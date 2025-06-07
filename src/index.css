@@ -1,7 +1,7 @@
+@import './styles/advanced.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './styles/advanced.css';
 
 /* Enhanced base styles */
 @layer base {
