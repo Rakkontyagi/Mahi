@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import { LoadingProvider } from './components/Loading/LoadingProvider';
 import { TemporalNavigation } from './components/Navigation/TemporalNavigation';
 import { AdvancedHero } from './components/Advanced/AdvancedHero';
-import { MemoryVisualization } from './components/4D/MemoryVisualization';
 import { CursorFollower } from './components/Advanced/MicroInteractions';
 import { PerformanceMonitor } from './components/Advanced/PerformanceOptimizer';
 
@@ -35,8 +34,6 @@ function AppContent() {
           <IndiaKeywordOptimization />
         </Suspense>
       </main>
-
-      <MemoryVisualization />
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TemporalNavigation } from '../Navigation/TemporalNavigation';
 import { TemporalParticles } from '../4D/TemporalParticles';
-import { MemoryVisualization } from '../4D/MemoryVisualization';
 import { PageStructure } from '../../utils/pageStructure';
 
 interface PageTemplateProps {
@@ -64,8 +63,6 @@ export const PageTemplate: React.FC<PageTemplateProps> = ({ page, children }) =>
       <main>
         {children}
       </main>
-
-      <MemoryVisualization />
     </div>
   );
 };
