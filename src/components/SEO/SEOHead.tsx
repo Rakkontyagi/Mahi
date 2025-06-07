@@ -30,9 +30,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Robots */}
       {noindex ? (
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots\" content="noindex, nofollow" />
       ) : (
-        <meta name="robots" content="index, follow" />
+        <meta name="robots\" content="index, follow" />
       )}
       
       {/* Open Graph */}
