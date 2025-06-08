@@ -15,12 +15,17 @@ import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './compon
 // CaseStudyPageTemplate is not used for type-only import
 // CaseStudiesHubPage is not used for type-only import
 // ProblemSolutionPageTemplate is not used for type-only import
+// ConsultationPageTemplate is not used for type-only import
+// ServicePricingPageTemplate is not used for type-only import
+// LeadMagnetLandingPageTemplate is not used for type-only import
+// ROICalculatorPage is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
 import { fictionalCompetitors, ourServiceComparisons } from './data/competitors';
 import { allCaseStudies } from './data/caseStudies';
-import { allProblems, allSolutionSets } from './data/problemSolutions'; // New imports
+import { allProblems, allSolutionSets } from './data/problemSolutions';
+import { allLeadMagnets } from './data/leadMagnets'; // New import
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
@@ -28,7 +33,12 @@ const ServiceROIPageTemplate = lazy(() => import('./components/Templates/Service
 const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate })));
 const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate })));
 const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage })));
-const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate }))); // New lazy load
+const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate })));
+const ConsultationPageTemplate = lazy(() => import('./components/Templates/ConsultationPageTemplate').then(module => ({ default: module.ConsultationPageTemplate })));
+const ServicePricingPageTemplate = lazy(() => import('./components/Templates/ServicePricingPageTemplate').then(module => ({ default: module.ServicePricingPageTemplate })));
+const LeadMagnetLandingPageTemplate = lazy(() => import('./components/Templates/LeadMagnetLandingPageTemplate').then(module => ({ default: module.LeadMagnetLandingPageTemplate })));
+const ROICalculatorPage = lazy(() => import('./components/Pages/ROICalculatorPage').then(module => ({ default: module.ROICalculatorPage }))); // New lazy load
+const IndustriesHubPage = lazy(() => import('./components/Pages/IndustriesHubPage').then(module => ({ default: module.IndustriesHubPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -148,6 +158,10 @@ function AppContent() {
     return allSolutionSets.find(ss => ss.problemSlug === problemSlug);
   };
 
+  const findLeadMagnet = (id: string) => {
+    return allLeadMagnets.find(lm => lm.id === id);
+  };
+
   // Generate breadcrumbs
   const generateBreadcrumbs = (service?: any, location?: any, industry?: any) => {
     const breadcrumbs = [];
@@ -230,6 +244,57 @@ function AppContent() {
     }
   }
 
+  // Route: /industries/ (Hub Page)
+  // Place this before routes like /:serviceSlug/:industrySlug/ or /case-studies/
+  if (pathname === '/industries') {
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Industries", url: "/industries/", isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <IndustriesHubPage
+            allIndustries={comprehensiveIndustries}
+          />
+        </Suspense>
+      </PageWrapper>
+    );
+  }
+
+  // Route: /:serviceSlug/:stateSlug/:citySlug/pricing/
+  if (pathParts.length === 4 && pathParts[3] === 'pricing') {
+    const [serviceSlug, stateSlug, citySlug] = pathParts;
+
+    const service = findService(serviceSlug);
+    const location = findLocation(stateSlug, citySlug);
+
+    if (service && location) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: service.name, url: `/${service.slug}/` },
+        { name: `${location.city} Pricing`, url: pathname, isActive: true }
+      ];
+      const sidebarProps = {
+          currentService: service,
+          currentLocation: location
+      };
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <ServicePricingPageTemplate
+              service={service}
+              location={location}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
   // Route: /case-studies/ (Hub Page)
   // Placed BEFORE the individual case study route /case-studies/:slug
   if (pathname === '/case-studies') {
@@ -274,6 +339,84 @@ function AppContent() {
       );
     }
     // Optional: Fallback to a 404 or case studies list if not found
+  }
+
+  // Route: /resources/templates/digital-marketing-proposal-template/
+  if (pathParts.length === 3 &&
+      pathParts[0] === 'resources' &&
+      pathParts[1] === 'templates' &&
+      pathParts[2] === 'digital-marketing-proposal-template') {
+
+    const leadMagnetId = pathParts[2];
+    const leadMagnet = findLeadMagnet(leadMagnetId);
+
+    if (leadMagnet) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: "Resources", url: "/resources/" }, // Placeholder
+        { name: "Templates", url: "/resources/templates/" }, // Placeholder
+        { name: leadMagnet.title.replace(/{cityName}/g, '').replace(/{industryName}/g, '').trim(), url: pathname, isActive: true } // Basic title cleanup
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <LeadMagnetLandingPageTemplate
+              leadMagnet={leadMagnet}
+              // No location prop for this generic template example
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
+  // Route: /digital-marketing-consultation/:stateSlug/:citySlug/
+  if (pathParts.length === 3 && pathParts[0] === 'digital-marketing-consultation') {
+    const [, stateSlug, citySlug] = pathParts;
+
+    const location = findLocation(stateSlug, citySlug);
+
+    if (location) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        // { name: "Consultations", url: "/consultations/" }, // Optional hub page
+        { name: `Digital Marketing Consultation in ${location.city}`, url: pathname, isActive: true }
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <ConsultationPageTemplate
+              location={location}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
+  // Route: /tools/marketing-automation-roi-calculator/
+  if (pathParts.length === 2 && // Corrected length check, path is /tools/slug
+      pathParts[0] === 'tools' &&
+      pathParts[1] === 'marketing-automation-roi-calculator') {
+
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Tools", url: "/tools/" },
+      { name: "Marketing Automation ROI Calculator", url: pathname, isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <ROICalculatorPage />
+        </Suspense>
+      </PageWrapper>
+    );
   }
 
   // Route: /:serviceSlug/:industrySizeSlug/roi/
