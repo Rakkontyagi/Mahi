@@ -38,6 +38,7 @@ const ConsultationPageTemplate = lazy(() => import('./components/Templates/Consu
 const ServicePricingPageTemplate = lazy(() => import('./components/Templates/ServicePricingPageTemplate').then(module => ({ default: module.ServicePricingPageTemplate })));
 const LeadMagnetLandingPageTemplate = lazy(() => import('./components/Templates/LeadMagnetLandingPageTemplate').then(module => ({ default: module.LeadMagnetLandingPageTemplate })));
 const ROICalculatorPage = lazy(() => import('./components/Pages/ROICalculatorPage').then(module => ({ default: module.ROICalculatorPage }))); // New lazy load
+const IndustriesHubPage = lazy(() => import('./components/Pages/IndustriesHubPage').then(module => ({ default: module.IndustriesHubPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -241,6 +242,26 @@ function AppContent() {
         );
       }
     }
+  }
+
+  // Route: /industries/ (Hub Page)
+  // Place this before routes like /:serviceSlug/:industrySlug/ or /case-studies/
+  if (pathname === '/industries') {
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Industries", url: "/industries/", isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <IndustriesHubPage
+            allIndustries={comprehensiveIndustries}
+          />
+        </Suspense>
+      </PageWrapper>
+    );
   }
 
   // Route: /:serviceSlug/:stateSlug/:citySlug/pricing/
