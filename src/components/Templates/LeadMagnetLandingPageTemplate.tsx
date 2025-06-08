@@ -115,13 +115,18 @@ const LeadMagnetLandingPageTemplate: React.FC<LeadMagnetLandingPageTemplateProps
           <section className="py-16 sm:py-20 md:py-24 text-center bg-black/30 backdrop-blur-lg relative">
             <div className="container mx-auto px-4 sm:px-6 relative z-10">
               {leadMagnet.heroImageMockupUrl ? (
-                <img
-                  src={leadMagnet.heroImageMockupUrl}
-                  alt={interpolate(leadMagnet.title, interpContext)}
-                  className="w-full max-w-md mx-auto mb-6 sm:mb-8 rounded-lg shadow-2xl"
-                />
+                <div className="w-full max-w-md mx-auto mb-6 sm:mb-8 aspect-[4/3] bg-slate-700/30 rounded-lg shadow-2xl flex items-center justify-center">
+                  <img
+                    src={leadMagnet.heroImageMockupUrl}
+                    alt={interpolate(leadMagnet.title, interpContext)}
+                    className="w-full h-full object-contain rounded-lg" // object-contain might be better for mockups
+                    loading="lazy"
+                    width="800" // Example 4:3 intrinsic dimension
+                    height="600" // Example 4:3 intrinsic dimension
+                  />
+                </div>
               ) : (
-                <div className="w-full max-w-md h-64 bg-slate-700/50 flex items-center justify-center text-slate-500 rounded-lg mx-auto mb-6 sm:mb-8">
+                <div className="w-full max-w-md h-64 bg-slate-700/50 flex items-center justify-center text-slate-500 rounded-lg mx-auto mb-6 sm:mb-8 aspect-[4/3]">
                   <Gift size={64} /> {/* Placeholder icon */}
                 </div>
               )}

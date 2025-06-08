@@ -58,21 +58,44 @@ export const AnimatedSection: React.FC<AnimatedSectionProps> = ({
 export const CursorFollower: React.FC = () => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [isHovering, setIsHovering] = React.useState(false);
+  const [isTouchDevice, setIsTouchDevice] = React.useState(false);
   const cursorRef = React.useRef<HTMLDivElement>(null);
+  const animationFrameId = React.useRef<number | null>(null);
 
   React.useEffect(() => {
+    // Check for touch device only on client-side after mount
+    const touchCheck = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setIsTouchDevice(touchCheck);
+    if (touchCheck) {
+      setIsVisible(false); // Ensure it's not visible on touch devices
+      return; // Don't attach mouse listeners
+    }
+
+    let lastPosition = { x: 0, y: 0 };
+
     const handleMouseMove = (e: MouseEvent) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = e.clientX + 'px';
-        cursorRef.current.style.top = e.clientY + 'px';
-        setIsVisible(true);
+      lastPosition = { x: e.clientX, y: e.clientY };
+      if (!animationFrameId.current) {
+        animationFrameId.current = requestAnimationFrame(() => {
+          if (cursorRef.current) {
+            cursorRef.current.style.left = `${lastPosition.x}px`;
+            cursorRef.current.style.top = `${lastPosition.y}px`;
+            setIsVisible(true); // Make visible on first move after potential initial hide
+          }
+          animationFrameId.current = null;
+        });
       }
     };
 
-    const handleMouseEnter = () => setIsVisible(true);
-    const handleMouseLeave = () => setIsVisible(false);
+    const handleMouseEnter = () => {
+      if (!isTouchDevice) setIsVisible(true);
+    };
+    const handleMouseLeave = () => {
+      if (!isTouchDevice) setIsVisible(false);
+    };
 
     const handleElementHover = (e: Event) => {
+      if (isTouchDevice) return;
       const target = e.target as HTMLElement;
       if (target.matches('button, a, [role="button"], .hoverable')) {
         setIsHovering(true);
@@ -81,9 +104,11 @@ export const CursorFollower: React.FC = () => {
 
     const handleElementLeave = () => setIsHovering(false);
 
+    if (isTouchDevice) return; // Don't add listeners if it's a touch device
+
     document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mouseenter', handleMouseEnter); // Track mouse entering window
+    document.addEventListener('mouseleave', handleMouseLeave); // Track mouse leaving window
     document.addEventListener('mouseover', handleElementHover);
     document.addEventListener('mouseout', handleElementLeave);
 
@@ -93,16 +118,23 @@ export const CursorFollower: React.FC = () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseover', handleElementHover);
       document.removeEventListener('mouseout', handleElementLeave);
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
     };
-  }, []);
+  }, [isTouchDevice]); // Re-run if isTouchDevice changes (though it shouldn't after initial check)
+
+  if (isTouchDevice) {
+    return null; // Don't render anything on touch devices
+  }
 
   return (
     <motion.div
       ref={cursorRef}
-      className={`fixed pointer-events-none z-50 mix-blend-difference ${
-        isVisible ? 'opacity-100' : 'opacity-0'
+      className={`fixed pointer-events-none z-50 mix-blend-difference transition-opacity duration-200 ${
+        isVisible ? 'opacity-100' : 'opacity-0' // Control visibility via opacity for smoother transitions
       }`}
-      style={{ transform: 'translate(-50%, -50%)' }}
+      style={{ transform: 'translate(-50%, -50%)', willChange: 'left, top' }} // Hint browser for optimization
       animate={{
         scale: isHovering ? 2 : 1,
         backgroundColor: isHovering ? '#ffffff' : 'rgba(255, 255, 255, 0.5)'
