@@ -24,9 +24,10 @@ export interface ComprehensiveServiceData {
     generalFactors?: string[];
     businessTypeSpecificCosts: BusinessTypeCostDetail[];
   };
-  roiInformation?: { // This is the new part
+  roiInformation?: {
     industrySizeSpecificROI: IndustrySizeROIDetail[];
   };
+  industryHighlights?: ServiceIndustryHighlight[]; // New field for service-specific industry highlights
 }
 
 export interface FictionalCaseSnippet {
@@ -44,17 +45,65 @@ export interface IndustrySizeROIDetail {
   fictionalCaseSnippet?: FictionalCaseSnippet;
 }
 
+// For Industry-specific data within ComprehensiveIndustryData
+export interface IndustryServiceBenefit {
+  serviceSlug: string;
+  benefits: string[];
+  caseStudyTeaser?: {
+    fictionalClientName: string;
+    achievedResult: string;
+    caseStudyId?: string;
+  };
+}
+
+export interface IndustryStat {
+  label: string;
+  value: string;
+  icon?: string;
+  source?: string;
+}
+
+// New Rich Interface for Industries
+export interface ComprehensiveIndustryData {
+  name: string;
+  slug: string;
+  description: string; // Existing, ensure it's part of this new definition
+  typicalChallenges?: string[];
+  commonGoals?: string[];
+  serviceSpecificData?: IndustryServiceBenefit[];
+  industryStats?: IndustryStat[];
+}
+
+// For Service-specific data within ComprehensiveServiceData
+export interface ServiceIndustryHighlight {
+  industrySlug: string;
+  specificFeatures?: string[];
+  commonUseCases?: string[];
+}
+
+// For Location-specific data within CityData
+export interface LocationIndustryInsight {
+  industrySlug: string;
+  insights: string[];
+  marketTrends?: string[];
+  localRegulationsSummary?: string;
+}
+
+// New Rich Interface for Cities
+export interface CityData {
+  name: string;
+  slug: string;
+  population?: number;
+  isMetro?: boolean;
+  industries?: string[]; // Refers to slugs of industries prevalent in the city
+  tier: 1 | 2 | 3;
+  localIndustryInsights?: LocationIndustryInsight[]; // New field
+}
+
 export interface ComprehensiveLocationData {
   state: string;
   stateSlug: string;
-  cities: Array<{
-    name: string;
-    slug: string;
-    population?: number;
-    isMetro?: boolean;
-    industries?: string[];
-    tier: 1 | 2 | 3;
-  }>;
+  cities: CityData[]; // Updated to use CityData interface
 }
 
 export const allIndianLocations: ComprehensiveLocationData[] = [
@@ -63,7 +112,30 @@ export const allIndianLocations: ComprehensiveLocationData[] = [
     stateSlug: "maharashtra",
     cities: [
       { name: "Mumbai", slug: "mumbai", population: 12442373, isMetro: true, tier: 1, industries: ["finance", "entertainment", "technology", "manufacturing"] },
-      { name: "Pune", slug: "pune", population: 3124458, isMetro: true, tier: 1, industries: ["technology", "automotive", "education", "manufacturing"] },
+      {
+        name: "Pune",
+        slug: "pune",
+        population: 3124458,
+        isMetro: true,
+        tier: 1,
+        industries: ["technology", "automotive", "education", "manufacturing", "healthcare"], // Added "healthcare"
+        localIndustryInsights: [
+          {
+            industrySlug: "healthcare",
+            insights: [
+              "Pune is a significant hub for medical tourism, particularly for specialized treatments, driving demand for advanced healthcare technology.",
+              "The city boasts a strong IT and software development ecosystem, fostering collaborations and innovations in health-tech.",
+              "Growing health awareness among Pune's population is increasing demand for preventative care and personalized health solutions."
+            ],
+            marketTrends: [
+              "Rapid adoption of telemedicine and remote patient monitoring solutions.",
+              "Increased investment in AI and ML for diagnostics and hospital management.",
+              "Emergence of specialized health-tech startups focusing on niche healthcare problems."
+            ],
+            localRegulationsSummary: "Healthcare providers in Pune must adhere to national standards set by the NMC and state-specific health advisories from Maharashtra Health Dept."
+          }
+        ]
+      },
       { name: "Nagpur", slug: "nagpur", population: 2405421, tier: 1, industries: ["mining", "agriculture", "textiles"] },
       { name: "Nashik", slug: "nashik", population: 1486973, tier: 2, industries: ["wine", "agriculture", "manufacturing"] },
       { name: "Aurangabad", slug: "aurangabad", population: 1175116, tier: 2, industries: ["automotive", "pharmaceuticals", "agriculture"] },
@@ -225,7 +297,25 @@ export const comprehensiveServices: ComprehensiveServiceData[] = [
       { name: "Workflow Automation", slug: "workflow-automation" },
       { name: "AI Analytics", slug: "ai-analytics" }
     ],
-    costInformation: {
+    industryHighlights: [
+      {
+        industrySlug: "healthcare",
+        specificFeatures: [
+          "HIPAA-compliant AI modules and data handling.",
+          "Secure integration capabilities with existing EHR/EMR systems.",
+          "Natural Language Processing (NLP) for analyzing clinical notes and patient feedback.",
+          "Computer vision capabilities for medical image analysis (e.g., X-rays, MRIs)."
+        ],
+        commonUseCases: [
+          "AI-assisted medical image interpretation.",
+          "Predictive analytics for patient risk stratification and proactive care.",
+          "Automated medical coding and billing processes.",
+          "AI-driven drug discovery and development research.",
+          "Intelligent virtual health assistants and chatbots."
+        ]
+      }
+    ],
+    costInformation: { // Ensure existing costInformation is preserved
       generalFactors: [
         "Complexity of existing systems for integration",
         "Volume of data to be processed",
@@ -419,9 +509,61 @@ export const comprehensiveServices: ComprehensiveServiceData[] = [
   }
 ];
 
-export const comprehensiveIndustries = [
-  { name: "Healthcare", slug: "healthcare", description: "Digital marketing for healthcare providers" },
-  { name: "Real Estate", slug: "real-estate", description: "Marketing solutions for real estate businesses" },
+export const comprehensiveIndustries: ComprehensiveIndustryData[] = [
+  {
+    name: "Healthcare",
+    slug: "healthcare",
+    description: "The healthcare industry encompasses hospitals, clinics, pharmaceutical companies, medical device manufacturers, and telehealth services, all focused on maintaining and improving patient health.",
+    typicalChallenges: [
+      "Ensuring HIPAA compliance with new technology adoption",
+      "Managing and securing large volumes of sensitive patient data",
+      "Improving patient experience and engagement in a scalable way",
+      "Reducing physician burnout from administrative tasks",
+      "Interoperability between disparate health IT systems",
+      "Keeping up with rapid medical advancements and research"
+    ],
+    commonGoals: [
+      "Enhance diagnostic accuracy and speed",
+      "Streamline administrative and clinical workflows",
+      "Personalize patient care pathways effectively",
+      "Improve operational efficiency and reduce costs",
+      "Increase patient access to care through digital channels",
+      "Facilitate preventative care and wellness programs"
+    ],
+    serviceSpecificData: [
+      {
+        serviceSlug: "ai-automation",
+        benefits: [
+          "AI-powered diagnostic assistance tools for faster, more accurate analysis.",
+          "Automated patient scheduling, reminders, and follow-up communication.",
+          "Personalized treatment plan adjustments based on real-time patient data.",
+          "Intelligent automation of billing and claims processing.",
+          "Predictive analytics for identifying at-risk patients and optimizing resource allocation."
+        ],
+        caseStudyTeaser: {
+          fictionalClientName: "MediCare Pune Hospital (Fictional)",
+          achievedResult: "Reduced patient wait times by 30% using AI scheduling.",
+          caseStudyId: "healthcare-ai-automation-pune-patient-engagement"
+        }
+      },
+      {
+        serviceSlug: "digital-marketing", // Example for another service
+        benefits: [
+          "Targeted patient acquisition through ethical online campaigns.",
+          "Enhanced online reputation and patient trust.",
+          "Educational content marketing to inform and engage patients.",
+          "Improved visibility for specialized medical services."
+        ]
+      }
+    ],
+    industryStats: [
+      { label: "Global AI in Healthcare Market Size (2023 Est.)", value: "$20.9 Billion", icon: "DollarSign", source: "Various Market Reports" },
+      { label: "Expected CAGR of AI in Healthcare (2024-2030)", value: "37.5%", icon: "TrendingUp", source: "Various Market Reports" },
+      { label: "Improvement in Diagnostic Accuracy with AI (Select Studies)", value: "Up to 20%", icon: "CheckCircle", source: "Academic Publications" },
+      { label: "Telemedicine Adoption Increase Since 2020", value: "Over 50x", icon: "Users", source: "Industry Surveys"}
+    ]
+  },
+  { name: "Real Estate", slug: "real-estate", description: "Marketing solutions for real estate businesses" }, // Ensure other industries also conform or are updated later
   { name: "E-commerce", slug: "ecommerce", description: "Specialized marketing for online stores" },
   { name: "Education", slug: "education", description: "Marketing for educational institutions" },
   { name: "Manufacturing", slug: "manufacturing", description: "Industrial marketing solutions" },
