@@ -7,11 +7,11 @@ import { CursorFollower } from './components/Advanced/MicroInteractions';
 import { PerformanceMonitor } from './components/Advanced/PerformanceOptimizer';
 import { Footer } from './components/Layout/Footer';
 
-// Lazy load heavy components
+// Lazy load components
 const QuantumServices = lazy(() => import('./components/4D/QuantumServices').then(module => ({ default: module.QuantumServices })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
-// Delhi service pages
+// Delhi pages
 const DelhiDigitalMarketing = lazy(() => import('./components/Pages/DelhiDigitalMarketing').then(module => ({ default: module.DelhiDigitalMarketing })));
 const DelhiAIAutomation = lazy(() => import('./components/Pages/DelhiAIAutomation').then(module => ({ default: module.DelhiAIAutomation })));
 const DelhiBusinessAutomation = lazy(() => import('./components/Pages/DelhiBusinessAutomation').then(module => ({ default: module.DelhiBusinessAutomation })));
@@ -19,117 +19,83 @@ const DelhiSEOServices = lazy(() => import('./components/Pages/DelhiSEOServices'
 const DelhiPPCManagement = lazy(() => import('./components/Pages/DelhiPPCManagement').then(module => ({ default: module.DelhiPPCManagement })));
 const DelhiSocialMediaMarketing = lazy(() => import('./components/Pages/DelhiSocialMediaMarketing').then(module => ({ default: module.DelhiSocialMediaMarketing })));
 
+// City pages
+const MumbaiDigitalMarketing = lazy(() => import('./components/Pages/MumbaiDigitalMarketing').then(module => ({ default: module.MumbaiDigitalMarketing })));
+const BangaloreDigitalMarketing = lazy(() => import('./components/Pages/BangaloreDigitalMarketing').then(module => ({ default: module.BangaloreDigitalMarketing })));
+const ChennaiDigitalMarketing = lazy(() => import('./components/Pages/ChennaiDigitalMarketing').then(module => ({ default: module.ChennaiDigitalMarketing })));
+const HyderabadDigitalMarketing = lazy(() => import('./components/Pages/HyderabadDigitalMarketing').then(module => ({ default: module.HyderabadDigitalMarketing })));
+const PuneDigitalMarketing = lazy(() => import('./components/Pages/PuneDigitalMarketing').then(module => ({ default: module.PuneDigitalMarketing })));
+
+// Industry pages
+const HealthcareDigitalMarketing = lazy(() => import('./components/Pages/HealthcareDigitalMarketing').then(module => ({ default: module.HealthcareDigitalMarketing })));
+const EcommerceDigitalMarketing = lazy(() => import('./components/Pages/EcommerceDigitalMarketing').then(module => ({ default: module.EcommerceDigitalMarketing })));
+const RealEstateDigitalMarketing = lazy(() => import('./components/Pages/RealEstateDigitalMarketing').then(module => ({ default: module.RealEstateDigitalMarketing })));
+
 function AppContent() {
-  // Simple routing based on pathname
-  const pathname = window.location.pathname;
+  const pathname = window.location.pathname.replace(/\/$/, '') || '/';
 
-  // Route to specific Delhi pages
-  if (pathname === '/digital-marketing-delhi/' || pathname === '/digital-marketing-delhi') {
-    return (
-      <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        <CursorFollower />
-        <PerformanceMonitor />
-        <TemporalNavigation />
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" /></div>}>
-          <DelhiDigitalMarketing />
-        </Suspense>
-        <Footer />
-      </div>
-    );
-  }
+  const LoadingFallback = () => (
+    <div className="flex items-center justify-center min-h-screen bg-black">
+      <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+    </div>
+  );
 
-  if (pathname === '/ai-automation-delhi/' || pathname === '/ai-automation-delhi') {
-    return (
-      <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        <CursorFollower />
-        <PerformanceMonitor />
-        <TemporalNavigation />
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" /></div>}>
-          <DelhiAIAutomation />
-        </Suspense>
-        <Footer />
-      </div>
-    );
-  }
+  const PageWrapper = ({ children }: { children: React.ReactNode }) => (
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      <CursorFollower />
+      <PerformanceMonitor />
+      <TemporalNavigation />
+      {children}
+      <Footer />
+    </div>
+  );
 
-  if (pathname === '/business-automation-delhi/' || pathname === '/business-automation-delhi') {
-    return (
-      <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        <CursorFollower />
-        <PerformanceMonitor />
-        <TemporalNavigation />
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" /></div>}>
-          <DelhiBusinessAutomation />
-        </Suspense>
-        <Footer />
-      </div>
-    );
-  }
+  // Route mapping
+  const routes: Record<string, React.ComponentType> = {
+    // Delhi pages
+    '/digital-marketing-delhi': DelhiDigitalMarketing,
+    '/ai-automation-delhi': DelhiAIAutomation,
+    '/business-automation-delhi': DelhiBusinessAutomation,
+    '/seo-services-delhi': DelhiSEOServices,
+    '/ppc-management-delhi': DelhiPPCManagement,
+    '/social-media-marketing-delhi': DelhiSocialMediaMarketing,
+    
+    // City pages
+    '/digital-marketing-mumbai': MumbaiDigitalMarketing,
+    '/digital-marketing-bangalore': BangaloreDigitalMarketing,
+    '/digital-marketing-chennai': ChennaiDigitalMarketing,
+    '/digital-marketing-hyderabad': HyderabadDigitalMarketing,
+    '/digital-marketing-pune': PuneDigitalMarketing,
+    
+    // Industry pages
+    '/healthcare-digital-marketing': HealthcareDigitalMarketing,
+    '/ecommerce-digital-marketing': EcommerceDigitalMarketing,
+    '/real-estate-digital-marketing': RealEstateDigitalMarketing,
+  };
 
-  if (pathname === '/seo-services-delhi/' || pathname === '/seo-services-delhi') {
-    return (
-      <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        <CursorFollower />
-        <PerformanceMonitor />
-        <TemporalNavigation />
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" /></div>}>
-          <DelhiSEOServices />
-        </Suspense>
-        <Footer />
-      </div>
-    );
-  }
+  const PageComponent = routes[pathname];
 
-  if (pathname === '/ppc-management-delhi/' || pathname === '/ppc-management-delhi') {
+  if (PageComponent) {
     return (
-      <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        <CursorFollower />
-        <PerformanceMonitor />
-        <TemporalNavigation />
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" /></div>}>
-          <DelhiPPCManagement />
+      <PageWrapper>
+        <Suspense fallback={<LoadingFallback />}>
+          <PageComponent />
         </Suspense>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (pathname === '/social-media-marketing-delhi/' || pathname === '/social-media-marketing-delhi') {
-    return (
-      <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        <CursorFollower />
-        <PerformanceMonitor />
-        <TemporalNavigation />
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" /></div>}>
-          <DelhiSocialMediaMarketing />
-        </Suspense>
-        <Footer />
-      </div>
+      </PageWrapper>
     );
   }
 
   // Default homepage
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      <CursorFollower />
-      <PerformanceMonitor />
-      <TemporalNavigation />
-      
+    <PageWrapper>
       <main>
         <AdvancedHero />
-        
-        <Suspense fallback={
-          <div className="flex items-center justify-center py-20">
-            <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
-          </div>
-        }>
+        <Suspense fallback={<LoadingFallback />}>
           <QuantumServices />
           <IndiaKeywordOptimization />
         </Suspense>
       </main>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 }
 
