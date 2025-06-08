@@ -1,4 +1,31 @@
 // Comprehensive location data for all Indian states and cities
+
+// Interface for Cost Information
+export interface CostTier {
+  name: string; // e.g., "Basic Setup", "Advanced Integration", "Full Scale Enterprise"
+  range: string; // e.g., "$500 - $1,500 / month", "Starting at $2,000", "Custom Quote"
+  features: string[]; // Key features included in this tier
+}
+
+export interface BusinessTypeCostDetail {
+  businessTypeSlug: string;
+  factors: string[];
+  costTiers: CostTier[];
+  roiNotes?: string;
+}
+
+export interface ComprehensiveServiceData {
+  name: string;
+  slug: string;
+  description: string;
+  keywords: string[];
+  subServices?: Array<{ name: string; slug: string }>;
+  costInformation?: {
+    generalFactors?: string[];
+    businessTypeSpecificCosts: BusinessTypeCostDetail[];
+  };
+}
+
 export interface ComprehensiveLocationData {
   state: string;
   stateSlug: string;
@@ -146,7 +173,7 @@ export const allIndianLocations: ComprehensiveLocationData[] = [
   }
 ];
 
-export const comprehensiveServices = [
+export const comprehensiveServices: ComprehensiveServiceData[] = [
   {
     name: "Digital Marketing Services",
     slug: "digital-marketing",
@@ -179,7 +206,59 @@ export const comprehensiveServices = [
       { name: "Sales Process Automation", slug: "sales-process-automation" },
       { name: "Workflow Automation", slug: "workflow-automation" },
       { name: "AI Analytics", slug: "ai-analytics" }
-    ]
+    ],
+    costInformation: {
+      generalFactors: [
+        "Complexity of existing systems for integration",
+        "Volume of data to be processed",
+        "Number of processes to be automated",
+        "Level of customization required",
+        "Need for ongoing AI model training and maintenance"
+      ],
+      businessTypeSpecificCosts: [
+        {
+          businessTypeSlug: "small-business",
+          factors: [
+            "Automating 1-2 core processes (e.g., customer support FAQs, email categorization).",
+            "Integration with 1-2 existing tools.",
+            "Basic AI model setup, minimal customization."
+          ],
+          costTiers: [
+            { name: "Starter AI Toolkit", range: "$300 - $800 / month", features: ["Chatbot for FAQs (up to 50 intents)", "Email sorting (up to 2 rules)", "Basic analytics dashboard"] },
+            { name: "Growth AI Suite", range: "$800 - $2,000 / month", features: ["Custom chatbot flows (up to 150 intents)", "Automated social media responses", "Lead qualification bot", "Advanced analytics"] }
+          ],
+          roiNotes: "Focuses on time-saving for repetitive tasks and improving customer response times."
+        },
+        {
+          businessTypeSlug: "ecommerce-store",
+          factors: [
+            "AI for product recommendations and personalization.",
+            "Inventory management and demand forecasting AI.",
+            "Automated customer service for order tracking and returns.",
+            "Fraud detection algorithms."
+          ],
+          costTiers: [
+            { name: "E-com AI Essentials", range: "$700 - $2,500 / month", features: ["Personalized product recommendations (up to 10k users)", "Basic inventory alerts", "Chatbot for order status"] },
+            { name: "E-com AI Pro", range: "$2,500 - $7,000 / month", features: ["Advanced recommendation engine", "Dynamic pricing suggestions", "AI-powered search", "Automated abandoned cart recovery emails"] }
+          ],
+          roiNotes: "Aims to increase average order value, reduce cart abandonment, and optimize stock levels."
+        },
+        {
+          businessTypeSlug: "startup",
+          factors: [
+            "Scalable AI infrastructure for rapid growth.",
+            "AI for market analysis and customer segmentation.",
+            "Automating lean operational processes.",
+            "Often requires flexible, phased implementation."
+          ],
+          costTiers: [
+            { name: "Lean AI Launchpad", range: "$500 - $1,800 / month", features: ["AI-driven competitor analysis tool", "Automated customer feedback analysis", "Core process automation (1 process)"] },
+            { name: "Scale-up AI Engine", range: "$1,800 - $6,000 / month", features: ["Predictive analytics for user behavior", "AI for A/B testing website/app changes", "Scalable chatbot infrastructure", "Multiple process automations"] }
+          ],
+          roiNotes: "Geared towards achieving product-market fit faster, data-driven decision making, and efficient scaling."
+        }
+      ]
+    }
   },
   {
     name: "Business Automation Services",
@@ -287,4 +366,88 @@ export const comprehensiveIndustries = [
   { name: "Legal Services", slug: "legal-services", description: "Marketing for law firms" },
   { name: "Fitness & Wellness", slug: "fitness-wellness", description: "Health and fitness marketing" },
   { name: "Beauty & Cosmetics", slug: "beauty-cosmetics", description: "Beauty industry marketing" }
+];
+
+export interface ComprehensiveBusinessType {
+  name: string;
+  slug: string;
+  description?: string;
+}
+
+export const comprehensiveBusinessTypes: ComprehensiveBusinessType[] = [
+  {
+    name: "Small Business",
+    slug: "small-business",
+    description: "Businesses with a smaller workforce and revenue, often owner-operated."
+  },
+  {
+    name: "Medium Business",
+    slug: "medium-business",
+    description: "Businesses with a moderate workforce and revenue, typically expanding their operations."
+  },
+  {
+    name: "Large Enterprise",
+    slug: "large-enterprise",
+    description: "Well-established businesses with a large workforce, significant revenue, and often complex operations."
+  },
+  {
+    name: "Startup",
+    slug: "startup",
+    description: "Newly established businesses, typically innovative and aiming for rapid growth."
+  },
+  {
+    name: "E-commerce Store",
+    slug: "ecommerce-store",
+    description: "Businesses that primarily sell products or services online."
+  },
+  {
+    name: "Local Shop",
+    slug: "local-shop",
+    description: "Brick-and-mortar businesses serving a specific geographic area."
+  },
+  {
+    name: "SaaS Company",
+    slug: "saas-company",
+    description: "Businesses that provide software as a service, typically on a subscription basis."
+  },
+  {
+    name: "Service Provider",
+    slug: "service-provider",
+    description: "Businesses that offer professional services to clients."
+  },
+  {
+    name: "Non-Profit Organization",
+    slug: "non-profit",
+    description: "Organizations that operate for a social cause, not for profit."
+  },
+  {
+    name: "Manufacturing Firm",
+    slug: "manufacturing-firm",
+    description: "Businesses involved in the production of goods."
+  },
+  {
+    name: "Real Estate Agency",
+    slug: "real-estate-agency",
+    description: "Businesses that assist clients in buying, selling, or renting properties."
+  },
+  {
+    name: "Healthcare Clinic",
+    slug: "healthcare-clinic",
+    description: "Medical facilities providing outpatient care."
+  },
+  {
+    name: "Educational Institution",
+    slug: "educational-institution",
+    description: "Organizations providing learning and education services."
+  },
+  {
+    name: "Restaurant / Cafe",
+    slug: "restaurant-cafe",
+    description: "Businesses that prepare and serve food and beverages to customers."
+  },
+  {
+    name: "Travel Agency",
+    slug: "travel-agency",
+    description: "Businesses that help people plan and book travel arrangements."
+  }
 ];

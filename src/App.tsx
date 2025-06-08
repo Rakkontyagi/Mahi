@@ -9,9 +9,12 @@ import { ContextualSidebar } from './components/Layout/ContextualSidebar';
 import { BreadcrumbNavigation } from './components/Layout/BreadcrumbNavigation';
 import { ServiceLocationTemplate } from './components/Templates/ServiceLocationTemplate';
 import { IndustryLocationTemplate } from './components/Templates/IndustryLocationTemplate';
+import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './components/Templates/ServiceCostPageTemplate'; // For type only
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
+import { comprehensiveBusinessTypes } from './data/businessTypes';
 
 // Lazy load components
+const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -40,6 +43,7 @@ const PuneDigitalMarketing = lazy(() => import('./components/Pages/PuneDigitalMa
 const HealthcareDigitalMarketing = lazy(() => import('./components/Pages/HealthcareDigitalMarketing').then(module => ({ default: module.HealthcareDigitalMarketing })));
 const EcommerceDigitalMarketing = lazy(() => import('./components/Pages/EcommerceDigitalMarketing').then(module => ({ default: module.EcommerceDigitalMarketing })));
 const RealEstateDigitalMarketing = lazy(() => import('./components/Pages/RealEstateDigitalMarketing').then(module => ({ default: module.RealEstateDigitalMarketing })));
+// ServiceCostPageTemplate is lazy loaded above with other page components
 
 function AppContent() {
   const pathname = window.location.pathname.replace(/\/$/, '') || '/';
@@ -100,6 +104,10 @@ function AppContent() {
   // Helper function to find industry
   const findIndustry = (slug: string) => {
     return comprehensiveIndustries.find(i => i.slug === slug);
+  };
+
+  const findBusinessType = (slug: string) => {
+    return comprehensiveBusinessTypes.find(bt => bt.slug === slug);
   };
 
   // Generate breadcrumbs
@@ -181,6 +189,42 @@ function AppContent() {
           </PageWrapper>
         );
       }
+    }
+  }
+
+  // Route: /:serviceSlug/:businessTypeSlug/:stateSlug/:citySlug/cost/
+  if (pathParts.length === 5 && pathParts[4] === 'cost') {
+    const [serviceSlug, businessTypeSlug, stateSlug, citySlug] = pathParts;
+    const service = findService(serviceSlug);
+    const businessType = findBusinessType(businessTypeSlug);
+    const location = findLocation(stateSlug, citySlug);
+
+    if (service && businessType && location) {
+      const breadcrumbs = [
+        { name: "Services", url: "/services/" }, // Assuming a general services listing page
+        { name: service.name, url: `/${service.slug}/` }, // Link to service hub page
+        { name: businessType.name, url: `/${service.slug}/${businessType.slug}/` }, // Placeholder - this page might not exist, but good for structure
+        { name: location.state, url: `/locations/${location.stateSlug}/` }, // Assuming a general state listing page
+        { name: location.city, url: `/${service.slug}/${businessType.slug}/${location.stateSlug}/${location.citySlug}/` }, // Link to a potential Service+BT+Location page
+        { name: "Cost Analysis", url: `/${service.slug}/${businessType.slug}/${location.stateSlug}/${location.citySlug}/cost/`, isActive: true }
+      ];
+      const sidebarProps = {
+        currentService: service,
+        currentLocation: location,
+        // currentBusinessType: businessType, // Pass if ContextualSidebar uses it
+      };
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <ServiceCostPageTemplate
+              service={service}
+              businessType={businessType}
+              location={location}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
     }
   }
 
