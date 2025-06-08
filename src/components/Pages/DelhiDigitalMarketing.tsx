@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, TrendingUp, Award, Users, Target, Zap, Phone, Mail, Clock, CheckCircle, Building, Globe, Search, Share2 } from 'lucide-react';
-import { GlassmorphismCard } from '../../Advanced/GlassmorphismCard';
-import { ScrollReveal } from '../../Advanced/ParallaxSection';
-import { SEOHead } from '../../SEO/SEOHead';
+import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
+import { ScrollReveal } from '../Advanced/ParallaxSection';
+import { SEOHead } from '../SEO/SEOHead';
 
 export const DelhiDigitalMarketing: React.FC = () => {
   const benefits = [
