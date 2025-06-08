@@ -331,7 +331,9 @@ export const GodDigitalLogo: React.FC<GodDigitalLogoProps> = ({
           className={`${sizeClasses[size]} w-auto`}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          role="img" // Add role="img" for accessibility
         >
+          <title>God Digital Marketing Logo</title> {/* Accessibility Title */}
           <motion.circle
             cx="16"
             cy="16"

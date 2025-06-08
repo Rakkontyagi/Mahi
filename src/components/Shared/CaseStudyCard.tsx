@@ -35,7 +35,10 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ caseStudy }) => {
         <img
           src={caseStudy.heroImage}
           alt={caseStudy.title || `Case study for ${caseStudy.fictionalClientName}`}
-          className="w-full h-48 object-cover" // Removed rounded-t-lg to let BaseCard handle it
+          className="w-full h-48 object-cover"
+          loading="lazy"
+          width="341" // Assuming a common 16:9 aspect ratio for h-48 (192px)
+          height="192"
         />
       ) : (
         <div className="w-full h-48 bg-slate-700/50 flex items-center justify-center text-slate-500">
