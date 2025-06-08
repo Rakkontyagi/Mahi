@@ -10,11 +10,14 @@ import { BreadcrumbNavigation } from './components/Layout/BreadcrumbNavigation';
 import { ServiceLocationTemplate } from './components/Templates/ServiceLocationTemplate';
 import { IndustryLocationTemplate } from './components/Templates/IndustryLocationTemplate';
 import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './components/Templates/ServiceCostPageTemplate'; // For type only
+// ServiceROIPageTemplate is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
+import { comprehensiveIndustrySizes } from './data/industrySizes'; // New import
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
+const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate').then(module => ({ default: module.ServiceROIPageTemplate }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -110,6 +113,10 @@ function AppContent() {
     return comprehensiveBusinessTypes.find(bt => bt.slug === slug);
   };
 
+  const findIndustrySize = (slug: string) => {
+    return comprehensiveIndustrySizes.find(is => is.slug === slug);
+  };
+
   // Generate breadcrumbs
   const generateBreadcrumbs = (service?: any, location?: any, industry?: any) => {
     const breadcrumbs = [];
@@ -189,6 +196,36 @@ function AppContent() {
           </PageWrapper>
         );
       }
+    }
+  }
+
+  // Route: /:serviceSlug/:industrySizeSlug/roi/
+  if (pathParts.length === 3 && pathParts[2] === 'roi') {
+    const [serviceSlug, industrySizeSlug] = pathParts;
+    const service = findService(serviceSlug);
+    const industrySize = findIndustrySize(industrySizeSlug);
+
+    if (service && industrySize) {
+      const breadcrumbs = [
+        { name: "Services", url: "/services/" },
+        { name: service.name, url: `/${service.slug}/` },
+        { name: `ROI for ${industrySize.name}`, url: `/${service.slug}/${industrySize.slug}/roi/`, isActive: true }
+      ];
+      const sidebarProps = {
+          currentService: service,
+          // currentIndustrySize: industrySize, // If sidebar needs this
+      };
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <ServiceROIPageTemplate
+              service={service}
+              industrySize={industrySize}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
     }
   }
 

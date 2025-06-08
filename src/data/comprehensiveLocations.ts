@@ -24,6 +24,24 @@ export interface ComprehensiveServiceData {
     generalFactors?: string[];
     businessTypeSpecificCosts: BusinessTypeCostDetail[];
   };
+  roiInformation?: { // This is the new part
+    industrySizeSpecificROI: IndustrySizeROIDetail[];
+  };
+}
+
+export interface FictionalCaseSnippet {
+  fictionalCompanyName: string; // Emphasize fiction
+  challenge: string;
+  solutionHighlight: string;
+  result: string;
+}
+
+export interface IndustrySizeROIDetail {
+  industrySizeSlug: string;
+  drivers: string[];
+  potentialFigures: string[];
+  factors: string[];
+  fictionalCaseSnippet?: FictionalCaseSnippet;
 }
 
 export interface ComprehensiveLocationData {
@@ -347,6 +365,57 @@ export const comprehensiveServices: ComprehensiveServiceData[] = [
     description: "Performance-based affiliate marketing programs",
     keywords: ["affiliate marketing", "performance marketing", "affiliate programs"],
     subServices: []
+  },
+  {
+    name: "Marketing Automation",
+    slug: "marketing-automation",
+    description: "Streamline, automate, and measure marketing tasks and workflows to grow revenue and improve efficiency.",
+    keywords: ["marketing automation", "automated email marketing", "lead nurturing", "crm integration", "customer journey mapping"],
+    subServices: [
+      { name: "Email Automation Strategy", slug: "email-automation-strategy" }, // Changed slug for clarity
+      { name: "Lead Scoring Systems Design", slug: "lead-scoring-systems-design" }, // Changed slug
+      { name: "Automated Customer Journey Builder", slug: "automated-customer-journey-builder" } // Changed slug
+    ],
+    roiInformation: {
+      industrySizeSpecificROI: [
+        {
+          industrySizeSlug: "small",
+          drivers: ["Automate repetitive email tasks", "Improve lead capture from website", "Basic lead segmentation & follow-up", "Track campaign performance simply"],
+          potentialFigures: ["Save 5-10 hours per week on marketing tasks", "Increase website lead conversion by 10-15%", "Grow email engagement by 20%"],
+          factors: ["Ease of use of the platform", "Limited budget for advanced features", "Need for simple integration with existing tools (e.g., website forms)", "Availability of learning resources"],
+          fictionalCaseSnippet: {
+            fictionalCompanyName: "GreenSprout Landscaping (Fictional)",
+            challenge: "Manually sending monthly newsletters and struggling to follow up on website inquiries consistently.",
+            solutionHighlight: "Implemented a basic marketing automation tool for automated welcome emails, monthly newsletter dispatch, and lead capture forms with auto-responders.",
+            result: "Reduced newsletter preparation time by 70% and saw a 25% increase in inquiries converting to consultations."
+          }
+        },
+        {
+          industrySizeSlug: "medium",
+          drivers: ["Advanced lead nurturing workflows", "Dynamic content personalization", "Automated A/B testing of campaigns", "Integration with CRM for sales alignment", "More sophisticated analytics and reporting"],
+          potentialFigures: ["Improve marketing qualified lead (MQL) to sales qualified lead (SQL) conversion by 20-30%", "Increase average deal size by 10% through better nurturing", "Reduce churn by 15% with targeted post-sale communication"],
+          factors: ["Scalability of the automation platform", "Complexity of integration with multiple business systems", "Team skills for creating and managing complex campaigns", "Data hygiene and CRM data quality"],
+          fictionalCaseSnippet: {
+            fictionalCompanyName: "FlexiComponents Manufacturing (Fictional)",
+            challenge: "Sales team overwhelmed with unqualified leads and marketing struggled to demonstrate direct revenue impact.",
+            solutionHighlight: "Deployed marketing automation integrated with their CRM, featuring automated lead scoring, multi-touch nurture campaigns, and personalized email content based on behavior.",
+            result: "Generated 40% more SQLs, shortened the average sales cycle by 18%, and attributed 22% of new revenue directly to automated campaigns within the first year."
+          }
+        },
+        {
+          industrySizeSlug: "large",
+          drivers: ["Multi-channel campaign orchestration (email, social, SMS, web)", "Predictive analytics for lead scoring and churn", "Account-Based Marketing (ABM) automation at scale", "Full lifecycle customer journey management", "Compliance and governance automation"],
+          potentialFigures: ["Increase marketing contribution to pipeline by over 50%", "Improve customer lifetime value (CLTV) by 20-25%", "Achieve near real-time personalization across all touchpoints", "Reduce marketing operational costs by 15-20% through efficiency"],
+          factors: ["Ability to handle massive data volumes and user bases", "Customization capabilities to fit complex organizational structures", "Global deployment and multi-language support", "Advanced security and data governance features", "Change management across large teams"],
+          fictionalCaseSnippet: {
+            fictionalCompanyName: "GlobalEduConnect (Fictional)",
+            challenge: "Managing diverse marketing efforts across multiple countries with inconsistent branding and poor lead handoff to regional sales teams.",
+            solutionHighlight: "Implemented an enterprise-grade marketing automation platform, standardizing global campaigns, enabling localized personalization, and automating lead routing with strict SLAs.",
+            result: "Improved global campaign deployment speed by 4x, increased lead quality scores by an average of 35%, and saw a 15% uplift in cross-sell/upsell revenue from existing customers."
+          }
+        }
+      ]
+    }
   }
 ];
 
