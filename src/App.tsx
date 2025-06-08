@@ -11,13 +11,16 @@ import { ServiceLocationTemplate } from './components/Templates/ServiceLocationT
 import { IndustryLocationTemplate } from './components/Templates/IndustryLocationTemplate';
 import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './components/Templates/ServiceCostPageTemplate'; // For type only
 // ServiceROIPageTemplate is not used for type-only import
+// CompetitorAlternativePageTemplate is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
-import { comprehensiveIndustrySizes } from './data/industrySizes'; // New import
+import { comprehensiveIndustrySizes } from './data/industrySizes';
+import { fictionalCompetitors, ourServiceComparisons } from './data/competitors'; // New imports
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
-const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate').then(module => ({ default: module.ServiceROIPageTemplate }))); // New lazy load
+const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate').then(module => ({ default: module.ServiceROIPageTemplate })));
+const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -115,6 +118,14 @@ function AppContent() {
 
   const findIndustrySize = (slug: string) => {
     return comprehensiveIndustrySizes.find(is => is.slug === slug);
+  };
+
+  const findCompetitor = (slug: string) => {
+    return fictionalCompetitors.find(c => c.slug === slug);
+  };
+
+  const findServiceComparison = (ourServiceSlug: string, competitorSlug: string) => {
+    return ourServiceComparisons.find(sc => sc.ourServiceSlug === ourServiceSlug && sc.competitorSlug === competitorSlug);
   };
 
   // Generate breadcrumbs
@@ -265,8 +276,53 @@ function AppContent() {
     }
   }
 
+  // Route: /alternatives/:competitorSlug/:serviceSlug/:stateSlug/:citySlug/
+  if (pathParts.length === 5 && pathParts[0] === 'alternatives') {
+    const [, competitorSlug, serviceSlug, stateSlug, citySlug] = pathParts;
+
+    const competitor = findCompetitor(competitorSlug);
+    const serviceData = findService(serviceSlug);
+    const location = findLocation(stateSlug, citySlug);
+    const serviceComparison = findServiceComparison(serviceSlug, competitorSlug);
+
+    if (competitor && serviceData && location && serviceComparison) {
+      const ourServiceInfo = {
+        name: serviceData.name,
+        slug: serviceData.slug,
+        advantages: serviceComparison.ourAdvantages,
+        differentiators: serviceComparison.ourDifferentiators,
+        comparisonTitle: serviceComparison.comparisonTitle
+                          || `Why Our ${serviceData.name} is a Strong ${competitor.name} Alternative`
+      };
+
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        // { name: "Alternatives", url: "/alternatives/" }, // Consider if a hub page for /alternatives/ will exist
+        { name: `${competitor.name} Alternatives`, url: `/alternatives/${competitor.slug}/` }, // Placeholder for competitor specific alternatives page
+        { name: `vs ${serviceData.name} in ${location.city}`, url: pathname, isActive: true }
+      ];
+      const sidebarProps = {
+          // currentService: serviceData, // Optional, if sidebar needs it
+          // currentLocation: location
+      };
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <CompetitorAlternativePageTemplate
+              competitor={competitor}
+              location={location}
+              ourServiceInfo={ourServiceInfo}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
   // Route: /[service]/[state]/[city]/
-  if (pathParts.length === 3) {
+  // This existing 3-part route is for ServiceLocationTemplate, ensure it's distinct from the ROI route
+  if (pathParts.length === 3 && pathParts[2] !== 'roi') { // Added condition to avoid conflict with ROI route
     const [serviceSlug, stateSlug, citySlug] = pathParts;
     const service = findService(serviceSlug);
     const location = findLocation(stateSlug, citySlug);
