@@ -14,6 +14,11 @@ import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } fr
 // Lazy load components
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
+// Core Service Pages
+const DigitalMarketingServices = lazy(() => import('./components/Pages/CoreServices/DigitalMarketingServices').then(module => ({ default: module.DigitalMarketingServices })));
+const SEOServices = lazy(() => import('./components/Pages/CoreServices/SEOServices').then(module => ({ default: module.SEOServices })));
+const PPCAdvertising = lazy(() => import('./components/Pages/CoreServices/PPCAdvertising').then(module => ({ default: module.PPCAdvertising })));
+
 // Service Hub Pages
 const DigitalMarketingHub = lazy(() => import('./components/Pages/ServiceHubPages/DigitalMarketingHub').then(module => ({ default: module.DigitalMarketingHub })));
 const AIAutomationHub = lazy(() => import('./components/Pages/ServiceHubPages/AIAutomationHub').then(module => ({ default: module.AIAutomationHub })));
@@ -126,6 +131,25 @@ function AppContent() {
 
   // Dynamic route matching
   const pathParts = pathname.split('/').filter(Boolean);
+
+  // Core Service Pages (New)
+  const coreServicePages: Record<string, React.ComponentType> = {
+    'digital-marketing-services': DigitalMarketingServices,
+    'seo-services': SEOServices,
+    'ppc-advertising': PPCAdvertising,
+  };
+
+  // Check for core service pages first
+  if (pathParts.length === 1 && coreServicePages[pathParts[0]]) {
+    const ServiceComponent = coreServicePages[pathParts[0]];
+    return (
+      <PageWrapper>
+        <Suspense fallback={<LoadingFallback />}>
+          <ServiceComponent />
+        </Suspense>
+      </PageWrapper>
+    );
+  }
 
   // Route: /[service]/ (Service Hub Pages)
   if (pathParts.length === 1) {
