@@ -27,7 +27,18 @@ export interface ComprehensiveServiceData {
   roiInformation?: {
     industrySizeSpecificROI: IndustrySizeROIDetail[];
   };
-  industryHighlights?: ServiceIndustryHighlight[]; // New field for service-specific industry highlights
+  industryHighlights?: ServiceIndustryHighlight[];
+  hireUsFocusedData?: HireUsFocusedData; // New field for "Hire Us" page content
+}
+
+export interface HireUsFocusedData {
+  heroTitleTemplate?: string;
+  heroSubtitleTemplate?: string;
+  whyHireOurAgencyPoints?: string[];
+  ourApproachSummary?: string;
+  partnershipBenefits?: string[];
+  pricingModelStatement?: string;
+  gettingStartedSteps?: string[];
 }
 
 export interface FictionalCaseSnippet {
@@ -279,7 +290,32 @@ export const comprehensiveServices: ComprehensiveServiceData[] = [
       { name: "Instagram Marketing", slug: "instagram-marketing" },
       { name: "LinkedIn Marketing", slug: "linkedin-marketing" },
       { name: "YouTube Marketing", slug: "youtube-marketing" }
-    ]
+    ],
+    hireUsFocusedData: {
+      heroTitleTemplate: "Partner with God Digital Marketing for Expert {serviceName} in {cityName}",
+      heroSubtitleTemplate: "Drive growth and achieve measurable results with God Digital Marketing, the leading {serviceName} agency dedicated to {cityName} businesses.",
+      whyHireOurAgencyPoints: [
+        "**Proven Results in {cityName}**: We have a track record of delivering tangible outcomes for businesses in your local market.",
+        "**Certified & Experienced Team**: Our specialists are certified and bring years of experience to your campaigns.",
+        "**Data-Driven Strategies**: We leverage advanced analytics for transparent, ROI-focused digital marketing.",
+        "**Customized Solutions**: No one-size-fits-all. We tailor every strategy to your unique business needs in {cityName}.",
+        "**Transparent Communication**: Expect regular updates and clear reporting on your campaign performance."
+      ],
+      ourApproachSummary: "Our approach to {serviceName} in {cityName} begins with a deep dive into your business, local audience, and objectives. We then craft a comprehensive, multi-channel strategy, often integrating SEO, content marketing, PPC, and social media, to maximize your online presence and drive qualified leads. We believe in a collaborative partnership, working closely with you to adapt and optimize for continuous improvement and success in the {cityName} market.",
+      partnershipBenefits: [
+        "A dedicated account manager focused on your {cityName} success.",
+        "Access to our full suite of premium marketing tools and software.",
+        "Proactive insights and recommendations to keep you ahead of competitors in {cityName}.",
+        "Flexible engagement models designed to suit your business size and specific goals."
+      ],
+      pricingModelStatement: "We offer transparent, customized pricing for our {serviceName} in {cityName}, tailored to your specific needs and budget. Contact us today for a detailed proposal with no hidden fees.",
+      gettingStartedSteps: [
+        "1. **Free Initial Consultation**: Let's discuss your {cityName} business goals and digital marketing needs.",
+        "2. **Strategy Proposal**: We'll present a tailored {serviceName} plan designed for your success.",
+        "3. **Campaign Launch & Execution**: Our experts implement your strategy with precision.",
+        "4. **Ongoing Optimization & Reporting**: We continuously refine campaigns, providing clear reports on performance in the {cityName} market."
+      ]
+    }
   },
   {
     name: "AI Automation Services",
