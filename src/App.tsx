@@ -6,27 +6,26 @@ import { AdvancedHero } from './components/Advanced/AdvancedHero';
 import { CursorFollower } from './components/Advanced/MicroInteractions';
 import { PerformanceMonitor } from './components/Advanced/PerformanceOptimizer';
 import { Footer } from './components/Layout/Footer';
+import { ServiceLocationTemplate } from './components/Templates/ServiceLocationTemplate';
+import { IndustryLocationTemplate } from './components/Templates/IndustryLocationTemplate';
+import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 
 // Lazy load components
 const QuantumServices = lazy(() => import('./components/4D/QuantumServices').then(module => ({ default: module.QuantumServices })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
-// Delhi pages
+// Existing city pages
 const DelhiDigitalMarketing = lazy(() => import('./components/Pages/DelhiDigitalMarketing').then(module => ({ default: module.DelhiDigitalMarketing })));
 const DelhiAIAutomation = lazy(() => import('./components/Pages/DelhiAIAutomation').then(module => ({ default: module.DelhiAIAutomation })));
 const DelhiBusinessAutomation = lazy(() => import('./components/Pages/DelhiBusinessAutomation').then(module => ({ default: module.DelhiBusinessAutomation })));
 const DelhiSEOServices = lazy(() => import('./components/Pages/DelhiSEOServices').then(module => ({ default: module.DelhiSEOServices })));
 const DelhiPPCManagement = lazy(() => import('./components/Pages/DelhiPPCManagement').then(module => ({ default: module.DelhiPPCManagement })));
 const DelhiSocialMediaMarketing = lazy(() => import('./components/Pages/DelhiSocialMediaMarketing').then(module => ({ default: module.DelhiSocialMediaMarketing })));
-
-// City pages
 const MumbaiDigitalMarketing = lazy(() => import('./components/Pages/MumbaiDigitalMarketing').then(module => ({ default: module.MumbaiDigitalMarketing })));
 const BangaloreDigitalMarketing = lazy(() => import('./components/Pages/BangaloreDigitalMarketing').then(module => ({ default: module.BangaloreDigitalMarketing })));
 const ChennaiDigitalMarketing = lazy(() => import('./components/Pages/ChennaiDigitalMarketing').then(module => ({ default: module.ChennaiDigitalMarketing })));
 const HyderabadDigitalMarketing = lazy(() => import('./components/Pages/HyderabadDigitalMarketing').then(module => ({ default: module.HyderabadDigitalMarketing })));
 const PuneDigitalMarketing = lazy(() => import('./components/Pages/PuneDigitalMarketing').then(module => ({ default: module.PuneDigitalMarketing })));
-
-// Industry pages
 const HealthcareDigitalMarketing = lazy(() => import('./components/Pages/HealthcareDigitalMarketing').then(module => ({ default: module.HealthcareDigitalMarketing })));
 const EcommerceDigitalMarketing = lazy(() => import('./components/Pages/EcommerceDigitalMarketing').then(module => ({ default: module.EcommerceDigitalMarketing })));
 const RealEstateDigitalMarketing = lazy(() => import('./components/Pages/RealEstateDigitalMarketing').then(module => ({ default: module.RealEstateDigitalMarketing })));
@@ -50,30 +49,144 @@ function AppContent() {
     </div>
   );
 
-  // Route mapping
-  const routes: Record<string, React.ComponentType> = {
-    // Delhi pages
+  // Helper function to find service by slug
+  const findService = (slug: string) => {
+    return comprehensiveServices.find(s => s.slug === slug) ||
+           comprehensiveServices.flatMap(s => s.subServices || []).find(s => s.slug === slug);
+  };
+
+  // Helper function to find location
+  const findLocation = (stateSlug: string, citySlug: string) => {
+    const state = allIndianLocations.find(s => s.stateSlug === stateSlug);
+    if (!state) return null;
+    
+    const city = state.cities.find(c => c.slug === citySlug);
+    if (!city) return null;
+
+    return {
+      city: city.name,
+      state: state.state,
+      citySlug: city.slug,
+      stateSlug: state.stateSlug,
+      population: city.population,
+      isMetro: city.isMetro,
+      industries: city.industries,
+      tier: city.tier
+    };
+  };
+
+  // Helper function to find industry
+  const findIndustry = (slug: string) => {
+    return comprehensiveIndustries.find(i => i.slug === slug);
+  };
+
+  // Dynamic route matching
+  const pathParts = pathname.split('/').filter(Boolean);
+
+  // Route: /[service]/[state]/[city]/
+  if (pathParts.length === 3) {
+    const [serviceSlug, stateSlug, citySlug] = pathParts;
+    const service = findService(serviceSlug);
+    const location = findLocation(stateSlug, citySlug);
+
+    if (service && location) {
+      // Generate related services and nearby locations
+      const relatedServices = comprehensiveServices
+        .filter(s => s.slug !== service.slug)
+        .slice(0, 6)
+        .map(s => ({
+          name: s.name,
+          slug: s.slug,
+          url: `/${s.slug}/${stateSlug}/${citySlug}/`
+        }));
+
+      const state = allIndianLocations.find(s => s.stateSlug === stateSlug);
+      const nearbyLocations = state ? state.cities
+        .filter(c => c.slug !== citySlug)
+        .slice(0, 8)
+        .map(c => ({
+          city: c.name,
+          citySlug: c.slug,
+          stateSlug: state.stateSlug,
+          url: `/${serviceSlug}/${state.stateSlug}/${c.slug}/`
+        })) : [];
+
+      return (
+        <PageWrapper>
+          <Suspense fallback={<LoadingFallback />}>
+            <ServiceLocationTemplate 
+              service={service}
+              location={location}
+              relatedServices={relatedServices}
+              nearbyLocations={nearbyLocations}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
+  // Route: /[service]/[industry]/[state]/[city]/
+  if (pathParts.length === 4) {
+    const [serviceSlug, industrySlug, stateSlug, citySlug] = pathParts;
+    const service = findService(serviceSlug);
+    const industry = findIndustry(industrySlug);
+    const location = findLocation(stateSlug, citySlug);
+
+    if (service && industry && location) {
+      return (
+        <PageWrapper>
+          <Suspense fallback={<LoadingFallback />}>
+            <IndustryLocationTemplate 
+              service={service}
+              industry={industry}
+              location={location}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
+  // Route: /[service]/[industry]/
+  if (pathParts.length === 2) {
+    const [serviceSlug, industrySlug] = pathParts;
+    const service = findService(serviceSlug);
+    const industry = findIndustry(industrySlug);
+
+    if (service && industry) {
+      return (
+        <PageWrapper>
+          <Suspense fallback={<LoadingFallback />}>
+            <IndustryLocationTemplate 
+              service={service}
+              industry={industry}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
+  // Existing static routes
+  const staticRoutes: Record<string, React.ComponentType> = {
     '/digital-marketing-delhi': DelhiDigitalMarketing,
     '/ai-automation-delhi': DelhiAIAutomation,
     '/business-automation-delhi': DelhiBusinessAutomation,
     '/seo-services-delhi': DelhiSEOServices,
     '/ppc-management-delhi': DelhiPPCManagement,
     '/social-media-marketing-delhi': DelhiSocialMediaMarketing,
-    
-    // City pages
     '/digital-marketing-mumbai': MumbaiDigitalMarketing,
     '/digital-marketing-bangalore': BangaloreDigitalMarketing,
     '/digital-marketing-chennai': ChennaiDigitalMarketing,
     '/digital-marketing-hyderabad': HyderabadDigitalMarketing,
     '/digital-marketing-pune': PuneDigitalMarketing,
-    
-    // Industry pages
     '/healthcare-digital-marketing': HealthcareDigitalMarketing,
     '/ecommerce-digital-marketing': EcommerceDigitalMarketing,
     '/real-estate-digital-marketing': RealEstateDigitalMarketing,
   };
 
-  const PageComponent = routes[pathname];
+  const PageComponent = staticRoutes[pathname];
 
   if (PageComponent) {
     return (
