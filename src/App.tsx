@@ -17,12 +17,14 @@ import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './compon
 // ProblemSolutionPageTemplate is not used for type-only import
 // ConsultationPageTemplate is not used for type-only import
 // ServicePricingPageTemplate is not used for type-only import
+// LeadMagnetLandingPageTemplate is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
 import { fictionalCompetitors, ourServiceComparisons } from './data/competitors';
 import { allCaseStudies } from './data/caseStudies';
-import { allProblems, allSolutionSets } from './data/problemSolutions'; // New imports
+import { allProblems, allSolutionSets } from './data/problemSolutions';
+import { allLeadMagnets } from './data/leadMagnets'; // New import
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
@@ -32,7 +34,8 @@ const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStud
 const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage })));
 const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate })));
 const ConsultationPageTemplate = lazy(() => import('./components/Templates/ConsultationPageTemplate').then(module => ({ default: module.ConsultationPageTemplate })));
-const ServicePricingPageTemplate = lazy(() => import('./components/Templates/ServicePricingPageTemplate').then(module => ({ default: module.ServicePricingPageTemplate }))); // New lazy load
+const ServicePricingPageTemplate = lazy(() => import('./components/Templates/ServicePricingPageTemplate').then(module => ({ default: module.ServicePricingPageTemplate })));
+const LeadMagnetLandingPageTemplate = lazy(() => import('./components/Templates/LeadMagnetLandingPageTemplate').then(module => ({ default: module.LeadMagnetLandingPageTemplate }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -150,6 +153,10 @@ function AppContent() {
 
   const findSolutionSet = (problemSlug: string) => {
     return allSolutionSets.find(ss => ss.problemSlug === problemSlug);
+  };
+
+  const findLeadMagnet = (id: string) => {
+    return allLeadMagnets.find(lm => lm.id === id);
   };
 
   // Generate breadcrumbs
@@ -309,6 +316,37 @@ function AppContent() {
       );
     }
     // Optional: Fallback to a 404 or case studies list if not found
+  }
+
+  // Route: /resources/templates/digital-marketing-proposal-template/
+  if (pathParts.length === 3 &&
+      pathParts[0] === 'resources' &&
+      pathParts[1] === 'templates' &&
+      pathParts[2] === 'digital-marketing-proposal-template') {
+
+    const leadMagnetId = pathParts[2];
+    const leadMagnet = findLeadMagnet(leadMagnetId);
+
+    if (leadMagnet) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: "Resources", url: "/resources/" }, // Placeholder
+        { name: "Templates", url: "/resources/templates/" }, // Placeholder
+        { name: leadMagnet.title.replace(/{cityName}/g, '').replace(/{industryName}/g, '').trim(), url: pathname, isActive: true } // Basic title cleanup
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <LeadMagnetLandingPageTemplate
+              leadMagnet={leadMagnet}
+              // No location prop for this generic template example
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
   }
 
   // Route: /digital-marketing-consultation/:stateSlug/:citySlug/

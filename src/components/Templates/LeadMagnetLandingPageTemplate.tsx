@@ -70,13 +70,44 @@ const LeadMagnetLandingPageTemplate: React.FC<LeadMagnetLandingPageTemplateProps
   const pageTitle = interpolate(leadMagnet.metaTitle || leadMagnet.title, interpContext);
   const pageDescription = interpolate(leadMagnet.metaDescription, interpContext);
 
+  const siteBaseUrl = "https://goddigitalmarketing.com"; // Or from a config/env
+  let typePathSegment = leadMagnet.type.toLowerCase();
+
+  // Construct path segment based on type to match App.tsx routing logic
+  if (leadMagnet.type === 'Template') { // Specific case for single template route
+    typePathSegment = 'templates';
+  } else if (leadMagnet.type === 'Checklist') {
+    typePathSegment = 'checklists';
+  } else if (leadMagnet.type === 'Guide') {
+    typePathSegment = 'guides';
+  } else if (leadMagnet.type === 'Report') {
+    typePathSegment = 'reports';
+  } else if (leadMagnet.type === 'VideoSeries') {
+    typePathSegment = 'video-series';
+  } else {
+    typePathSegment = typePathSegment + 's'; // Default pluralization
+  }
+
+  // The route for "digital-marketing-proposal-template" is specific.
+  // Other lead magnets might follow a more generic pattern like /resources/:type/:id/ if implemented in App.tsx
+  let calculatedCanonicalUrl = `${siteBaseUrl}/resources/${typePathSegment}/${leadMagnet.id}/`;
+  if (leadMagnet.id === 'digital-marketing-proposal-template' && leadMagnet.type === 'Template') {
+    calculatedCanonicalUrl = `${siteBaseUrl}/resources/templates/digital-marketing-proposal-template/`;
+  }
+  // If location context is provided and relevant for this lead magnet's URL structure:
+  // (Currently, lead magnet URLs in App.tsx are not location-specific, but if they were, you'd add logic here)
+  // Example: if (location?.citySlug && location?.stateSlug && leadMagnet.isLocationSpecific) {
+  //   calculatedCanonicalUrl = `${siteBaseUrl}/resources/${typePathSegment}/${location.stateSlug}/${location.citySlug}/${leadMagnet.id}/`;
+  // }
+
+
   return (
     <>
       <SEOHead
         title={`${pageTitle} | ${AGENCY_NAME}`}
         description={pageDescription}
         keywords={leadMagnet.keywords?.map(k => interpolate(k, interpContext)).join(', ')}
-        // canonicalUrl={... construct from leadMagnet.id and maybe location ...}
+        canonicalUrl={calculatedCanonicalUrl} // Use the calculated variable
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-800 text-gray-200 font-sans">
         {/* Hero Section */}

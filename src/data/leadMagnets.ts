@@ -80,5 +80,46 @@ export const allLeadMagnets: LeadMagnetData[] = [
     metaTitle: "Real Estate Marketing Checklist for {cityName} Agents | Free PDF",
     metaDescription: "Download our free Real Estate Marketing Checklist specifically for {cityName} agents. Boost leads and sales in the {cityName} property market.",
     keywords: ["real estate marketing checklist", "property marketing {cityName}", "real estate leads {cityName}", "{cityName} real estate guide"]
+  },
+  {
+    id: "digital-marketing-proposal-template",
+    type: "Template",
+    title: "Professional Digital Marketing Proposal Template",
+    pageHeadline: "Download Your Free Digital Marketing Proposal Template",
+    pageSubtitle: "Win more clients with our expertly crafted, easy-to-use proposal template. Includes all essential sections to save you time and make you look professional.",
+    // industrySlug: undefined, // Explicitly undefined or omitted
+    benefits: [
+      "Save countless hours on proposal creation.",
+      "Present a professional image to potential clients.",
+      "Ensure all critical proposal sections are covered.",
+      "Easily customize with your branding and client specifics.",
+      "Increase your proposal win rate with a clear, persuasive structure.",
+      "Clearly outline scope, deliverables, timeline, and pricing."
+    ],
+    targetAudience: [
+      "Freelance digital marketers and consultants.",
+      "Small to medium-sized marketing agencies.",
+      "Marketing professionals new to proposal writing.",
+      "Anyone looking to standardize and elevate their client proposals."
+    ],
+    heroImageMockupUrl: "/placeholders/proposal-template-mockup.png",
+    previewImageUrl: "/placeholders/proposal-template-preview.png",
+    formCTA_text: "Download Free Proposal Template",
+    downloadFileUrl: "/downloads/digital-marketing-proposal-template.docx",
+    metaTitle: "Free Digital Marketing Proposal Template (Word/Doc) | Download Now",
+    metaDescription: "Get our free, professional Digital Marketing Proposal Template to create winning proposals faster. Easy to customize, includes all essential sections. Download now!",
+    keywords: ["digital marketing proposal template", "free proposal template", "marketing proposal doc", "agency proposal template"],
+    fictionalTestimonials: [
+      {
+        text: "This proposal template is a game-changer! It's so comprehensive and saved me days of work. My clients are impressed.",
+        authorName: "Sarah L. (Fictional)",
+        authorRoleOrCompany: "Freelance Marketing Consultant"
+      },
+      {
+        text: "Finally, a proposal template that covers everything and looks great. Highly recommend!",
+        authorName: "John B. (Fictional)",
+        authorRoleOrCompany: "Owner, Apex Digital Agency (Fictional)"
+      }
+    ]
   }
 ];
