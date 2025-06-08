@@ -10,12 +10,12 @@ const navigationItems = [
     href: '#services', 
     quantum: true,
     dropdown: [
-      { label: 'SEO Services', href: '/seo-services' },
-      { label: 'PPC Management', href: '/ppc-management' },
-      { label: 'Social Media Marketing', href: '/social-media-marketing' },
-      { label: 'Lead Generation', href: '/lead-generation' },
-      { label: 'AI Automation', href: '/ai-automation' },
-      { label: 'Content Marketing', href: '/content-marketing' }
+      { label: 'Digital Marketing Delhi', href: '/digital-marketing-delhi' },
+      { label: 'AI Automation Delhi', href: '/ai-automation-delhi' },
+      { label: 'Business Automation Delhi', href: '/business-automation-delhi' },
+      { label: 'SEO Services Delhi', href: '/seo-services-delhi' },
+      { label: 'PPC Management Delhi', href: '/ppc-management-delhi' },
+      { label: 'Social Media Marketing Delhi', href: '/social-media-marketing-delhi' }
     ]
   },
   { 
@@ -23,11 +23,11 @@ const navigationItems = [
     href: '#locations', 
     temporal: true,
     dropdown: [
-      { label: 'Delhi NCR', href: '/digital-marketing-delhi' },
-      { label: 'Mumbai', href: '/digital-marketing-mumbai' },
-      { label: 'Bangalore', href: '/digital-marketing-bangalore' },
-      { label: 'Chennai', href: '/digital-marketing-chennai' },
-      { label: 'Hyderabad', href: '/digital-marketing-hyderabad' },
+      { label: 'Delhi Digital Marketing', href: '/digital-marketing-delhi' },
+      { label: 'Mumbai Digital Marketing', href: '/digital-marketing-mumbai' },
+      { label: 'Bangalore Digital Marketing', href: '/digital-marketing-bangalore' },
+      { label: 'Chennai Digital Marketing', href: '/digital-marketing-chennai' },
+      { label: 'Hyderabad Digital Marketing', href: '/digital-marketing-hyderabad' },
       { label: 'All Cities', href: '/locations' }
     ]
   },
@@ -36,11 +36,11 @@ const navigationItems = [
     href: '#industries', 
     dimensional: true,
     dropdown: [
-      { label: 'E-commerce', href: '/ecommerce-digital-marketing' },
-      { label: 'Healthcare', href: '/healthcare-digital-marketing' },
-      { label: 'Real Estate', href: '/real-estate-digital-marketing' },
-      { label: 'Education', href: '/education-digital-marketing' },
-      { label: 'Technology', href: '/technology-digital-marketing' },
+      { label: 'E-commerce Digital Marketing', href: '/ecommerce-digital-marketing' },
+      { label: 'Healthcare Digital Marketing', href: '/healthcare-digital-marketing' },
+      { label: 'Real Estate Digital Marketing', href: '/real-estate-digital-marketing' },
+      { label: 'Education Digital Marketing', href: '/education-digital-marketing' },
+      { label: 'Technology Digital Marketing', href: '/technology-digital-marketing' },
       { label: 'All Industries', href: '/industries' }
     ]
   },

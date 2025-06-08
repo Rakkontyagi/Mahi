@@ -1,9 +1,11 @@
 import React, { Suspense, lazy } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { LoadingProvider } from './components/Loading/LoadingProvider';
 import { TemporalNavigation } from './components/Navigation/TemporalNavigation';
 import { AdvancedHero } from './components/Advanced/AdvancedHero';
 import { CursorFollower } from './components/Advanced/MicroInteractions';
 import { PerformanceMonitor } from './components/Advanced/PerformanceOptimizer';
+import { Footer } from './components/Layout/Footer';
 
 // Lazy load heavy components
 const QuantumServices = lazy(() => import('./components/4D/QuantumServices').then(module => ({ default: module.QuantumServices })));
@@ -34,15 +36,19 @@ function AppContent() {
           <IndiaKeywordOptimization />
         </Suspense>
       </main>
+
+      <Footer />
     </div>
   );
 }
 
 function App() {
   return (
-    <LoadingProvider>
-      <AppContent />
-    </LoadingProvider>
+    <HelmetProvider>
+      <LoadingProvider>
+        <AppContent />
+      </LoadingProvider>
+    </HelmetProvider>
   );
 }
 
