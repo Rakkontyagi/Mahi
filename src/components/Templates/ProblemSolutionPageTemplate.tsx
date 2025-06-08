@@ -1,9 +1,9 @@
 import React from 'react';
 import { ProblemData, SolutionSet, SolutionDetail } from '../../data/problemSolutions';
 import { comprehensiveServices } from '../../data/comprehensiveLocations';
-import SEOHead from '../SEO/SEOHead';
-import AnimatedSection from '../Shared/AnimatedSection';
-import BaseCard from '../Shared/BaseCard';
+import { SEOHead } from '../SEO/SEOHead';
+import { AnimatedSection } from '../Shared/AnimatedSection';
+import { BaseCard } from '../Shared/BaseCard';
 import { Lightbulb, AlertTriangle, CheckSquare, MapPin, ChevronRight, Zap, Settings, Users } from 'lucide-react'; // Example icons
 
 // Simplified Location Info Props for this template
@@ -45,7 +45,7 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
     `${problem.problemSlug} ${location.citySlug}`,
     `${problem.problemTitle} solutions ${location.citySlug}`,
     `fix ${problem.problemSlug} ${location.citySlug}`,
-  ].join(', ');
+  ];
 
   // Simple icon picker for symptoms, can be expanded
   const symptomIcons = [AlertTriangle, Lightbulb, Zap, Users, Settings];
@@ -56,11 +56,11 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
         title={`${pageTitle} | ${YourCompanyName}`}
         description={metaDescription}
         keywords={metaKeywords}
-        // canonicalUrl={`/problems/${problem.problemSlug}/${location.stateSlug}/${location.citySlug}/`} // Example
+        canonicalUrl={`/problems/${problem.problemSlug}/${location.stateSlug}/${location.citySlug}/`}
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-gray-200 font-sans">
         {/* Hero Section */}
-        <AnimatedSection animationType="fadeInDown" duration={1000}>
+        <AnimatedSection direction="down" duration={1000}>
           <section className="py-16 sm:py-20 md:py-28 text-center bg-black/30 backdrop-blur-md">
             <div className="container mx-auto px-4 sm:px-6">
               <p className="text-sm sm:text-md text-indigo-300 uppercase tracking-wider mb-2 sm:mb-3">
@@ -78,19 +78,19 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
 
         <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
           {/* Section: Understanding [Problem Title] */}
-          <AnimatedSection animationType="fadeInUp" duration={1000} delay={100}>
+          <AnimatedSection direction="up" duration={1000} delay={100}>
             <section className="mb-12 md:mb-16">
               <h2 className="text-2xl sm:text-3xl font-semibold mb-6 md:mb-8 text-center text-indigo-300 break-words">
                 Understanding {problem.problemTitle}
               </h2>
-              <BaseCard variant="glass" className="p-4 sm:p-6">
+              <BaseCard variant="glass" className="p-4 sm:p-6" title={problem.problemTitle} description={problem.problemDescription}>
                 <p className="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed break-words">{problem.problemDescription}</p>
                 <h3 className="text-lg sm:text-xl font-semibold mb-4 text-gray-100">Common Symptoms Include:</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {problem.symptoms.map((symptom, index) => {
                     const Icon = symptomIcons[index % symptomIcons.length];
                     return (
-                      <BaseCard key={index} variant="default" className="p-3 sm:p-4 bg-slate-800/50 flex items-start">
+                      <BaseCard key={index} variant="default" className="p-3 sm:p-4 bg-slate-800/50 flex items-start" title={symptom} description={symptom}>
                         <Icon className="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" />
                         <p className="text-gray-300 text-xs sm:text-sm break-words">{symptom}</p>
                       </BaseCard>
@@ -102,7 +102,7 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
           </AnimatedSection>
 
           {/* Section: Our Approach to Solving [Problem Title] */}
-          <AnimatedSection animationType="fadeInUp" duration={1000} delay={200}>
+          <AnimatedSection direction="up" duration={1000} delay={200}>
             <section className="mb-12 md:mb-16 text-center">
               <h2 className="text-2xl sm:text-3xl font-semibold mb-6 md:mb-8 text-purple-300 break-words">
                 Our Approach to Tackling {problem.problemTitle}
@@ -114,7 +114,7 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
           </AnimatedSection>
 
           {/* Section: Effective Solutions We Offer */}
-          <AnimatedSection animationType="fadeInUp" duration={1000} delay={300}>
+          <AnimatedSection direction="up" duration={1000} delay={300}>
             <section className="mb-12 md:mb-16">
               <h2 className="text-2xl sm:text-3xl font-semibold mb-8 md:mb-12 text-center text-teal-300 break-words">
                 Effective Solutions We Offer
@@ -122,7 +122,7 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
               {solutionSet.solutions && solutionSet.solutions.length > 0 ? (
                 <div className="space-y-8">
                   {solutionSet.solutions.map((solution, index) => (
-                    <BaseCard key={index} variant="glass" className="p-4 sm:p-6 md:p-8 hover:shadow-teal-500/20 transition-shadow">
+                    <BaseCard key={index} variant="glass" className="p-4 sm:p-6 md:p-8 hover:shadow-teal-500/20 transition-shadow" title={getServiceName(solution.serviceSlug)} description={solution.relevanceToProblem}>
                         <h4 className="text-xl sm:text-2xl font-semibold text-teal-400 mb-3 flex items-center">
                           <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2.5 flex-shrink-0" />
                           <a href={`/${solution.serviceSlug}/`} className="text-teal-400 hover:text-teal-200 hover:underline transition-colors">
@@ -157,7 +157,7 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
           </AnimatedSection>
 
           {/* Section: Why Choose Us in [City]? */}
-          <AnimatedSection animationType="fadeInUp" duration={1000} delay={400}>
+          <AnimatedSection direction="up" duration={1000} delay={400}>
             <section className="mb-12 md:mb-16 py-8 md:py-12 bg-slate-800/40 rounded-xl">
               <div className="container mx-auto px-4 sm:px-6 text-center">
                 <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-purple-300 break-words flex items-center justify-center">
@@ -174,7 +174,7 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
           </AnimatedSection>
 
           {/* Call to Action Section */}
-          <AnimatedSection animationType="fadeIn" duration={1000} delay={500}>
+          <AnimatedSection direction="fade" duration={1000} delay={500}>
             <section className="py-12 md:py-16 text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-white break-words">
                 Ready to Solve Your {problem.problemTitle.toLowerCase()}?

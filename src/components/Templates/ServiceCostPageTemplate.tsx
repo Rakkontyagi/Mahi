@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../SEO/SEOHead';
+import { SEOHead } from '../SEO/SEOHead';
 import { ComprehensiveServiceData } from '../../data/comprehensiveLocations'; // Updated import
 
 // Basic Prop Interfaces

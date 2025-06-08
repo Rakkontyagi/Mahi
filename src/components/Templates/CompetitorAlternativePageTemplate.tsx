@@ -1,7 +1,7 @@
 import React from 'react';
-import SEOHead from '../SEO/SEOHead';
-import AnimatedSection from '../Shared/AnimatedSection';
-import BaseCard from '../Shared/BaseCard';
+import { SEOHead } from '../SEO/SEOHead';
+import { AnimatedSection } from '../Shared/AnimatedSection';
+import { BaseCard } from '../Shared/BaseCard';
 import { CheckCircle, Lightbulb, ShieldCheck, Sparkles, Target as TargetIcon, Zap } from 'lucide-react'; // Example icons
 
 // Prop Interfaces
@@ -60,11 +60,12 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
       <SEOHead
         title={pageTitle}
         description={metaDescription}
-        keywords={metaKeywords}
+        keywords={metaKeywords.split(', ')}
+        canonicalUrl={`https://goddigitalmarketing.com/alternatives/${competitor.slug}/${ourServiceInfo.slug}/${location.stateSlug}/${location.citySlug}`}
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-black to-blue-900 text-gray-200 font-sans">
         {/* Hero Section */}
-        <AnimatedSection animationType="fadeInDown" duration={1000}>
+        <AnimatedSection direction="down" duration={1000}>
           <section className="py-16 sm:py-20 md:py-28 text-center bg-black/40 backdrop-blur-lg">
             <div className="container mx-auto px-4 sm:px-6">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-teal-300 via-cyan-300 to-sky-400 break-words">
@@ -79,12 +80,12 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
 
         {/* Section: Understanding [Competitor Name] */}
         {competitor.fictionalUnderview && (
-          <AnimatedSection animationType="fadeInUp" duration={1000} delay={100}>
+          <AnimatedSection direction="up" duration={1000} delay={100}>
             <section className="py-12 md:py-16 container mx-auto px-4 sm:px-6">
               <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 md:mb-12 text-sky-300 break-words">
                 About {competitor.name}
               </h2>
-              <BaseCard variant="glass" className="max-w-3xl mx-auto p-4 sm:p-6">
+              <BaseCard variant="glass" className="max-w-3xl mx-auto p-4 sm:p-6" title={competitor.name} description={competitor.fictionalUnderview}>
                 <p className="text-gray-300 mb-4 text-sm sm:text-base">{competitor.fictionalUnderview}</p>
                 {competitor.fictionalStrengths && competitor.fictionalStrengths.length > 0 && (
                   <>
@@ -100,7 +101,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
         )}
 
         {/* Section: Why Explore Alternatives? */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={150}>
+        <AnimatedSection direction="up" duration={1000} delay={150}>
             <section className="py-12 md:py-16 bg-slate-800/30">
                 <div className="container mx-auto px-4 sm:px-6">
                     <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 md:mb-12 text-cyan-300 break-words">
@@ -112,7 +113,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
                             { title: "Specialized Expertise", text: `Seeking cutting-edge solutions in ${ourServiceInfo.name} that require dedicated focus.`, icon: <Sparkles className="w-5 h-5 mr-2 text-cyan-400" /> },
                             { title: "Greater ROI Focus", text: "Looking for a partnership geared towards maximizing your return on investment through tailored strategies.", icon: <TargetIcon className="w-5 h-5 mr-2 text-cyan-400" /> },
                         ].map(item => (
-                             <BaseCard key={item.title} variant="glass" className="p-4 hover:shadow-cyan-500/20">
+                             <BaseCard key={item.title} variant="glass" className="p-4 hover:shadow-cyan-500/20" title={item.title} description={item.text}>
                                 <div className="flex items-center mb-2">
                                    {item.icon} <h3 className="font-semibold text-gray-100">{item.title}</h3>
                                 </div>
@@ -125,7 +126,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
         </AnimatedSection>
 
         {/* Section: Introducing Our [Service Name] */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={200}>
+        <AnimatedSection direction="up" duration={1000} delay={200}>
           <section className="py-12 md:py-16 container mx-auto px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-6 md:mb-8 text-teal-300 break-words">
               Our Solution: {ourServiceInfo.name}
@@ -137,7 +138,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
         </AnimatedSection>
 
         {/* Section: Key Advantages Over [Competitor Name] */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={250}>
+        <AnimatedSection direction="up" duration={1000} delay={250}>
           <section className="py-12 md:py-16 bg-black/20">
             <div className="container mx-auto px-4 sm:px-6">
               <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 md:mb-12 text-green-300 break-words">
@@ -146,7 +147,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
               {ourServiceInfo.advantages && ourServiceInfo.advantages.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   {ourServiceInfo.advantages.map((advantage, index) => (
-                    <BaseCard key={`adv-${index}`} variant="glass" className="p-4 sm:p-6 hover:shadow-green-500/20">
+                    <BaseCard key={`adv-${index}`} variant="glass" className="p-4 sm:p-6 hover:shadow-green-500/20" title={advantage} description={advantage}>
                       <div className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
                         <p className="text-gray-300 text-sm sm:text-base break-words">{advantage}</p>
@@ -162,7 +163,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
         </AnimatedSection>
 
         {/* Section: Our Differentiators */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={300}>
+        <AnimatedSection direction="up" duration={1000} delay={300}>
           <section className="py-12 md:py-16">
             <div className="container mx-auto px-4 sm:px-6">
               <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 md:mb-12 text-sky-300 break-words">
@@ -171,7 +172,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
               {ourServiceInfo.differentiators && ourServiceInfo.differentiators.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   {ourServiceInfo.differentiators.map((differentiator, index) => (
-                    <BaseCard key={`diff-${index}`} variant="glass" className="p-4 sm:p-6 hover:shadow-sky-500/20">
+                    <BaseCard key={`diff-${index}`} variant="glass" className="p-4 sm:p-6 hover:shadow-sky-500/20" title={differentiator} description={differentiator}>
                        <div className="flex items-start">
                         <Zap className="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" />
                         <p className="text-gray-300 text-sm sm:text-base break-words">{differentiator}</p>
@@ -187,7 +188,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
         </AnimatedSection>
 
         {/* Section: Your Best Choice in [City] */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={350}>
+        <AnimatedSection direction="up" duration={1000} delay={350}>
           <section className="py-12 md:py-16 bg-slate-800/30">
             <div className="container mx-auto px-4 sm:px-6 text-center">
               <h2 className="text-2xl sm:text-3xl font-semibold mb-6 md:mb-8 text-teal-300 break-words">
@@ -201,7 +202,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
         </AnimatedSection>
 
         {/* Call to Action Section */}
-        <AnimatedSection animationType="pulse" duration={1500} delay={500}>
+        <AnimatedSection direction="fade" duration={1500} delay={500}>
           <section className="py-16 sm:py-20 md:py-28 text-center bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-700 mt-12 md:mt-16">
             <div className="container mx-auto px-4 sm:px-6">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-white break-words">

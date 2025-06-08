@@ -138,9 +138,9 @@ export const EnhancedNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-gray-800"
+            className="lg:hidden fixed top-0 left-0 w-full h-full z-[9999] bg-black/95 backdrop-blur-xl border-b border-gray-800 overflow-y-auto"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: '100%' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >

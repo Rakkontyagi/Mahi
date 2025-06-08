@@ -13,9 +13,9 @@ interface SimplifiedServiceData {
   [key: string]: any;
 }
 
-import SEOHead from '../SEO/SEOHead';
-import AnimatedSection from '../Shared/AnimatedSection';
-import { CaseStudyCard } from '../Shared/CaseStudyCard'; // Import the new card component
+import { SEOHead } from '../SEO/SEOHead';
+import { AnimatedSection } from '../Shared/AnimatedSection';
+import CaseStudyCard from '../Shared/CaseStudyCard';
 import { Filter, ListChecks } from 'lucide-react'; // Icons for filter section
 
 interface CaseStudiesHubPageProps {
@@ -61,12 +61,12 @@ const CaseStudiesHubPage: React.FC<CaseStudiesHubPageProps> = ({
       <SEOHead
         title={`Client Case Studies | Success Stories | ${YourCompanyName}`}
         description="Explore our client case studies to see how we've helped businesses across various industries achieve their goals with our innovative solutions."
-        keywords="case studies, success stories, client results, digital marketing case studies, ai automation case studies"
+        keywords={["case studies", "success stories", "client results", "digital marketing case studies", "ai automation case studies"]}
         canonicalUrl="https://goddigitalmarketing.com/case-studies/" // Placeholder
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-black to-purple-900 text-gray-200 font-sans">
         {/* Hero Section */}
-        <AnimatedSection animationType="fadeInDown" duration={1000}>
+        <AnimatedSection direction="down" duration={1000}>
           <section className="py-16 sm:py-20 md:py-28 text-center bg-black/30 backdrop-blur-md">
             <div className="container mx-auto px-4 sm:px-6">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-orange-300 break-words">
@@ -81,7 +81,7 @@ const CaseStudiesHubPage: React.FC<CaseStudiesHubPageProps> = ({
 
         <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
           {/* Filter Section */}
-          <AnimatedSection animationType="fadeIn" duration={1000} delay={200}>
+          <AnimatedSection direction="fade" duration={1000} delay={200}>
             <section className="mb-10 md:mb-12 p-4 sm:p-6 bg-slate-800/50 rounded-xl shadow-lg">
               <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-6 text-pink-400 flex items-center justify-center">
                 <Filter className="w-6 h-6 sm:w-8 sm:h-8 mr-3" /> Filter Case Studies
@@ -123,7 +123,7 @@ const CaseStudiesHubPage: React.FC<CaseStudiesHubPageProps> = ({
           </AnimatedSection>
 
           {/* Case Study List/Grid Section */}
-          <AnimatedSection animationType="fadeInUp" duration={1000} delay={400}>
+          <AnimatedSection direction="up" duration={1000} delay={400}>
             <section>
               <h3 className="text-xl sm:text-2xl font-semibold text-center mb-6 md:mb-8 text-gray-300 flex items-center justify-center">
                 <ListChecks className="w-6 h-6 sm:w-7 sm:h-7 mr-3 text-purple-400" />
