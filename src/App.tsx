@@ -16,6 +16,12 @@ import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } fr
 const QuantumServices = lazy(() => import('./components/4D/QuantumServices').then(module => ({ default: module.QuantumServices })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
+// Service Hub Pages
+const DigitalMarketingHub = lazy(() => import('./components/Pages/ServiceHubPages/DigitalMarketingHub').then(module => ({ default: module.DigitalMarketingHub })));
+const AIAutomationHub = lazy(() => import('./components/Pages/ServiceHubPages/AIAutomationHub').then(module => ({ default: module.AIAutomationHub })));
+const LeadGenerationHub = lazy(() => import('./components/Pages/ServiceHubPages/LeadGenerationHub').then(module => ({ default: module.LeadGenerationHub })));
+const BusinessAutomationHub = lazy(() => import('./components/Pages/ServiceHubPages/BusinessAutomationHub').then(module => ({ default: module.BusinessAutomationHub })));
+
 // Existing city pages
 const DelhiDigitalMarketing = lazy(() => import('./components/Pages/DelhiDigitalMarketing').then(module => ({ default: module.DelhiDigitalMarketing })));
 const DelhiAIAutomation = lazy(() => import('./components/Pages/DelhiAIAutomation').then(module => ({ default: module.DelhiAIAutomation })));
@@ -111,6 +117,11 @@ function AppContent() {
         { name: industry.name, url: `/digital-marketing/${industry.slug}/` },
         { name: service.name, url: `/${service.slug}/${industry.slug}/`, isActive: true }
       );
+    } else if (service) {
+      breadcrumbs.push(
+        { name: "Services", url: "/services/" },
+        { name: service.name, url: `/${service.slug}/`, isActive: true }
+      );
     }
 
     return breadcrumbs;
@@ -118,6 +129,39 @@ function AppContent() {
 
   // Dynamic route matching
   const pathParts = pathname.split('/').filter(Boolean);
+
+  // Route: /[service]/ (Service Hub Pages)
+  if (pathParts.length === 1) {
+    const [serviceSlug] = pathParts;
+    const service = findService(serviceSlug);
+
+    if (service) {
+      const breadcrumbs = generateBreadcrumbs(service);
+      const sidebarProps = {
+        currentService: service
+      };
+
+      // Service Hub Pages
+      const serviceHubPages: Record<string, React.ComponentType> = {
+        'digital-marketing': DigitalMarketingHub,
+        'ai-automation': AIAutomationHub,
+        'lead-generation': LeadGenerationHub,
+        'business-automation': BusinessAutomationHub,
+      };
+
+      const ServiceHubComponent = serviceHubPages[serviceSlug];
+
+      if (ServiceHubComponent) {
+        return (
+          <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+            <Suspense fallback={<LoadingFallback />}>
+              <ServiceHubComponent />
+            </Suspense>
+          </PageWrapper>
+        );
+      }
+    }
+  }
 
   // Route: /[service]/[state]/[city]/
   if (pathParts.length === 3) {
