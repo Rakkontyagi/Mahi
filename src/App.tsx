@@ -13,17 +13,19 @@ import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './compon
 // ServiceROIPageTemplate is not used for type-only import
 // CompetitorAlternativePageTemplate is not used for type-only import
 // CaseStudyPageTemplate is not used for type-only import
+// CaseStudiesHubPage is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
 import { fictionalCompetitors, ourServiceComparisons } from './data/competitors';
-import { allCaseStudies } from './data/caseStudies'; // New import
+import { allCaseStudies } from './data/caseStudies';
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
 const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate').then(module => ({ default: module.ServiceROIPageTemplate })));
 const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate })));
-const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate }))); // New lazy load
+const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate })));
+const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -215,6 +217,28 @@ function AppContent() {
         );
       }
     }
+  }
+
+  // Route: /case-studies/ (Hub Page)
+  // Placed BEFORE the individual case study route /case-studies/:slug
+  if (pathname === '/case-studies') {
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Case Studies", url: "/case-studies/", isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <CaseStudiesHubPage
+            allCaseStudies={allCaseStudies}
+            allIndustries={comprehensiveIndustries}
+            allServices={comprehensiveServices}
+          />
+        </Suspense>
+      </PageWrapper>
+    );
   }
 
   // Route: /case-studies/:caseStudySlug/
