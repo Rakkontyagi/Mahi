@@ -18,6 +18,7 @@ import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './compon
 // ConsultationPageTemplate is not used for type-only import
 // ServicePricingPageTemplate is not used for type-only import
 // LeadMagnetLandingPageTemplate is not used for type-only import
+// ROICalculatorPage is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
@@ -35,7 +36,8 @@ const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubP
 const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate })));
 const ConsultationPageTemplate = lazy(() => import('./components/Templates/ConsultationPageTemplate').then(module => ({ default: module.ConsultationPageTemplate })));
 const ServicePricingPageTemplate = lazy(() => import('./components/Templates/ServicePricingPageTemplate').then(module => ({ default: module.ServicePricingPageTemplate })));
-const LeadMagnetLandingPageTemplate = lazy(() => import('./components/Templates/LeadMagnetLandingPageTemplate').then(module => ({ default: module.LeadMagnetLandingPageTemplate }))); // New lazy load
+const LeadMagnetLandingPageTemplate = lazy(() => import('./components/Templates/LeadMagnetLandingPageTemplate').then(module => ({ default: module.LeadMagnetLandingPageTemplate })));
+const ROICalculatorPage = lazy(() => import('./components/Pages/ROICalculatorPage').then(module => ({ default: module.ROICalculatorPage }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -373,6 +375,27 @@ function AppContent() {
         </PageWrapper>
       );
     }
+  }
+
+  // Route: /tools/marketing-automation-roi-calculator/
+  if (pathParts.length === 2 && // Corrected length check, path is /tools/slug
+      pathParts[0] === 'tools' &&
+      pathParts[1] === 'marketing-automation-roi-calculator') {
+
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Tools", url: "/tools/" },
+      { name: "Marketing Automation ROI Calculator", url: pathname, isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <ROICalculatorPage />
+        </Suspense>
+      </PageWrapper>
+    );
   }
 
   // Route: /:serviceSlug/:industrySizeSlug/roi/
