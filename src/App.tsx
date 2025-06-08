@@ -1,11 +1,13 @@
 import React, { Suspense, lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { LoadingProvider } from './components/Loading/LoadingProvider';
-import { TemporalNavigation } from './components/Navigation/TemporalNavigation';
+import { EnhancedNavigation } from './components/Navigation/EnhancedNavigation';
 import { AdvancedHero } from './components/Advanced/AdvancedHero';
 import { CursorFollower } from './components/Advanced/MicroInteractions';
 import { PerformanceMonitor } from './components/Advanced/PerformanceOptimizer';
-import { Footer } from './components/Layout/Footer';
+import { EnhancedFooter } from './components/Layout/EnhancedFooter';
+import { ContextualSidebar } from './components/Layout/ContextualSidebar';
+import { BreadcrumbNavigation } from './components/Layout/BreadcrumbNavigation';
 import { ServiceLocationTemplate } from './components/Templates/ServiceLocationTemplate';
 import { IndustryLocationTemplate } from './components/Templates/IndustryLocationTemplate';
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
@@ -39,13 +41,25 @@ function AppContent() {
     </div>
   );
 
-  const PageWrapper = ({ children }: { children: React.ReactNode }) => (
+  const PageWrapper = ({ children, breadcrumbs, sidebarProps }: { 
+    children: React.ReactNode;
+    breadcrumbs?: Array<{ name: string; url: string; isActive?: boolean }>;
+    sidebarProps?: any;
+  }) => (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <CursorFollower />
       <PerformanceMonitor />
-      <TemporalNavigation />
-      {children}
-      <Footer />
+      <EnhancedNavigation />
+      {breadcrumbs && breadcrumbs.length > 0 && (
+        <div className="pt-20">
+          <BreadcrumbNavigation items={breadcrumbs} />
+        </div>
+      )}
+      <div className={breadcrumbs ? '' : 'pt-20'}>
+        {children}
+      </div>
+      {sidebarProps && <ContextualSidebar {...sidebarProps} />}
+      <EnhancedFooter />
     </div>
   );
 
@@ -80,6 +94,28 @@ function AppContent() {
     return comprehensiveIndustries.find(i => i.slug === slug);
   };
 
+  // Generate breadcrumbs
+  const generateBreadcrumbs = (service?: any, location?: any, industry?: any) => {
+    const breadcrumbs = [];
+
+    if (service && location) {
+      breadcrumbs.push(
+        { name: "Services", url: "/services/" },
+        { name: service.name, url: `/${service.slug}/` },
+        { name: location.state, url: `/locations/${location.stateSlug}/` },
+        { name: location.city, url: `/${service.slug}/${location.stateSlug}/${location.citySlug}/`, isActive: true }
+      );
+    } else if (industry && service) {
+      breadcrumbs.push(
+        { name: "Industries", url: "/industries/" },
+        { name: industry.name, url: `/digital-marketing/${industry.slug}/` },
+        { name: service.name, url: `/${service.slug}/${industry.slug}/`, isActive: true }
+      );
+    }
+
+    return breadcrumbs;
+  };
+
   // Dynamic route matching
   const pathParts = pathname.split('/').filter(Boolean);
 
@@ -111,8 +147,14 @@ function AppContent() {
           url: `/${serviceSlug}/${state.stateSlug}/${c.slug}/`
         })) : [];
 
+      const breadcrumbs = generateBreadcrumbs(service, location);
+      const sidebarProps = {
+        currentService: service,
+        currentLocation: location
+      };
+
       return (
-        <PageWrapper>
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
           <Suspense fallback={<LoadingFallback />}>
             <ServiceLocationTemplate 
               service={service}
@@ -134,8 +176,15 @@ function AppContent() {
     const location = findLocation(stateSlug, citySlug);
 
     if (service && industry && location) {
+      const breadcrumbs = generateBreadcrumbs(service, location, industry);
+      const sidebarProps = {
+        currentService: service,
+        currentLocation: location,
+        currentIndustry: industry
+      };
+
       return (
-        <PageWrapper>
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
           <Suspense fallback={<LoadingFallback />}>
             <IndustryLocationTemplate 
               service={service}
@@ -155,8 +204,14 @@ function AppContent() {
     const industry = findIndustry(industrySlug);
 
     if (service && industry) {
+      const breadcrumbs = generateBreadcrumbs(service, null, industry);
+      const sidebarProps = {
+        currentService: service,
+        currentIndustry: industry
+      };
+
       return (
-        <PageWrapper>
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
           <Suspense fallback={<LoadingFallback />}>
             <IndustryLocationTemplate 
               service={service}
