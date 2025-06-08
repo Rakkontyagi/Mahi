@@ -12,15 +12,18 @@ import { IndustryLocationTemplate } from './components/Templates/IndustryLocatio
 import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './components/Templates/ServiceCostPageTemplate'; // For type only
 // ServiceROIPageTemplate is not used for type-only import
 // CompetitorAlternativePageTemplate is not used for type-only import
+// CaseStudyPageTemplate is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
-import { fictionalCompetitors, ourServiceComparisons } from './data/competitors'; // New imports
+import { fictionalCompetitors, ourServiceComparisons } from './data/competitors';
+import { allCaseStudies } from './data/caseStudies'; // New import
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
 const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate').then(module => ({ default: module.ServiceROIPageTemplate })));
-const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate }))); // New lazy load
+const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate })));
+const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -128,6 +131,10 @@ function AppContent() {
     return ourServiceComparisons.find(sc => sc.ourServiceSlug === ourServiceSlug && sc.competitorSlug === competitorSlug);
   };
 
+  const findCaseStudy = (slug: string) => {
+    return allCaseStudies.find(cs => cs.id === slug);
+  };
+
   // Generate breadcrumbs
   const generateBreadcrumbs = (service?: any, location?: any, industry?: any) => {
     const breadcrumbs = [];
@@ -208,6 +215,30 @@ function AppContent() {
         );
       }
     }
+  }
+
+  // Route: /case-studies/:caseStudySlug/
+  if (pathParts.length === 2 && pathParts[0] === 'case-studies') {
+    const caseStudySlug = pathParts[1];
+    const caseStudy = findCaseStudy(caseStudySlug);
+
+    if (caseStudy) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: "Case Studies", url: "/case-studies/" }, // Link to a potential case studies hub
+        { name: caseStudy.title, url: `/case-studies/${caseStudy.id}/`, isActive: true }
+      ];
+      const sidebarProps = null; // Or specific sidebar if designed for case studies
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <CaseStudyPageTemplate caseStudy={caseStudy} />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+    // Optional: Fallback to a 404 or case studies list if not found
   }
 
   // Route: /:serviceSlug/:industrySizeSlug/roi/
