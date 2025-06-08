@@ -28,7 +28,26 @@ export interface ComprehensiveServiceData {
     industrySizeSpecificROI: IndustrySizeROIDetail[];
   };
   industryHighlights?: ServiceIndustryHighlight[];
-  hireUsFocusedData?: HireUsFocusedData; // New field for "Hire Us" page content
+  hireUsFocusedData?: HireUsFocusedData;
+  pricingPageDetails?: PricingPageDetails; // New field for Pricing Page content
+}
+
+export interface PricingTier {
+  tierName: string;
+  price: string; // e.g., "$X/month" or "Starting at $Y"
+  features: string[];
+  suitableFor?: string;
+  tierCTA_text?: string; // e.g., "Get Started" or "Contact Sales"
+  tierCTA_link?: string; // e.g., /contact-us?tier=starter
+  highlight?: boolean; // To emphasize a particular tier
+}
+
+export interface PricingPageDetails {
+  introduction?: string; // Templated: {serviceName}, {cityName}
+  pricingTiers?: PricingTier[];
+  generalPricingFactors?: string[]; // Templated: {serviceName}, {cityName}
+  customQuoteStatement?: string; // Templated: {serviceName}, {cityName}
+  faq?: Array<{ question: string; answer: string; }>; // Templated: {serviceName}, {cityName}
 }
 
 export interface HireUsFocusedData {
@@ -542,8 +561,83 @@ export const comprehensiveServices: ComprehensiveServiceData[] = [
         }
       ]
     }
+  },
+  pricingPageDetails: {
+    introduction: "Our Marketing Automation solutions for {cityName} businesses are designed to fit your specific needs and budget, helping you streamline workflows, nurture leads, and drive growth. Explore our transparent pricing options below or contact us for a custom quote.",
+    pricingTiers: [
+      {
+        tierName: "MA Starter Suite",
+        price: "Starting at $299/month (billed annually) for {cityName} clients",
+        features: [
+          "Basic Email Marketing Automation (up to 2,000 contacts)",
+          "Lead Capture Forms & Landing Pages (up to 5)",
+          "Simple Lead Scoring",
+          "Standard Reporting Dashboard",
+          "CRM Integration (Basic)"
+        ],
+        suitableFor: "Small businesses in {cityName} looking to automate core marketing tasks and nurture leads effectively.",
+        tierCTA_text: "Choose Starter",
+        tierCTA_link: "/contact-us?service=marketing-automation&tier=starter&city={cityNameEncoded}"
+      },
+      {
+        tierName: "MA Growth Engine",
+        price: "Starting at $799/month (billed annually) for {cityName} clients",
+        features: [
+          "Advanced Email Marketing & Nurturing Workflows (up to 10,000 contacts)",
+          "Dynamic Content Personalization",
+          "Advanced Lead Scoring & Segmentation",
+          "Customizable Reporting & Analytics",
+          "CRM Integration (Advanced, Bi-directional)",
+          "A/B Testing for Emails & Landing Pages",
+          "Social Media Automation (Basic)"
+        ],
+        suitableFor: "Medium-sized businesses in {cityName} aiming to scale their marketing efforts and improve conversion rates.",
+        tierCTA_text: "Choose Growth",
+        tierCTA_link: "/contact-us?service=marketing-automation&tier=growth&city={cityNameEncoded}",
+        highlight: true
+      },
+      {
+        tierName: "MA Enterprise OS",
+        price: "Custom Quote for {cityName} Enterprises",
+        features: [
+          "Full Multi-Channel Automation (Email, SMS, Social, Web)",
+          "Predictive Lead Scoring & AI Insights",
+          "Account-Based Marketing (ABM) Features",
+          "Dedicated Account Manager & Priority Support",
+          "Full API Access & Custom Integrations",
+          "Advanced Attribution Modeling",
+          "Compliance & Governance Tools"
+        ],
+        suitableFor: "Large businesses and enterprises in {cityName} requiring a comprehensive, scalable, and highly customized marketing automation platform.",
+        tierCTA_text: "Request Custom Quote",
+        tierCTA_link: "/contact-us?service=marketing-automation&tier=enterprise&city={cityNameEncoded}"
+      }
+    ],
+    generalPricingFactors: [
+      "Number of contacts and email send volume.",
+      "Complexity of automation workflows and campaign logic.",
+      "Level of customization and integration required with existing systems.",
+      "Number of users needing access to the platform.",
+      "Specific advanced features utilized (e.g., predictive AI, ABM).",
+      "Data migration and onboarding support for your {cityName} team."
+    ],
+    customQuoteStatement: "For businesses in {cityName} with unique requirements or higher volumes, we offer custom Marketing Automation packages. Contact us for a personalized quote that aligns perfectly with your strategic objectives.",
+    faq: [
+      {
+        question: "How does Marketing Automation pricing typically work for {cityName} businesses?",
+        answer: "Pricing is usually based on the number of contacts in your database, the volume of emails sent, and the feature set you require. We offer tiered packages and custom solutions to fit various {cityName} business needs and budgets."
+      },
+      {
+        question: "Can I upgrade my Marketing Automation plan as my {cityName} business grows?",
+        answer: "Absolutely! Our Marketing Automation plans are designed to be scalable. You can easily upgrade to a higher tier or add specific features as your {cityName} business expands and your needs evolve."
+      },
+      {
+        question: "What kind of support is included with the Marketing Automation services in {cityName}?",
+        answer: "All our plans include standard support. Higher-tier plans for {cityName} clients often come with a dedicated account manager, priority support, and personalized onboarding to ensure you maximize the platform's potential."
+      }
+    ]
   }
-];
+}];
 
 export const comprehensiveIndustries: ComprehensiveIndustryData[] = [
   {

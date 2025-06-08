@@ -16,6 +16,7 @@ import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './compon
 // CaseStudiesHubPage is not used for type-only import
 // ProblemSolutionPageTemplate is not used for type-only import
 // ConsultationPageTemplate is not used for type-only import
+// ServicePricingPageTemplate is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
@@ -30,7 +31,8 @@ const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templa
 const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate })));
 const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage })));
 const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate })));
-const ConsultationPageTemplate = lazy(() => import('./components/Templates/ConsultationPageTemplate').then(module => ({ default: module.ConsultationPageTemplate }))); // New lazy load
+const ConsultationPageTemplate = lazy(() => import('./components/Templates/ConsultationPageTemplate').then(module => ({ default: module.ConsultationPageTemplate })));
+const ServicePricingPageTemplate = lazy(() => import('./components/Templates/ServicePricingPageTemplate').then(module => ({ default: module.ServicePricingPageTemplate }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -229,6 +231,37 @@ function AppContent() {
           </PageWrapper>
         );
       }
+    }
+  }
+
+  // Route: /:serviceSlug/:stateSlug/:citySlug/pricing/
+  if (pathParts.length === 4 && pathParts[3] === 'pricing') {
+    const [serviceSlug, stateSlug, citySlug] = pathParts;
+
+    const service = findService(serviceSlug);
+    const location = findLocation(stateSlug, citySlug);
+
+    if (service && location) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: service.name, url: `/${service.slug}/` },
+        { name: `${location.city} Pricing`, url: pathname, isActive: true }
+      ];
+      const sidebarProps = {
+          currentService: service,
+          currentLocation: location
+      };
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <ServicePricingPageTemplate
+              service={service}
+              location={location}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
     }
   }
 
