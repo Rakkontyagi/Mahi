@@ -14,18 +14,21 @@ import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './compon
 // CompetitorAlternativePageTemplate is not used for type-only import
 // CaseStudyPageTemplate is not used for type-only import
 // CaseStudiesHubPage is not used for type-only import
+// ProblemSolutionPageTemplate is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
 import { fictionalCompetitors, ourServiceComparisons } from './data/competitors';
 import { allCaseStudies } from './data/caseStudies';
+import { allProblems, allSolutionSets } from './data/problemSolutions'; // New imports
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
 const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate').then(module => ({ default: module.ServiceROIPageTemplate })));
 const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate })));
 const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate })));
-const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage }))); // New lazy load
+const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage })));
+const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -135,6 +138,14 @@ function AppContent() {
 
   const findCaseStudy = (slug: string) => {
     return allCaseStudies.find(cs => cs.id === slug);
+  };
+
+  const findProblem = (slug: string) => {
+    return allProblems.find(p => p.problemSlug === slug);
+  };
+
+  const findSolutionSet = (problemSlug: string) => {
+    return allSolutionSets.find(ss => ss.problemSlug === problemSlug);
   };
 
   // Generate breadcrumbs
@@ -368,6 +379,41 @@ function AppContent() {
               competitor={competitor}
               location={location}
               ourServiceInfo={ourServiceInfo}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+  }
+
+  // Route: /solutions/:problemSlug/:stateSlug/:citySlug/
+  if (pathParts.length === 4 && pathParts[0] === 'solutions') {
+    const [, problemSlug, stateSlug, citySlug] = pathParts;
+
+    const problem = findProblem(problemSlug);
+    const solutionSet = findSolutionSet(problemSlug);
+    const location = findLocation(stateSlug, citySlug);
+
+    if (problem && solutionSet && location) {
+      const dynamicPageTitle = solutionSet.solutionSetTitleTemplate
+        .replace('{problemTitle}', problem.problemTitle)
+        .replace('{cityName}', location.city);
+
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        // { name: "Solutions", url: "/solutions/" }, // Optional hub page
+        { name: problem.problemTitle, url: `/solutions/${problem.problemSlug}/` }, // Placeholder for problem-specific hub
+        { name: `In ${location.city}`, url: pathname, isActive: true }
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <ProblemSolutionPageTemplate
+              problem={problem}
+              solutionSet={solutionSet}
+              location={location}
             />
           </Suspense>
         </PageWrapper>
