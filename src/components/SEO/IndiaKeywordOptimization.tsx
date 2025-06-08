@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, TrendingUp, Award, Users, Target, Zap } from 'lucide-react';
+import { StatsGrid } from '../Shared/StatsGrid';
 
 const primaryKeywords = [
   'God Digital Marketing',
@@ -19,10 +20,10 @@ const serviceKeywords = [
 ];
 
 const indiaStats = [
-  { icon: <MapPin className="w-6 h-6" />, label: 'States Covered', value: '28+' },
-  { icon: <Users className="w-6 h-6" />, label: 'Cities Served', value: '500+' },
-  { icon: <TrendingUp className="w-6 h-6" />, label: 'Average ROI', value: '340%' },
-  { icon: <Award className="w-6 h-6" />, label: 'Success Rate', value: '98%' }
+  { icon: MapPin, label: 'States Covered', value: '28+' },
+  { icon: Users, label: 'Cities Served', value: '500+' },
+  { icon: TrendingUp, label: 'Average ROI', value: '340%' },
+  { icon: Award, label: 'Success Rate', value: '98%' }
 ];
 
 export const IndiaKeywordOptimization: React.FC = () => {
@@ -53,7 +54,7 @@ export const IndiaKeywordOptimization: React.FC = () => {
           {primaryKeywords.map((keyword, index) => (
             <motion.div
               key={keyword}
-              className="p-8 border border-gray-800 bg-black/50 backdrop-blur-sm"
+              className="p-8 border border-gray-800 bg-black/50 backdrop-blur-sm rounded-lg"
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -89,7 +90,7 @@ export const IndiaKeywordOptimization: React.FC = () => {
             {serviceKeywords.map((keyword, index) => (
               <motion.div
                 key={keyword}
-                className="p-4 border border-gray-800 bg-black/30 text-center"
+                className="p-4 border border-gray-800 bg-black/30 text-center rounded-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -116,32 +117,11 @@ export const IndiaKeywordOptimization: React.FC = () => {
         </motion.div>
 
         {/* India Statistics */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {indiaStats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="flex justify-center mb-4 text-white">
-                {stat.icon}
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <StatsGrid stats={indiaStats} className="mb-16" />
 
         {/* India Coverage Content */}
         <motion.div
-          className="p-8 border border-gray-800 bg-gradient-to-br from-black/60 to-gray-900/20"
+          className="p-8 border border-gray-800 bg-gradient-to-br from-black/60 to-gray-900/20 rounded-lg"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

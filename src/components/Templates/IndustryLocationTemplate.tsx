@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCircle } from 'lucide-react';
-import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
-import { ScrollReveal } from '../Advanced/ParallaxSection';
+import { Building, TrendingUp, Award, Users, Phone, Mail, Clock, CheckCircle } from 'lucide-react';
+import { BaseCard } from '../Shared/BaseCard';
+import { AnimatedSection } from '../Shared/AnimatedSection';
 import { SEOHead } from '../SEO/SEOHead';
 
 interface IndustryLocationTemplateProps {
@@ -83,7 +83,7 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 relative z-10">
-            <ScrollReveal direction="up">
+            <AnimatedSection direction="up">
               <div className="text-center mb-12">
                 <motion.div
                   className="inline-flex items-center space-x-2 mb-6 px-4 py-2 border border-gray-800 rounded-full bg-black/50 backdrop-blur-sm"
@@ -108,22 +108,26 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
                   {location && ` Serving ${location.city}, ${location.state} with industry expertise.`}
                 </p>
               </div>
-            </ScrollReveal>
+            </AnimatedSection>
 
             {/* Stats Grid */}
-            <ScrollReveal direction="up" delay={0.2}>
+            <AnimatedSection direction="up" delay={0.2}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 {stats.map((stat, index) => (
-                  <GlassmorphismCard key={stat.label} className="p-6 text-center">
+                  <BaseCard
+                    key={stat.label}
+                    title={stat.value}
+                    description={stat.label}
+                    variant="glass"
+                    className="text-center"
+                  >
                     <div className="flex justify-center mb-4 text-blue-400">
                       {stat.icon}
                     </div>
-                    <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </GlassmorphismCard>
+                  </BaseCard>
                 ))}
               </div>
-            </ScrollReveal>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -131,7 +135,7 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
+              <AnimatedSection direction="left">
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                     Why Choose Our {industry.name} {service.name}?
@@ -156,11 +160,14 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
                     ))}
                   </div>
                 </div>
-              </ScrollReveal>
+              </AnimatedSection>
 
-              <ScrollReveal direction="right">
-                <GlassmorphismCard className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">Get Industry-Specific Solutions</h3>
+              <AnimatedSection direction="right">
+                <BaseCard
+                  title="Get Industry-Specific Solutions"
+                  description=""
+                  variant="glass"
+                >
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-blue-400" />
@@ -183,8 +190,8 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
                   >
                     Get {industry.name} Consultation
                   </motion.button>
-                </GlassmorphismCard>
-              </ScrollReveal>
+                </BaseCard>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -192,7 +199,7 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
         {/* CTA Section */}
         <section className="py-20 bg-gray-900/20">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <ScrollReveal direction="up">
+            <AnimatedSection direction="up">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your {industry.name} Business?
               </h2>
@@ -216,7 +223,7 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
                   View {industry.name} Case Studies
                 </motion.button>
               </div>
-            </ScrollReveal>
+            </AnimatedSection>
           </div>
         </section>
       </div>

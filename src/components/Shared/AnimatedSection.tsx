@@ -1,69 +1,66 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-interface MicroInteractionProps {
+interface AnimatedSectionProps {
   children: React.ReactNode;
-  type?: 'hover' | 'click' | 'focus' | 'magnetic';
-  intensity?: number;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'scale' | 'fade';
+  delay?: number;
+  duration?: number;
+  className?: string;
 }
 
-export const MicroInteraction: React.FC<MicroInteractionProps> = ({
-  children,
-  type = 'hover',
-  intensity = 1
+export const AnimatedSection: React.FC<AnimatedSectionProps> = ({ 
+  children, 
+  direction = 'up', 
+  delay = 0, 
+  duration = 0.6,
+  className = ''
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
-  
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  
-  const springX = useSpring(x, { stiffness: 300, damping: 30 });
-  const springY = useSpring(y, { stiffness: 300, damping: 30 });
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current || type !== 'magnetic') return;
-    
-    const rect = ref.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    
-    const deltaX = (e.clientX - centerX) * 0.1 * intensity;
-    const deltaY = (e.clientY - centerY) * 0.1 * intensity;
-    
-    x.set(deltaX);
-    y.set(deltaY);
+  const getInitial = () => {
+    switch (direction) {
+      case 'down': return { y: -50, opacity: 0 };
+      case 'left': return { x: 50, opacity: 0 };
+      case 'right': return { x: -50, opacity: 0 };
+      case 'scale': return { scale: 0.8, opacity: 0 };
+      case 'fade': return { opacity: 0 };
+      default: return { y: 50, opacity: 0 };
+    }
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    x.set(0);
-    y.set(0);
+  const getAnimate = () => {
+    switch (direction) {
+      case 'scale': return { scale: 1, opacity: 1 };
+      case 'fade': return { opacity: 1 };
+      default: return { x: 0, y: 0, opacity: 1 };
+    }
   };
 
   return (
     <motion.div
-      ref={ref}
-      style={{ x: springX, y: springY }}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={handleMouseLeave}
-      whileHover={type === 'hover' ? { scale: 1.02 + (intensity * 0.01) } : {}}
-      whileTap={type === 'click' ? { scale: 0.98 - (intensity * 0.01) } : {}}
-      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+      className={className}
+      initial={getInitial()}
+      whileInView={getAnimate()}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ 
+        duration, 
+        delay,
+        type: "spring",
+        stiffness: 100,
+        damping: 20
+      }}
     >
       {children}
     </motion.div>
   );
 };
 
-// Advanced cursor follower
+// Cursor follower component
 export const CursorFollower: React.FC = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [isHovering, setIsHovering] = React.useState(false);
+  const cursorRef = React.useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (cursorRef.current) {
         cursorRef.current.style.left = e.clientX + 'px';
@@ -75,7 +72,6 @@ export const CursorFollower: React.FC = () => {
     const handleMouseEnter = () => setIsVisible(true);
     const handleMouseLeave = () => setIsVisible(false);
 
-    // Detect hoverable elements
     const handleElementHover = (e: Event) => {
       const target = e.target as HTMLElement;
       if (target.matches('button, a, [role="button"], .hoverable')) {

@@ -3,8 +3,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { LoadingProvider } from './components/Loading/LoadingProvider';
 import { EnhancedNavigation } from './components/Navigation/EnhancedNavigation';
 import { AdvancedHero } from './components/Advanced/AdvancedHero';
-import { CursorFollower } from './components/Advanced/MicroInteractions';
-import { PerformanceMonitor } from './components/Advanced/PerformanceOptimizer';
+import { CursorFollower } from './components/Shared/AnimatedSection';
 import { EnhancedFooter } from './components/Layout/EnhancedFooter';
 import { ContextualSidebar } from './components/Layout/ContextualSidebar';
 import { BreadcrumbNavigation } from './components/Layout/BreadcrumbNavigation';
@@ -13,7 +12,6 @@ import { IndustryLocationTemplate } from './components/Templates/IndustryLocatio
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 
 // Lazy load components
-const QuantumServices = lazy(() => import('./components/4D/QuantumServices').then(module => ({ default: module.QuantumServices })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Service Hub Pages
@@ -54,7 +52,6 @@ function AppContent() {
   }) => (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <CursorFollower />
-      <PerformanceMonitor />
       <EnhancedNavigation />
       {breadcrumbs && breadcrumbs.length > 0 && (
         <div className="pt-20">
@@ -303,7 +300,6 @@ function AppContent() {
       <main>
         <AdvancedHero />
         <Suspense fallback={<LoadingFallback />}>
-          <QuantumServices />
           <IndiaKeywordOptimization />
         </Suspense>
       </main>
