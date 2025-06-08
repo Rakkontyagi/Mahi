@@ -26,7 +26,7 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, activeMenu,
   return (
     <div className="relative">
       {/* Main Navigation Items */}
-      <div className="flex items-center space-x-8">
+      <div className="flex items-center lg:space-x-6"> {/* Changed space-x-8 to lg:space-x-6 */}
         <div
           className="relative"
           onMouseEnter={() => handleMenuHover('services')}

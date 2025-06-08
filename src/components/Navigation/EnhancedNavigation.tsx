@@ -61,7 +61,7 @@ export const EnhancedNavigation: React.FC = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center lg:space-x-6"> {/* Changed space-x-8 to lg:space-x-6 */}
             <MegaMenu
               isOpen={isOpen}
               onClose={() => setIsOpen(false)}
@@ -93,7 +93,7 @@ export const EnhancedNavigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <motion.a
               href="/contact/"
-              className="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300"
+              className="lg:px-4 xl:px-5 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300" {/* Changed px-6 */}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
