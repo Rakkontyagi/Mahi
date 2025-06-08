@@ -1,4 +1,49 @@
 // Comprehensive location data for all Indian states and cities
+
+// Interface for Cost Information
+export interface CostTier {
+  name: string; // e.g., "Basic Setup", "Advanced Integration", "Full Scale Enterprise"
+  range: string; // e.g., "$500 - $1,500 / month", "Starting at $2,000", "Custom Quote"
+  features: string[]; // Key features included in this tier
+}
+
+export interface BusinessTypeCostDetail {
+  businessTypeSlug: string;
+  factors: string[];
+  costTiers: CostTier[];
+  roiNotes?: string;
+}
+
+export interface ComprehensiveServiceData {
+  name: string;
+  slug: string;
+  description: string;
+  keywords: string[];
+  subServices?: Array<{ name: string; slug: string }>;
+  costInformation?: {
+    generalFactors?: string[];
+    businessTypeSpecificCosts: BusinessTypeCostDetail[];
+  };
+  roiInformation?: { // This is the new part
+    industrySizeSpecificROI: IndustrySizeROIDetail[];
+  };
+}
+
+export interface FictionalCaseSnippet {
+  fictionalCompanyName: string; // Emphasize fiction
+  challenge: string;
+  solutionHighlight: string;
+  result: string;
+}
+
+export interface IndustrySizeROIDetail {
+  industrySizeSlug: string;
+  drivers: string[];
+  potentialFigures: string[];
+  factors: string[];
+  fictionalCaseSnippet?: FictionalCaseSnippet;
+}
+
 export interface ComprehensiveLocationData {
   state: string;
   stateSlug: string;
@@ -146,7 +191,7 @@ export const allIndianLocations: ComprehensiveLocationData[] = [
   }
 ];
 
-export const comprehensiveServices = [
+export const comprehensiveServices: ComprehensiveServiceData[] = [
   {
     name: "Digital Marketing Services",
     slug: "digital-marketing",
@@ -179,7 +224,59 @@ export const comprehensiveServices = [
       { name: "Sales Process Automation", slug: "sales-process-automation" },
       { name: "Workflow Automation", slug: "workflow-automation" },
       { name: "AI Analytics", slug: "ai-analytics" }
-    ]
+    ],
+    costInformation: {
+      generalFactors: [
+        "Complexity of existing systems for integration",
+        "Volume of data to be processed",
+        "Number of processes to be automated",
+        "Level of customization required",
+        "Need for ongoing AI model training and maintenance"
+      ],
+      businessTypeSpecificCosts: [
+        {
+          businessTypeSlug: "small-business",
+          factors: [
+            "Automating 1-2 core processes (e.g., customer support FAQs, email categorization).",
+            "Integration with 1-2 existing tools.",
+            "Basic AI model setup, minimal customization."
+          ],
+          costTiers: [
+            { name: "Starter AI Toolkit", range: "$300 - $800 / month", features: ["Chatbot for FAQs (up to 50 intents)", "Email sorting (up to 2 rules)", "Basic analytics dashboard"] },
+            { name: "Growth AI Suite", range: "$800 - $2,000 / month", features: ["Custom chatbot flows (up to 150 intents)", "Automated social media responses", "Lead qualification bot", "Advanced analytics"] }
+          ],
+          roiNotes: "Focuses on time-saving for repetitive tasks and improving customer response times."
+        },
+        {
+          businessTypeSlug: "ecommerce-store",
+          factors: [
+            "AI for product recommendations and personalization.",
+            "Inventory management and demand forecasting AI.",
+            "Automated customer service for order tracking and returns.",
+            "Fraud detection algorithms."
+          ],
+          costTiers: [
+            { name: "E-com AI Essentials", range: "$700 - $2,500 / month", features: ["Personalized product recommendations (up to 10k users)", "Basic inventory alerts", "Chatbot for order status"] },
+            { name: "E-com AI Pro", range: "$2,500 - $7,000 / month", features: ["Advanced recommendation engine", "Dynamic pricing suggestions", "AI-powered search", "Automated abandoned cart recovery emails"] }
+          ],
+          roiNotes: "Aims to increase average order value, reduce cart abandonment, and optimize stock levels."
+        },
+        {
+          businessTypeSlug: "startup",
+          factors: [
+            "Scalable AI infrastructure for rapid growth.",
+            "AI for market analysis and customer segmentation.",
+            "Automating lean operational processes.",
+            "Often requires flexible, phased implementation."
+          ],
+          costTiers: [
+            { name: "Lean AI Launchpad", range: "$500 - $1,800 / month", features: ["AI-driven competitor analysis tool", "Automated customer feedback analysis", "Core process automation (1 process)"] },
+            { name: "Scale-up AI Engine", range: "$1,800 - $6,000 / month", features: ["Predictive analytics for user behavior", "AI for A/B testing website/app changes", "Scalable chatbot infrastructure", "Multiple process automations"] }
+          ],
+          roiNotes: "Geared towards achieving product-market fit faster, data-driven decision making, and efficient scaling."
+        }
+      ]
+    }
   },
   {
     name: "Business Automation Services",
@@ -268,6 +365,57 @@ export const comprehensiveServices = [
     description: "Performance-based affiliate marketing programs",
     keywords: ["affiliate marketing", "performance marketing", "affiliate programs"],
     subServices: []
+  },
+  {
+    name: "Marketing Automation",
+    slug: "marketing-automation",
+    description: "Streamline, automate, and measure marketing tasks and workflows to grow revenue and improve efficiency.",
+    keywords: ["marketing automation", "automated email marketing", "lead nurturing", "crm integration", "customer journey mapping"],
+    subServices: [
+      { name: "Email Automation Strategy", slug: "email-automation-strategy" }, // Changed slug for clarity
+      { name: "Lead Scoring Systems Design", slug: "lead-scoring-systems-design" }, // Changed slug
+      { name: "Automated Customer Journey Builder", slug: "automated-customer-journey-builder" } // Changed slug
+    ],
+    roiInformation: {
+      industrySizeSpecificROI: [
+        {
+          industrySizeSlug: "small",
+          drivers: ["Automate repetitive email tasks", "Improve lead capture from website", "Basic lead segmentation & follow-up", "Track campaign performance simply"],
+          potentialFigures: ["Save 5-10 hours per week on marketing tasks", "Increase website lead conversion by 10-15%", "Grow email engagement by 20%"],
+          factors: ["Ease of use of the platform", "Limited budget for advanced features", "Need for simple integration with existing tools (e.g., website forms)", "Availability of learning resources"],
+          fictionalCaseSnippet: {
+            fictionalCompanyName: "GreenSprout Landscaping (Fictional)",
+            challenge: "Manually sending monthly newsletters and struggling to follow up on website inquiries consistently.",
+            solutionHighlight: "Implemented a basic marketing automation tool for automated welcome emails, monthly newsletter dispatch, and lead capture forms with auto-responders.",
+            result: "Reduced newsletter preparation time by 70% and saw a 25% increase in inquiries converting to consultations."
+          }
+        },
+        {
+          industrySizeSlug: "medium",
+          drivers: ["Advanced lead nurturing workflows", "Dynamic content personalization", "Automated A/B testing of campaigns", "Integration with CRM for sales alignment", "More sophisticated analytics and reporting"],
+          potentialFigures: ["Improve marketing qualified lead (MQL) to sales qualified lead (SQL) conversion by 20-30%", "Increase average deal size by 10% through better nurturing", "Reduce churn by 15% with targeted post-sale communication"],
+          factors: ["Scalability of the automation platform", "Complexity of integration with multiple business systems", "Team skills for creating and managing complex campaigns", "Data hygiene and CRM data quality"],
+          fictionalCaseSnippet: {
+            fictionalCompanyName: "FlexiComponents Manufacturing (Fictional)",
+            challenge: "Sales team overwhelmed with unqualified leads and marketing struggled to demonstrate direct revenue impact.",
+            solutionHighlight: "Deployed marketing automation integrated with their CRM, featuring automated lead scoring, multi-touch nurture campaigns, and personalized email content based on behavior.",
+            result: "Generated 40% more SQLs, shortened the average sales cycle by 18%, and attributed 22% of new revenue directly to automated campaigns within the first year."
+          }
+        },
+        {
+          industrySizeSlug: "large",
+          drivers: ["Multi-channel campaign orchestration (email, social, SMS, web)", "Predictive analytics for lead scoring and churn", "Account-Based Marketing (ABM) automation at scale", "Full lifecycle customer journey management", "Compliance and governance automation"],
+          potentialFigures: ["Increase marketing contribution to pipeline by over 50%", "Improve customer lifetime value (CLTV) by 20-25%", "Achieve near real-time personalization across all touchpoints", "Reduce marketing operational costs by 15-20% through efficiency"],
+          factors: ["Ability to handle massive data volumes and user bases", "Customization capabilities to fit complex organizational structures", "Global deployment and multi-language support", "Advanced security and data governance features", "Change management across large teams"],
+          fictionalCaseSnippet: {
+            fictionalCompanyName: "GlobalEduConnect (Fictional)",
+            challenge: "Managing diverse marketing efforts across multiple countries with inconsistent branding and poor lead handoff to regional sales teams.",
+            solutionHighlight: "Implemented an enterprise-grade marketing automation platform, standardizing global campaigns, enabling localized personalization, and automating lead routing with strict SLAs.",
+            result: "Improved global campaign deployment speed by 4x, increased lead quality scores by an average of 35%, and saw a 15% uplift in cross-sell/upsell revenue from existing customers."
+          }
+        }
+      ]
+    }
   }
 ];
 
@@ -287,4 +435,88 @@ export const comprehensiveIndustries = [
   { name: "Legal Services", slug: "legal-services", description: "Marketing for law firms" },
   { name: "Fitness & Wellness", slug: "fitness-wellness", description: "Health and fitness marketing" },
   { name: "Beauty & Cosmetics", slug: "beauty-cosmetics", description: "Beauty industry marketing" }
+];
+
+export interface ComprehensiveBusinessType {
+  name: string;
+  slug: string;
+  description?: string;
+}
+
+export const comprehensiveBusinessTypes: ComprehensiveBusinessType[] = [
+  {
+    name: "Small Business",
+    slug: "small-business",
+    description: "Businesses with a smaller workforce and revenue, often owner-operated."
+  },
+  {
+    name: "Medium Business",
+    slug: "medium-business",
+    description: "Businesses with a moderate workforce and revenue, typically expanding their operations."
+  },
+  {
+    name: "Large Enterprise",
+    slug: "large-enterprise",
+    description: "Well-established businesses with a large workforce, significant revenue, and often complex operations."
+  },
+  {
+    name: "Startup",
+    slug: "startup",
+    description: "Newly established businesses, typically innovative and aiming for rapid growth."
+  },
+  {
+    name: "E-commerce Store",
+    slug: "ecommerce-store",
+    description: "Businesses that primarily sell products or services online."
+  },
+  {
+    name: "Local Shop",
+    slug: "local-shop",
+    description: "Brick-and-mortar businesses serving a specific geographic area."
+  },
+  {
+    name: "SaaS Company",
+    slug: "saas-company",
+    description: "Businesses that provide software as a service, typically on a subscription basis."
+  },
+  {
+    name: "Service Provider",
+    slug: "service-provider",
+    description: "Businesses that offer professional services to clients."
+  },
+  {
+    name: "Non-Profit Organization",
+    slug: "non-profit",
+    description: "Organizations that operate for a social cause, not for profit."
+  },
+  {
+    name: "Manufacturing Firm",
+    slug: "manufacturing-firm",
+    description: "Businesses involved in the production of goods."
+  },
+  {
+    name: "Real Estate Agency",
+    slug: "real-estate-agency",
+    description: "Businesses that assist clients in buying, selling, or renting properties."
+  },
+  {
+    name: "Healthcare Clinic",
+    slug: "healthcare-clinic",
+    description: "Medical facilities providing outpatient care."
+  },
+  {
+    name: "Educational Institution",
+    slug: "educational-institution",
+    description: "Organizations providing learning and education services."
+  },
+  {
+    name: "Restaurant / Cafe",
+    slug: "restaurant-cafe",
+    description: "Businesses that prepare and serve food and beverages to customers."
+  },
+  {
+    name: "Travel Agency",
+    slug: "travel-agency",
+    description: "Businesses that help people plan and book travel arrangements."
+  }
 ];
