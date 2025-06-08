@@ -15,6 +15,7 @@ import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './compon
 // CaseStudyPageTemplate is not used for type-only import
 // CaseStudiesHubPage is not used for type-only import
 // ProblemSolutionPageTemplate is not used for type-only import
+// ConsultationPageTemplate is not used for type-only import
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from './data/comprehensiveLocations';
 import { comprehensiveBusinessTypes } from './data/businessTypes';
 import { comprehensiveIndustrySizes } from './data/industrySizes';
@@ -28,7 +29,8 @@ const ServiceROIPageTemplate = lazy(() => import('./components/Templates/Service
 const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate })));
 const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate })));
 const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage })));
-const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate }))); // New lazy load
+const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate })));
+const ConsultationPageTemplate = lazy(() => import('./components/Templates/ConsultationPageTemplate').then(module => ({ default: module.ConsultationPageTemplate }))); // New lazy load
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -274,6 +276,32 @@ function AppContent() {
       );
     }
     // Optional: Fallback to a 404 or case studies list if not found
+  }
+
+  // Route: /digital-marketing-consultation/:stateSlug/:citySlug/
+  if (pathParts.length === 3 && pathParts[0] === 'digital-marketing-consultation') {
+    const [, stateSlug, citySlug] = pathParts;
+
+    const location = findLocation(stateSlug, citySlug);
+
+    if (location) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        // { name: "Consultations", url: "/consultations/" }, // Optional hub page
+        { name: `Digital Marketing Consultation in ${location.city}`, url: pathname, isActive: true }
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <ConsultationPageTemplate
+              location={location}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
   }
 
   // Route: /:serviceSlug/:industrySizeSlug/roi/
