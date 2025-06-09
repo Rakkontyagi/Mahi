@@ -3,7 +3,7 @@ import { TestimonialData } from '../../data/testimonialsData';
 import { SEOHead } from '../SEO/SEOHead';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 // import { BaseCard } from '../Shared/BaseCard'; // For context
-// import { TestimonialCard } from '../Shared/TestimonialCard'; // Placeholder
+import { TestimonialCard } from '../Shared/TestimonialCard'; // Corrected import
 import { Star, MessageSquare, Users, Sparkles } from 'lucide-react'; // Sparkles for hero
 
 interface TestimonialsPageProps {
@@ -68,30 +68,7 @@ export const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ allTestimoni
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {allTestimonials && allTestimonials.length > 0 ? (
               allTestimonials.map(testimonial => (
-                // Placeholder for TestimonialCard - will be replaced in a later step
-                <div
-                  key={testimonial.id}
-                  className="p-6 border border-gray-700/70 rounded-xl bg-slate-800/60 shadow-lg hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col"
-                >
-                  <div className="flex items-center mb-3">
-                    {testimonial.rating && (
-                      <div className="flex text-yellow-400 mr-3">
-                        {Array(testimonial.rating).fill(0).map((_, i) => <Star key={`filled-${i}`} className="w-5 h-5 fill-current" />)}
-                        {Array(5 - testimonial.rating).fill(0).map((_, i) => <Star key={`empty-${i}`} className="w-5 h-5 text-gray-600 fill-current" />)}
-                      </div>
-                    )}
-                  </div>
-                  <blockquote className="text-gray-200 italic mb-4 text-base leading-relaxed flex-grow">
-                    &ldquo;{testimonial.testimonialText}&rdquo;
-                  </blockquote>
-                  <div className="mt-auto pt-3 border-t border-slate-700/50">
-                     <h4 className="text-md font-semibold text-purple-300">{testimonial.clientName}</h4>
-                    {testimonial.companyName && <p className="text-sm text-gray-400">{testimonial.companyName}</p>}
-                    <p className="text-xs text-gray-500 mt-1">{testimonial.roleOrIndustry}</p>
-                    {testimonial.date && <p className="text-xs text-gray-500 text-right mt-2">Date: {testimonial.date}</p>}
-                  </div>
-                </div>
-                // Replace above div with: <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+                <TestimonialCard key={testimonial.id} testimonial={testimonial} />
               ))
             ) : (
               <div className="col-span-full text-center py-10">

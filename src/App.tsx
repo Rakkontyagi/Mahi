@@ -27,7 +27,8 @@ import { allCaseStudies } from './data/caseStudies';
 import { allProblems, allSolutionSets } from './data/problemSolutions';
 import { allLeadMagnets } from './data/leadMagnets';
 import { allTools } from './data/toolsData';
-import { allPortfolioItems } from './data/portfolioData'; // New import
+import { allPortfolioItems } from './data/portfolioData';
+import { allTestimonials } from './data/testimonialsData'; // New import
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
@@ -46,6 +47,7 @@ const StateSpecificPage = lazy(() => import('./components/Pages/StateSpecificPag
 const LocationTierPage = lazy(() => import('./components/Pages/LocationTierPage').then(module => ({ default: module.LocationTierPage })));
 const ToolsHubPage = lazy(() => import('./components/Pages/ToolsHubPage').then(module => ({ default: module.ToolsHubPage })));
 const PortfolioPage = lazy(() => import('./components/Pages/PortfolioPage').then(module => ({ default: module.PortfolioPage })));
+const TestimonialsPage = lazy(() => import('./components/Pages/TestimonialsPage').then(module => ({ default: module.TestimonialsPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -217,6 +219,25 @@ function AppContent() {
       <PageWrapper>
         <Suspense fallback={<LoadingFallback />}>
           <ServiceComponent />
+        </Suspense>
+      </PageWrapper>
+    );
+  }
+
+  // Route: /testimonials/ (Testimonials Page)
+  if (pathname === '/testimonials') {
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Testimonials", url: "/testimonials/", isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <TestimonialsPage
+            allTestimonials={allTestimonials}
+          />
         </Suspense>
       </PageWrapper>
     );
