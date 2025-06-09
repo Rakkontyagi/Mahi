@@ -17,7 +17,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 import CaseStudyCard from '../Shared/CaseStudyCard';
 import { Filter, ListChecks } from 'lucide-react'; // Icons for filter section
-import { getBreadcrumbSchema, getOrganizationSchema } from '../utils/seoStructuredData';
+import { getBreadcrumbSchema, getOrganizationSchema } from '../utils/seoStructuredData.js';
 
 interface CaseStudiesHubPageProps {
   allCaseStudies: CaseStudyData[];
