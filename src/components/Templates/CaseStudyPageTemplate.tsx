@@ -5,6 +5,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { Target, Briefcase, TrendingUp, Star, MessageSquare, Link as LinkIcon, CalendarDays, Users, Zap } from 'lucide-react'; // Example icons
+import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 
 interface CaseStudyPageTemplateProps {
   caseStudy: CaseStudyData;
@@ -211,6 +212,9 @@ const CaseStudyPageTemplate: React.FC<CaseStudyPageTemplateProps> = ({ caseStudy
           </AnimatedSection>
         </div>
       </div>
+      {utilizedServiceNames && utilizedServiceNames[0] && (
+        <ServiceLocationsFooter service={{ name: utilizedServiceNames[0], slug: caseStudy.serviceSlugs[0] }} />
+      )}
     </>
   );
 };

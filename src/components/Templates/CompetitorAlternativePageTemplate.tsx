@@ -3,6 +3,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { CheckCircle, Lightbulb, ShieldCheck, Sparkles, Target as TargetIcon, Zap } from 'lucide-react'; // Example icons
+import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 
 // Prop Interfaces
 interface CompetitorInfoProps {
@@ -218,6 +219,7 @@ const CompetitorAlternativePageTemplate: React.FC<CompetitorAlternativePageTempl
           </section>
         </AnimatedSection>
       </div>
+      <ServiceLocationsFooter service={ourServiceInfo} />
     </>
   );
 };

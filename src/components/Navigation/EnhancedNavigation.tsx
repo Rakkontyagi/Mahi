@@ -3,11 +3,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { GodDigitalNavLogo } from '../Brand/GodDigitalLogo';
 import { MegaMenu } from './MegaMenu';
+import { getAnchorText } from '../Shared/AnchorTextUtils';
+import { comprehensiveServices, allIndianLocations } from '../../data/comprehensiveLocations';
 
 export const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+
+  // Deduplication set for anchor text
+  const usedAnchors = new Set<string>();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -150,14 +155,14 @@ export const EnhancedNavigation: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Services</h3>
                   <div className="space-y-2 pl-4">
-                    {['Digital Marketing', 'AI Automation', 'Lead Generation', 'Social Media Management'].map((service) => (
+                    {comprehensiveServices.slice(0, 8).map((service) => (
                       <a
-                        key={service}
-                        href={`/${service.toLowerCase().replace(' ', '-')}/`}
+                        key={service.slug}
+                        href={`/${service.slug}/`}
                         className="block text-gray-300 hover:text-white transition-colors duration-300"
                         onClick={() => setIsOpen(false)}
                       >
-                        {service}
+                        {getAnchorText('service', service, undefined, usedAnchors)}
                       </a>
                     ))}
                   </div>
@@ -167,14 +172,14 @@ export const EnhancedNavigation: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Locations</h3>
                   <div className="space-y-2 pl-4">
-                    {['Delhi', 'Mumbai', 'Bangalore', 'Chennai', 'Hyderabad'].map((city) => (
+                    {allIndianLocations.flatMap(state => state.cities.filter(city => city.isMetro).map(city => ({ ...city, state: state.state, stateSlug: state.stateSlug }))).slice(0, 8).map((city) => (
                       <a
-                        key={city}
-                        href={`/digital-marketing-${city.toLowerCase()}/`}
+                        key={city.slug}
+                        href={`/${city.slug}/digital-marketing/`}
                         className="block text-gray-300 hover:text-white transition-colors duration-300"
                         onClick={() => setIsOpen(false)}
                       >
-                        {city}
+                        {getAnchorText('location', city, undefined, usedAnchors)}
                       </a>
                     ))}
                   </div>

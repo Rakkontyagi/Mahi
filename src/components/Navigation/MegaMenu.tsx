@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, MapPin, Building, Target, Zap, ArrowRight } from 'lucide-react';
 import { comprehensiveServices, allIndianLocations, comprehensiveIndustries } from '../../data/comprehensiveLocations';
+import { getAnchorText } from '../Shared/AnchorTextUtils';
 
 interface MegaMenuProps {
   isOpen: boolean;
@@ -22,6 +23,8 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, activeMenu,
   const handleMenuLeave = () => {
     onMenuChange(null);
   };
+
+  const usedAnchors = new Set<string>();
 
   return (
     <div className="relative">
@@ -84,17 +87,20 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, activeMenu,
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Core Services</h3>
                     <ul className="space-y-2">
-                      {mainServices.map((service) => (
+                      {mainServices.slice(0, 5).map((service) => (
                         <li key={service.slug}>
                           <a
-                            href={`/${service.slug}/`}
+                            href={`/services/${service.slug}/`}
                             className="block font-semibold text-white hover:text-blue-400 transition-colors text-base"
                           >
-                            {service.name}
+                            {getAnchorText('service', service, undefined, usedAnchors)}
                             <span className="block text-gray-400 font-normal text-sm mt-0.5">{service.description}</span>
                           </a>
                         </li>
                       ))}
+                      <li>
+                        <a href="/services/" className="text-blue-400 hover:text-white transition-colors text-base font-semibold">See all services</a>
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -103,10 +109,10 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, activeMenu,
                       {majorStates.slice(0, 6).map((state) => (
                         <li key={state.stateSlug}>
                           <a
-                            href={`/locations/${state.stateSlug}/`}
+                            href={`/${state.stateSlug}/digital-marketing/`}
                             className="block font-semibold text-white hover:text-blue-400 transition-colors text-base"
                           >
-                            {state.state}
+                            {getAnchorText('location', state, undefined, usedAnchors)}
                             <span className="block text-gray-400 font-normal text-sm mt-0.5">{state.cities.length} cities</span>
                           </a>
                         </li>
@@ -210,17 +216,20 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, activeMenu,
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Industries We Serve</h3>
                     <ul className="space-y-2">
-                      {mainIndustries.map((industry) => (
+                      {mainIndustries.slice(0, 5).map((industry) => (
                         <li key={industry.slug}>
                           <a
-                            href={`/digital-marketing/${industry.slug}/`}
+                            href={`/industries/${industry.slug}/digital-marketing/`}
                             className="block font-semibold text-white hover:text-blue-400 transition-colors text-base"
                           >
-                            {industry.name}
+                            {getAnchorText('industry', industry, undefined, usedAnchors)}
                             <span className="block text-gray-400 font-normal text-sm mt-0.5">{industry.description}</span>
                           </a>
                         </li>
                       ))}
+                      <li>
+                        <a href="/industries/" className="text-blue-400 hover:text-white transition-colors text-base font-semibold">See all industries</a>
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -232,7 +241,7 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, activeMenu,
                         { name: 'Tech Startup Growth', slug: 'technology', desc: 'Scalable marketing systems' },
                         { name: 'Financial Services', slug: 'financial-services', desc: 'Compliance-focused marketing' },
                         { name: 'Manufacturing', slug: 'manufacturing', desc: 'B2B lead generation' }
-                      ].map((service) => (
+                      ].slice(0, 5).map((service) => (
                         <li key={service.slug}>
                           <a
                             href={`/digital-marketing/${service.slug}/`}
@@ -243,6 +252,9 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, activeMenu,
                           </a>
                         </li>
                       ))}
+                      <li>
+                        <a href="/digital-marketing/" className="text-blue-400 hover:text-white transition-colors text-base font-semibold">See all services</a>
+                      </li>
                     </ul>
                   </div>
                 </>

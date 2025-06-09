@@ -5,6 +5,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { Lightbulb, AlertTriangle, CheckSquare, MapPin, ChevronRight, Zap, Settings, Users } from 'lucide-react'; // Example icons
+import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 
 // Simplified Location Info Props for this template
 interface LocationInfoProps {
@@ -189,6 +190,9 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
           </AnimatedSection>
         </div>
       </div>
+      {solutionSet.solutions && solutionSet.solutions[0] && (
+        <ServiceLocationsFooter service={solutionSet.solutions[0]} />
+      )}
     </>
   );
 };

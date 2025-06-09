@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, ArrowRight, Target, Zap, Users, TrendingUp, Building, Globe } from 'lucide-react';
 import { GodDigitalNavLogo } from '../Brand/GodDigitalLogo';
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from '../../data/comprehensiveLocations';
+import { getAnchorText } from '../Shared/AnchorTextUtils';
 
 export const EnhancedFooter: React.FC = () => {
   const majorStates = allIndianLocations.slice(0, 8);
@@ -15,6 +16,27 @@ export const EnhancedFooter: React.FC = () => {
       stateSlug: state.stateSlug
     }))
   ).slice(0, 12);
+
+  const usedAnchors = new Set<string>();
+
+  // For context-aware anchor text, pick a top service and a top city
+  const topService = mainServices[0];
+  const topCity = metroCities[0];
+
+  // Define the top 12 Indian metro cities in desired order
+  const topMetroCityNames = [
+    'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai', 'Kolkata',
+    'Pune', 'Ahmedabad', 'Surat', 'Jaipur', 'Lucknow', 'Kanpur'
+  ];
+  const topMetroCities = topMetroCityNames.map(cityName => {
+    for (const state of allIndianLocations) {
+      const city = state.cities.find(c => c.name.toLowerCase() === cityName.toLowerCase());
+      if (city) {
+        return { ...city, state: state.state, stateSlug: state.stateSlug };
+      }
+    }
+    return null;
+  }).filter(Boolean);
 
   return (
     <footer className="bg-black border-t border-gray-800 relative overflow-hidden">
@@ -86,7 +108,7 @@ export const EnhancedFooter: React.FC = () => {
               Our Services
             </h3>
             <ul className="space-y-3">
-              {mainServices.map((service, index) => (
+              {mainServices.slice(0, 5).map((service, index) => (
                 <motion.li
                   key={service.slug}
                   initial={{ opacity: 0, x: -10 }}
@@ -94,15 +116,20 @@ export const EnhancedFooter: React.FC = () => {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <a
-                    href={`/${service.slug}/`}
+                    href={`/services/${service.slug}/`}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group text-sm"
                     title={service.description}
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span>{service.name}</span>
+                    <span>{getAnchorText('service', service, { city: topCity.name, state: topCity.state }, usedAnchors)}</span>
                   </a>
                 </motion.li>
               ))}
+              <li>
+                <a href="/services/" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center group text-sm font-semibold">
+                  <ArrowRight className="w-3 h-3 mr-2" />See all services
+                </a>
+              </li>
             </ul>
           </motion.div>
 
@@ -117,7 +144,7 @@ export const EnhancedFooter: React.FC = () => {
               Major States
             </h3>
             <ul className="space-y-3">
-              {majorStates.map((state, index) => (
+              {majorStates.slice(0, 5).map((state, index) => (
                 <motion.li
                   key={state.stateSlug}
                   initial={{ opacity: 0, x: -10 }}
@@ -130,10 +157,15 @@ export const EnhancedFooter: React.FC = () => {
                     title={`Digital marketing services in ${state.state}`}
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span>{state.state}</span>
+                    <span>{getAnchorText('location', state, { service: topService.name }, usedAnchors)}</span>
                   </a>
                 </motion.li>
               ))}
+              <li>
+                <a href="/locations/" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center group text-sm font-semibold">
+                  <ArrowRight className="w-3 h-3 mr-2" />See all locations
+                </a>
+              </li>
             </ul>
           </motion.div>
 
@@ -148,7 +180,7 @@ export const EnhancedFooter: React.FC = () => {
               Metro Cities
             </h3>
             <ul className="space-y-3">
-              {metroCities.slice(0, 8).map((city, index) => (
+              {topMetroCities.map((city, index) => (
                 <motion.li
                   key={`${city.stateSlug}-${city.slug}`}
                   initial={{ opacity: 0, x: -10 }}
@@ -156,15 +188,19 @@ export const EnhancedFooter: React.FC = () => {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <a
-                    href={`/digital-marketing/${city.stateSlug}/${city.slug}/`}
+                    href={`/${city.slug}/digital-marketing/`}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group text-sm"
-                    title={`Digital marketing in ${city.name}, ${city.state}`}
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span>{city.name}</span>
+                    <span>{getAnchorText('location', city, { service: topService.name }, usedAnchors)}</span>
                   </a>
                 </motion.li>
               ))}
+              <li>
+                <a href="/locations/" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center group text-sm font-semibold">
+                  <ArrowRight className="w-3 h-3 mr-2" />See all locations
+                </a>
+              </li>
             </ul>
           </motion.div>
 
@@ -179,7 +215,7 @@ export const EnhancedFooter: React.FC = () => {
               Industries
             </h3>
             <ul className="space-y-3">
-              {popularIndustries.map((industry, index) => (
+              {popularIndustries.slice(0, 5).map((industry, index) => (
                 <motion.li
                   key={industry.slug}
                   initial={{ opacity: 0, x: -10 }}
@@ -187,15 +223,20 @@ export const EnhancedFooter: React.FC = () => {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <a
-                    href={`/digital-marketing/${industry.slug}/`}
+                    href={`/industries/${industry.slug}/digital-marketing/`}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group text-sm"
                     title={industry.description}
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span>{industry.name}</span>
+                    <span>{getAnchorText('industry', industry, { service: topService.name }, usedAnchors)}</span>
                   </a>
                 </motion.li>
               ))}
+              <li>
+                <a href="/industries/" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center group text-sm font-semibold">
+                  <ArrowRight className="w-3 h-3 mr-2" />See all industries
+                </a>
+              </li>
             </ul>
           </motion.div>
         </div>

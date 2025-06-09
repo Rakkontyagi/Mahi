@@ -3,6 +3,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { ComprehensiveServiceData } from '../../data/comprehensiveLocations'; // Import the main service type
+import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 
 // Prop Interfaces
 // ServiceInfoProps is replaced by ComprehensiveServiceData for the service prop
@@ -230,6 +231,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
           </section>
         </AnimatedSection>
       </div>
+      <ServiceLocationsFooter service={service} />
     </>
   );
 };

@@ -4,6 +4,9 @@ import { MapPin, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCirc
 import { BaseCard } from '../Shared/BaseCard';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
+import { getAnchorText } from '../Shared/AnchorTextUtils';
+import { comprehensiveServices, allIndianLocations, comprehensiveIndustries } from '../../data/comprehensiveLocations';
 
 interface ServiceLocationTemplateProps {
   service: {
@@ -115,6 +118,8 @@ export const ServiceLocationTemplate: React.FC<ServiceLocationTemplateProps> = (
       }
     }
   };
+
+  const usedAnchors = new Set<string>();
 
   return (
     <>
@@ -303,7 +308,53 @@ export const ServiceLocationTemplate: React.FC<ServiceLocationTemplateProps> = (
             </AnimatedSection>
           </div>
         </section>
+
+        {/* Related Links Section */}
+        <section className="py-12 bg-black border-t border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Related Services */}
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">Related Services</h3>
+              <ul className="space-y-2">
+                {comprehensiveServices.filter(s => s.slug !== service.slug).slice(0, 6).map(s => (
+                  <li key={s.slug}>
+                    <a href={`/${s.slug}/${location.stateSlug}/${location.citySlug}/`} className="text-blue-400 hover:text-white text-sm">
+                      {getAnchorText('service', s, { city: location.city }, usedAnchors)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Related Locations */}
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">Related Locations</h3>
+              <ul className="space-y-2">
+                {allIndianLocations.slice(0, 6).map(state => (
+                  <li key={state.stateSlug}>
+                    <a href={`/${service.slug}/${state.stateSlug}/`} className="text-blue-400 hover:text-white text-sm">
+                      {getAnchorText('location', state, { service: service.name }, usedAnchors)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Related Industries */}
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">Related Industries</h3>
+              <ul className="space-y-2">
+                {comprehensiveIndustries.slice(0, 6).map(i => (
+                  <li key={i.slug}>
+                    <a href={`/${service.slug}/${i.slug}/`} className="text-blue-400 hover:text-white text-sm">
+                      {getAnchorText('industry', i, { service: service.name }, usedAnchors)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
+      <ServiceLocationsFooter service={service} />
     </>
   );
 };
