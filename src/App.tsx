@@ -40,6 +40,7 @@ const LeadMagnetLandingPageTemplate = lazy(() => import('./components/Templates/
 const ROICalculatorPage = lazy(() => import('./components/Pages/ROICalculatorPage').then(module => ({ default: module.ROICalculatorPage }))); // New lazy load
 const IndustriesHubPage = lazy(() => import('./components/Pages/IndustriesHubPage').then(module => ({ default: module.IndustriesHubPage })));
 const LocationsHubPage = lazy(() => import('./components/Pages/LocationsHubPage').then(module => ({ default: module.LocationsHubPage })));
+const StateSpecificPage = lazy(() => import('./components/Pages/StateSpecificPage').then(module => ({ default: module.StateSpecificPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -129,6 +130,10 @@ function AppContent() {
   // Helper function to find industry
   const findIndustry = (slug: string) => {
     return comprehensiveIndustries.find(i => i.slug === slug);
+  };
+
+  const findState = (stateSlug: string) => {
+    return allIndianLocations.find(state => state.stateSlug === stateSlug);
   };
 
   const findBusinessType = (slug: string) => {
@@ -283,6 +288,34 @@ function AppContent() {
         </Suspense>
       </PageWrapper>
     );
+  }
+
+  // Route: /locations/:stateSlug/ (State Specific Page)
+  // Placed AFTER /locations/ exact match
+  if (pathParts.length === 2 && pathParts[0] === 'locations') {
+    const stateSlug = pathParts[1];
+    const stateData = findState(stateSlug);
+
+    if (stateData) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: "Locations", url: "/locations/" },
+        { name: stateData.state, url: `/locations/${stateData.stateSlug}/`, isActive: true }
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <StateSpecificPage
+              stateData={stateData}
+              // Consider passing allServices={comprehensiveServices} if CityCardStatePage needs it
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+    // If stateData is not found, it will fall through to other routes or 404 logic.
   }
 
   // Route: /:serviceSlug/:stateSlug/:citySlug/pricing/
