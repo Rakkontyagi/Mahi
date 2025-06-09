@@ -26,7 +26,8 @@ import { fictionalCompetitors, ourServiceComparisons } from './data/competitors'
 import { allCaseStudies } from './data/caseStudies';
 import { allProblems, allSolutionSets } from './data/problemSolutions';
 import { allLeadMagnets } from './data/leadMagnets';
-import { allTools } from './data/toolsData'; // New import
+import { allTools } from './data/toolsData';
+import { allPortfolioItems } from './data/portfolioData'; // New import
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
@@ -44,6 +45,7 @@ const LocationsHubPage = lazy(() => import('./components/Pages/LocationsHubPage'
 const StateSpecificPage = lazy(() => import('./components/Pages/StateSpecificPage').then(module => ({ default: module.StateSpecificPage })));
 const LocationTierPage = lazy(() => import('./components/Pages/LocationTierPage').then(module => ({ default: module.LocationTierPage })));
 const ToolsHubPage = lazy(() => import('./components/Pages/ToolsHubPage').then(module => ({ default: module.ToolsHubPage })));
+const PortfolioPage = lazy(() => import('./components/Pages/PortfolioPage').then(module => ({ default: module.PortfolioPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -354,6 +356,25 @@ function AppContent() {
       );
     }
     // If tierName is not valid, it will fall through (leading to 404 or default page).
+  }
+
+  // Route: /portfolio/ (Hub Page)
+  if (pathname === '/portfolio') {
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Our Work", url: "/portfolio/", isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <PortfolioPage
+            allPortfolioItems={allPortfolioItems}
+          />
+        </Suspense>
+      </PageWrapper>
+    );
   }
 
   // Route: /tools/ (Hub Page)
