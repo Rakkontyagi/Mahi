@@ -41,6 +41,7 @@ const ROICalculatorPage = lazy(() => import('./components/Pages/ROICalculatorPag
 const IndustriesHubPage = lazy(() => import('./components/Pages/IndustriesHubPage').then(module => ({ default: module.IndustriesHubPage })));
 const LocationsHubPage = lazy(() => import('./components/Pages/LocationsHubPage').then(module => ({ default: module.LocationsHubPage })));
 const StateSpecificPage = lazy(() => import('./components/Pages/StateSpecificPage').then(module => ({ default: module.StateSpecificPage })));
+const LocationTierPage = lazy(() => import('./components/Pages/LocationTierPage').then(module => ({ default: module.LocationTierPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -316,6 +317,41 @@ function AppContent() {
       );
     }
     // If stateData is not found, it will fall through to other routes or 404 logic.
+  }
+
+  // Route: /locations/tier/:tierName/ (Location Tier Page)
+  // Place this AFTER /locations/ and /locations/:stateSlug/
+  if (pathParts.length === 3 && pathParts[0] === 'locations' && pathParts[1] === 'tier') {
+    const tierName = pathParts[2];
+
+    // Validate tierName to ensure it's one of the expected values
+    const validTiers = ['metro', 'tier-2', 'tier-3'];
+    if (validTiers.includes(tierName)) {
+      let breadcrumbTierName = '';
+      if (tierName === 'metro') breadcrumbTierName = 'Metro Cities';
+      else if (tierName === 'tier-2') breadcrumbTierName = 'Tier 2 Cities';
+      else if (tierName === 'tier-3') breadcrumbTierName = 'Tier 3 Cities';
+      else breadcrumbTierName = tierName; // Fallback, though validation helps
+
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: "Locations", url: "/locations/" }, // Link to Locations Hub
+        { name: breadcrumbTierName, url: `/locations/tier/${tierName}/`, isActive: true }
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <LocationTierPage
+              tierIdentifier={tierName}
+              allIndianLocations={allIndianLocations}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+    // If tierName is not valid, it will fall through (leading to 404 or default page).
   }
 
   // Route: /:serviceSlug/:stateSlug/:citySlug/pricing/
