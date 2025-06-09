@@ -7,6 +7,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../Shared/AnchorTextUtils';
 import { comprehensiveServices, allIndianLocations, comprehensiveIndustries } from '../../data/comprehensiveLocations';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 interface IndustryLocationTemplateProps {
   industry: {
@@ -51,6 +52,16 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
     { icon: <Award className="w-6 h-6" />, label: "Success Rate", value: "96%" }
   ];
 
+  const canonicalUrl = location 
+    ? `https://goddigitalmarketing.com/${service.slug}/${industry.slug}/${location.stateSlug}/${location.citySlug}/`
+    : `https://goddigitalmarketing.com/${service.slug}/${industry.slug}/`;
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Industries', url: 'https://goddigitalmarketing.com/industries/' },
+    { title: industry.name, url: `https://goddigitalmarketing.com/industries/${industry.slug}/` },
+    { title: service.name, url: canonicalUrl }
+  ];
+
   const seoData = {
     title: `${pageTitle} | God Digital Marketing`,
     description: `Specialized ${service.name.toLowerCase()} for ${industry.name.toLowerCase()} businesses${location ? ` in ${location.city}, ${location.state}` : ''}. Industry-specific strategies and proven results.`,
@@ -64,19 +75,17 @@ export const IndustryLocationTemplate: React.FC<IndustryLocationTemplateProps> =
         `${location.city} ${industry.slug} ${service.slug}`
       ] : [])
     ],
-    canonicalUrl: location 
-      ? `https://goddigitalmarketing.com/${service.slug}/${industry.slug}/${location.stateSlug}/${location.citySlug}/`
-      : `https://goddigitalmarketing.com/${service.slug}/${industry.slug}/`,
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": pageTitle,
-      "description": `Specialized ${service.name.toLowerCase()} services for ${industry.name.toLowerCase()} businesses`,
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: pageTitle,
+        description: `Specialized ${service.name.toLowerCase()} services for ${industry.name.toLowerCase()} businesses`,
+        provider: 'God Digital Marketing',
+        areaServed: location ? `${location.city}, ${location.state}` : 'India',
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   const usedAnchors = new Set<string>();

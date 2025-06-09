@@ -4,6 +4,7 @@ import { ShoppingCart, TrendingUp, Award, Users, Target, Phone, Mail, Clock, Che
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const EcommerceDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,35 +50,39 @@ export const EcommerceDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/ecommerce-digital-marketing/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Ecommerce Digital Marketing', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "E-commerce Digital Marketing | Online Store Marketing | God Digital Marketing",
-    description: "Specialized e-commerce digital marketing services. Increase online sales by 400% with our proven SEO, PPC, and conversion optimization strategies for online stores.",
+    title: "Ecommerce Digital Marketing | Best Ecommerce Marketing Company India | God Digital Marketing",
+    description: "Top ecommerce digital marketing company in India. Grow your ecommerce business with our expert team and proven strategies for the ecommerce industry.",
     keywords: [
       "ecommerce digital marketing",
-      "online store marketing",
-      "ecommerce seo",
-      "shopping ads management",
-      "ecommerce ppc",
-      "online sales optimization",
-      "ecommerce website marketing",
-      "product marketing",
-      "conversion rate optimization",
-      "amazon marketing",
-      "shopify marketing",
-      "marketplace advertising"
+      "ecommerce marketing company india",
+      "best ecommerce marketing company india",
+      "ecommerce marketing agency india",
+      "ecommerce marketing india",
+      "digital marketing ecommerce india",
+      "ecommerce seo india",
+      "ecommerce ppc india",
+      "ecommerce content marketing india",
+      "ecommerce branding india",
+      "ecommerce marketing experts india"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/ecommerce-digital-marketing/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "E-commerce Digital Marketing Services",
-      "description": "Specialized digital marketing services for e-commerce businesses and online stores",
-      "url": "https://goddigitalmarketing.com/ecommerce-digital-marketing/",
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Ecommerce Digital Marketing",
+        description: "Comprehensive digital marketing solutions for ecommerce businesses",
+        provider: "God Digital Marketing",
+        areaServed: "India",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

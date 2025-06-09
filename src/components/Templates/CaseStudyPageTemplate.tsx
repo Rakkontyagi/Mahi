@@ -6,6 +6,7 @@ import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { Target, Briefcase, TrendingUp, Star, MessageSquare, Link as LinkIcon, CalendarDays, Users, Zap } from 'lucide-react'; // Example icons
 import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
+import { getCaseStudySchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 interface CaseStudyPageTemplateProps {
   caseStudy: CaseStudyData;
@@ -48,6 +49,13 @@ const CaseStudyPageTemplate: React.FC<CaseStudyPageTemplateProps> = ({ caseStudy
 
   const utilizedServiceNames = getServiceNames(caseStudy.serviceSlugs);
 
+  const canonicalUrl = `${siteBaseUrl}/case-studies/${caseStudy.id}/`;
+  const breadcrumbs = [
+    { title: 'Home', url: siteBaseUrl },
+    { title: 'Case Studies', url: `${siteBaseUrl}/case-studies/` },
+    { title: caseStudy.title, url: canonicalUrl }
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article", // Could also be CaseStudy, but Article is widely supported
@@ -66,8 +74,11 @@ const CaseStudyPageTemplate: React.FC<CaseStudyPageTemplateProps> = ({ caseStudy
         title={`${caseStudy.title} | Case Study`}
         description={caseStudy.metaDescription}
         keywords={caseStudy.keywords || []}
-        canonicalUrl={`${siteBaseUrl}/case-studies/${caseStudy.id}/`}
-        structuredData={structuredData}
+        canonicalUrl={canonicalUrl}
+        structuredData={[
+          getCaseStudySchema(caseStudy),
+          getBreadcrumbSchema(breadcrumbs)
+        ]}
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-gray-200 font-sans">
 

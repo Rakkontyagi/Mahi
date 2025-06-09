@@ -4,6 +4,7 @@ import { Heart, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCircl
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const HealthcareDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,35 +50,39 @@ export const HealthcareDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/healthcare-digital-marketing/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Healthcare Digital Marketing', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Healthcare Digital Marketing | Medical SEO | God Digital Marketing",
-    description: "Specialized healthcare digital marketing services. HIPAA-compliant strategies to increase patient acquisition by 250%. Expert medical SEO and healthcare marketing solutions.",
+    title: "Healthcare Digital Marketing | Best Healthcare Marketing Company India | God Digital Marketing",
+    description: "Top healthcare digital marketing company in India. Grow your healthcare business with our expert team and proven strategies for the healthcare industry.",
     keywords: [
       "healthcare digital marketing",
-      "medical digital marketing",
-      "healthcare seo",
-      "medical seo",
-      "doctor marketing",
-      "hospital marketing",
-      "healthcare ppc",
-      "medical practice marketing",
-      "patient acquisition",
-      "healthcare social media",
-      "medical website design",
-      "telemedicine marketing"
+      "healthcare marketing company india",
+      "best healthcare marketing company india",
+      "healthcare marketing agency india",
+      "healthcare marketing india",
+      "digital marketing healthcare india",
+      "healthcare seo india",
+      "healthcare ppc india",
+      "healthcare content marketing india",
+      "healthcare branding india",
+      "healthcare marketing experts india"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/healthcare-digital-marketing/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Healthcare Digital Marketing Services",
-      "description": "Specialized digital marketing services for healthcare providers and medical practices",
-      "url": "https://goddigitalmarketing.com/healthcare-digital-marketing/",
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Healthcare Digital Marketing",
+        description: "Comprehensive digital marketing solutions for healthcare businesses",
+        provider: "God Digital Marketing",
+        areaServed: "India",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

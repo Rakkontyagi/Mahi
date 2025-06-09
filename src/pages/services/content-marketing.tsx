@@ -2,6 +2,7 @@ import React from 'react';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { ServiceLocationsFooter } from '../../components/Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../../components/Shared/AnchorTextUtils';
+import { getServiceSchema, getFAQSchema, getPersonSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 const expert = {
   name: 'Priya Sharma',
@@ -29,6 +30,13 @@ const faqs = [
   }
 ];
 
+const canonicalUrl = "https://goddigitalmarketing.com/services/content-marketing/";
+const breadcrumbs = [
+  { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+  { title: 'Services', url: 'https://goddigitalmarketing.com/services/' },
+  { title: 'Content Marketing', url: canonicalUrl }
+];
+
 const ContentMarketingPage = () => {
   return (
     <>
@@ -36,7 +44,19 @@ const ContentMarketingPage = () => {
         title="Content Marketing Services in India | God Digital"
         description="Build authority and drive organic growth with India's top Content Marketing agency. Expert strategies, SEO content, and storytelling for every city and industry."
         keywords={["content marketing", "content strategy", "SEO content", "thought leadership", "brand storytelling", "content writing India"]}
-        canonicalUrl="https://goddigitalmarketing.com/services/content-marketing/"
+        canonicalUrl={canonicalUrl}
+        structuredData={[
+          getServiceSchema({
+            name: 'Content Marketing',
+            description: 'Build authority and drive organic growth with India\'s top Content Marketing agency. Expert strategies, SEO content, and storytelling for every city and industry.',
+            provider: 'God Digital',
+            areaServed: 'India',
+            url: canonicalUrl
+          }),
+          getFAQSchema(faqs),
+          getPersonSchema(expert),
+          getBreadcrumbSchema(breadcrumbs)
+        ]}
       />
       <main className="bg-white text-black min-h-screen">
         <section className="max-w-4xl mx-auto py-12 px-4">
@@ -111,46 +131,6 @@ const ContentMarketingPage = () => {
         </section>
         <ServiceLocationsFooter service={{ name: 'Content Marketing', slug: 'content-marketing' }} />
       </main>
-      {/* Schema.org JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Content Marketing",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "God Digital"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "India"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Content Marketing Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Content" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Thought Leadership" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Content" } }
-          ]
-        }
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.q,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.a }
-        }))
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": expert.name,
-        "jobTitle": expert.title,
-        "image": expert.image,
-        "sameAs": expert.sameAs
-      }) }} />
     </>
   );
 };

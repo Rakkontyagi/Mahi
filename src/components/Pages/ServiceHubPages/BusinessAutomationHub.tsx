@@ -5,6 +5,7 @@ import { GlassmorphismCard } from '../../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../../Advanced/ParallaxSection';
 import { SEOHead } from '../../SEO/SEOHead';
 import { allIndianLocations, comprehensiveServices } from '../../../data/comprehensiveLocations';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 export const BusinessAutomationHub: React.FC = () => {
   const businessAutomationService = comprehensiveServices.find(s => s.slug === 'business-automation');
@@ -50,6 +51,12 @@ export const BusinessAutomationHub: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/business-automation/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Business Automation', url: canonicalUrl }
+  ];
+
   const seoData = {
     title: "Business Automation Services India | Process Automation | God Digital Marketing",
     description: "Leading business automation company in India offering workflow automation, process optimization, and operational efficiency solutions. Increase productivity by 300% with our automation services.",
@@ -67,17 +74,17 @@ export const BusinessAutomationHub: React.FC = () => {
       "workflow optimization india",
       "business efficiency automation india"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/business-automation/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Business Automation Services",
-      "description": "Comprehensive business process automation and workflow optimization services",
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Business Automation Services",
+        description: "Comprehensive business process automation and workflow optimization services",
+        provider: "God Digital Marketing",
+        areaServed: "India",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

@@ -5,6 +5,7 @@ import { GlassmorphismCard } from '../../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../../Advanced/ParallaxSection';
 import { SEOHead } from '../../SEO/SEOHead';
 import { allIndianLocations, comprehensiveServices } from '../../../data/comprehensiveLocations';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 export const LeadGenerationHub: React.FC = () => {
   const leadGenerationService = comprehensiveServices.find(s => s.slug === 'lead-generation');
@@ -50,6 +51,12 @@ export const LeadGenerationHub: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/lead-generation/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Lead Generation', url: canonicalUrl }
+  ];
+
   const seoData = {
     title: "Lead Generation Services India | B2B Lead Generation | God Digital Marketing",
     description: "Leading lead generation company in India offering B2B and B2C lead generation services. Generate 300% more qualified leads with our proven strategies across 500+ cities.",
@@ -67,17 +74,17 @@ export const LeadGenerationHub: React.FC = () => {
       "online lead generation india",
       "lead generation experts india"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/lead-generation/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Lead Generation Services",
-      "description": "Comprehensive lead generation and customer acquisition services",
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Lead Generation Services",
+        description: "Comprehensive lead generation and customer acquisition services",
+        provider: "God Digital Marketing",
+        areaServed: "India",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

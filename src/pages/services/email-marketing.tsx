@@ -2,6 +2,7 @@ import React from 'react';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { ServiceLocationsFooter } from '../../components/Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../../components/Shared/AnchorTextUtils';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 const expert = {
   name: 'Amit Verma',
@@ -29,14 +30,31 @@ const faqs = [
   }
 ];
 
+const canonicalUrl = "https://goddigitalmarketing.com/services/email-marketing/";
+const breadcrumbs = [
+  { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+  { title: 'Services', url: 'https://goddigitalmarketing.com/services/' },
+  { title: 'Email Marketing', url: canonicalUrl }
+];
+
 const EmailMarketingPage = () => {
   return (
     <>
       <SEOHead
         title="Email Marketing Services in India | God Digital"
-        description="Boost conversions and nurture leads with India's best Email Marketing agency. Automation, segmentation, and high-converting campaigns for every city and industry."
-        keywords={["email marketing", "email automation", "newsletter India", "drip campaigns", "email deliverability", "lead nurturing"]}
-        canonicalUrl="https://goddigitalmarketing.com/services/email-marketing/"
+        description="Drive conversions and nurture leads with India's top Email Marketing agency. Campaign strategy, automation, and analytics for every industry."
+        keywords={["email marketing", "email automation", "lead nurturing", "email campaigns India", "newsletter marketing"]}
+        canonicalUrl={canonicalUrl}
+        structuredData={[
+          getServiceSchema({
+            name: 'Email Marketing',
+            description: 'Drive conversions and nurture leads with India\'s top Email Marketing agency. Campaign strategy, automation, and analytics for every industry.',
+            provider: 'God Digital',
+            areaServed: 'India',
+            url: canonicalUrl
+          }),
+          getBreadcrumbSchema(breadcrumbs)
+        ]}
       />
       <main className="bg-white text-black min-h-screen">
         <section className="max-w-4xl mx-auto py-12 px-4">

@@ -4,6 +4,7 @@ import { Search, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCirc
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 export const DelhiSEOServices: React.FC = () => {
   const benefits = [
@@ -49,9 +50,15 @@ export const DelhiSEOServices: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/seo-services-delhi/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'SEO Services Delhi', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "SEO Services in Delhi | Best SEO Company Delhi | God Digital Marketing",
-    description: "Leading SEO company in Delhi offering professional SEO services. Rank #1 on Google with our proven SEO strategies. Increase organic traffic by 400% for Delhi businesses.",
+    title: "SEO Services Delhi | Best SEO Company in Delhi NCR | God Digital Marketing",
+    description: "Best SEO company in Delhi NCR offering professional SEO services. Rank #1 on Google with our proven SEO strategies for Delhi businesses.",
     keywords: [
       "seo services delhi",
       "seo company delhi",
@@ -66,21 +73,17 @@ export const DelhiSEOServices: React.FC = () => {
       "website seo delhi",
       "seo packages delhi"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/seo-services-delhi/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "God Digital Marketing - SEO Services Delhi",
-      "description": "Leading SEO company in Delhi offering professional search engine optimization services",
-      "url": "https://goddigitalmarketing.com/seo-services-delhi/",
-      "telephone": "+91-9999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Delhi",
-        "addressRegion": "Delhi",
-        "addressCountry": "India"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "SEO Services Delhi",
+        description: "Professional search engine optimization services in Delhi NCR",
+        provider: "God Digital Marketing",
+        areaServed: "Delhi NCR",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

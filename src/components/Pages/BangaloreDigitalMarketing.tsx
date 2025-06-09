@@ -4,6 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Zap, Phone, Mail, Clock, Chec
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const BangaloreDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,38 +50,39 @@ export const BangaloreDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/digital-marketing-bangalore/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Digital Marketing Bangalore', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Digital Marketing Services in Bangalore | God Digital Marketing",
-    description: "Leading digital marketing agency in Bangalore offering SEO, PPC, social media marketing, and web development. Proven results for Bangalore businesses with 380%+ ROI improvement.",
+    title: "Digital Marketing Bangalore | Best Digital Marketing Company Bangalore | God Digital Marketing",
+    description: "Top digital marketing company in Bangalore offering 360° digital marketing solutions. Grow your business with our expert team and proven strategies for Bangalore market.",
     keywords: [
-      "digital marketing services bangalore",
-      "digital marketing agency bangalore",
+      "digital marketing bangalore",
       "digital marketing company bangalore",
-      "best digital marketing bangalore",
+      "best digital marketing company bangalore",
+      "digital marketing agency bangalore",
       "online marketing bangalore",
       "internet marketing bangalore",
       "digital advertising bangalore",
-      "marketing agency bangalore",
-      "seo services bangalore",
-      "ppc management bangalore",
-      "social media marketing bangalore",
-      "website development bangalore"
+      "performance marketing bangalore",
+      "growth marketing bangalore",
+      "brand marketing bangalore",
+      "digital marketing experts bangalore"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/digital-marketing-bangalore/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "God Digital Marketing - Bangalore",
-      "description": "Leading digital marketing agency in Bangalore offering comprehensive digital solutions",
-      "url": "https://goddigitalmarketing.com/digital-marketing-bangalore/",
-      "telephone": "+91-9999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bangalore",
-        "addressRegion": "Karnataka",
-        "addressCountry": "India"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Digital Marketing Bangalore",
+        description: "Comprehensive digital marketing solutions for Bangalore businesses",
+        provider: "God Digital Marketing",
+        areaServed: "Bangalore",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

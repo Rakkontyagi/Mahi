@@ -4,6 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCirc
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const ChennaiDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,38 +50,39 @@ export const ChennaiDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/digital-marketing-chennai/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Digital Marketing Chennai', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Digital Marketing Services in Chennai | God Digital Marketing",
-    description: "Leading digital marketing agency in Chennai offering SEO, PPC, social media marketing, and web development. Proven results for Chennai businesses with 360%+ ROI improvement.",
+    title: "Digital Marketing Chennai | Best Digital Marketing Company Chennai | God Digital Marketing",
+    description: "Top digital marketing company in Chennai offering 360° digital marketing solutions. Grow your business with our expert team and proven strategies for Chennai market.",
     keywords: [
-      "digital marketing services chennai",
-      "digital marketing agency chennai",
+      "digital marketing chennai",
       "digital marketing company chennai",
-      "best digital marketing chennai",
+      "best digital marketing company chennai",
+      "digital marketing agency chennai",
       "online marketing chennai",
       "internet marketing chennai",
       "digital advertising chennai",
-      "marketing agency chennai",
-      "seo services chennai",
-      "ppc management chennai",
-      "social media marketing chennai",
-      "website development chennai"
+      "performance marketing chennai",
+      "growth marketing chennai",
+      "brand marketing chennai",
+      "digital marketing experts chennai"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/digital-marketing-chennai/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "God Digital Marketing - Chennai",
-      "description": "Leading digital marketing agency in Chennai offering comprehensive digital solutions",
-      "url": "https://goddigitalmarketing.com/digital-marketing-chennai/",
-      "telephone": "+91-9999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Chennai",
-        "addressRegion": "Tamil Nadu",
-        "addressCountry": "India"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Digital Marketing Chennai",
+        description: "Comprehensive digital marketing solutions for Chennai businesses",
+        provider: "God Digital Marketing",
+        areaServed: "Chennai",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

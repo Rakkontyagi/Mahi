@@ -2,6 +2,7 @@ import React from 'react';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { ServiceLocationsFooter } from '../../components/Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../../components/Shared/AnchorTextUtils';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 const expert = {
   name: 'Rakesh Tyagi',
@@ -29,14 +30,31 @@ const faqs = [
   }
 ];
 
+const canonicalUrl = "https://goddigitalmarketing.com/services/social-media-marketing/";
+const breadcrumbs = [
+  { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+  { title: 'Services', url: 'https://goddigitalmarketing.com/services/' },
+  { title: 'Social Media Marketing', url: canonicalUrl }
+];
+
 const SocialMediaMarketingPage = () => {
   return (
     <>
       <SEOHead
         title="Social Media Marketing Services in India | God Digital"
-        description="Grow your brand with India's #1 Social Media Marketing agency. Viral campaigns, influencer marketing, and community building for every city and industry."
-        keywords={["social media marketing", "SMM India", "Instagram marketing", "Facebook ads", "brand engagement", "viral campaigns"]}
-        canonicalUrl="https://goddigitalmarketing.com/services/social-media-marketing/"
+        description="Grow your brand and engage your audience with India's top Social Media Marketing agency. Expert strategies for every platform and industry."
+        keywords={["social media marketing", "smm", "facebook marketing", "instagram marketing", "linkedin marketing", "brand engagement India"]}
+        canonicalUrl={canonicalUrl}
+        structuredData={[
+          getServiceSchema({
+            name: 'Social Media Marketing',
+            description: 'Grow your brand and engage your audience with India\'s top Social Media Marketing agency. Expert strategies for every platform and industry.',
+            provider: 'God Digital',
+            areaServed: 'India',
+            url: canonicalUrl
+          }),
+          getBreadcrumbSchema(breadcrumbs)
+        ]}
       />
       <main className="bg-white text-black min-h-screen">
         <section className="max-w-4xl mx-auto py-12 px-4">
