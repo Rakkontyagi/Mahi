@@ -6,7 +6,7 @@ import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { Target, Briefcase, TrendingUp, Star, MessageSquare, Link as LinkIcon, CalendarDays, Users, Zap } from 'lucide-react'; // Example icons
 import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
-import { getCaseStudySchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
+import { getCaseStudySchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
 
 interface CaseStudyPageTemplateProps {
   caseStudy: CaseStudyData;

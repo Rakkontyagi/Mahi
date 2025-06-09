@@ -5,7 +5,7 @@ import { GlassmorphismCard } from '../../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../../Advanced/ParallaxSection';
 import { SEOHead } from '../../SEO/SEOHead';
 import { allIndianLocations, comprehensiveServices } from '../../../data/comprehensiveLocations';
-import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
 
 export const LeadGenerationHub: React.FC = () => {
   const leadGenerationService = comprehensiveServices.find(s => s.slug === 'lead-generation');

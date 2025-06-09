@@ -2,7 +2,7 @@ import React from 'react';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { ServiceLocationsFooter } from '../../components/Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../../components/Shared/AnchorTextUtils';
-import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
 
 const expert = {
   name: 'Rakesh Tyagi',

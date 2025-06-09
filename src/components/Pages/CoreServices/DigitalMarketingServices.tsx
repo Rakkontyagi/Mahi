@@ -5,7 +5,7 @@ import { BaseCard } from '../../Shared/BaseCard';
 import { AnimatedSection } from '../../Shared/AnimatedSection';
 import { SEOHead } from '../../SEO/SEOHead';
 import { allIndianLocations } from '../../../data/comprehensiveLocations';
-import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
 
 export const DigitalMarketingServices: React.FC = () => {
   const majorStates = allIndianLocations.slice(0, 8);

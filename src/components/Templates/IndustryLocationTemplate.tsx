@@ -7,7 +7,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../Shared/AnchorTextUtils';
 import { comprehensiveServices, allIndianLocations, comprehensiveIndustries } from '../../data/comprehensiveLocations';
-import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
 
 interface IndustryLocationTemplateProps {
   industry: {
