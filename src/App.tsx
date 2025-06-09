@@ -39,6 +39,7 @@ const ServicePricingPageTemplate = lazy(() => import('./components/Templates/Ser
 const LeadMagnetLandingPageTemplate = lazy(() => import('./components/Templates/LeadMagnetLandingPageTemplate').then(module => ({ default: module.LeadMagnetLandingPageTemplate })));
 const ROICalculatorPage = lazy(() => import('./components/Pages/ROICalculatorPage').then(module => ({ default: module.ROICalculatorPage }))); // New lazy load
 const IndustriesHubPage = lazy(() => import('./components/Pages/IndustriesHubPage').then(module => ({ default: module.IndustriesHubPage })));
+const LocationsHubPage = lazy(() => import('./components/Pages/LocationsHubPage').then(module => ({ default: module.LocationsHubPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -258,6 +259,26 @@ function AppContent() {
         <Suspense fallback={<LoadingFallback />}>
           <IndustriesHubPage
             allIndustries={comprehensiveIndustries}
+          />
+        </Suspense>
+      </PageWrapper>
+    );
+  }
+
+  // Route: /locations/ (Hub Page)
+  // Place this with other hub page routes like /industries/
+  if (pathname === '/locations') {
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Locations", url: "/locations/", isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <LocationsHubPage
+            allLocations={allIndianLocations}
           />
         </Suspense>
       </PageWrapper>
