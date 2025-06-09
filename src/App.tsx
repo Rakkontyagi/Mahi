@@ -24,12 +24,12 @@ import { allProblems, allSolutionSets } from './data/problemSolutions'; // New i
 import ReloadPrompt from './components/Shared/ReloadPrompt';
 
 // Lazy load components
-const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
-const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate').then(module => ({ default: module.ServiceROIPageTemplate })));
-const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate').then(module => ({ default: module.CompetitorAlternativePageTemplate })));
-const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate').then(module => ({ default: module.CaseStudyPageTemplate })));
-const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage').then(module => ({ default: module.CaseStudiesHubPage })));
-const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate').then(module => ({ default: module.ProblemSolutionPageTemplate }))); // New lazy load
+const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate'));
+const ServiceROIPageTemplate = lazy(() => import('./components/Templates/ServiceROIPageTemplate'));
+const CompetitorAlternativePageTemplate = lazy(() => import('./components/Templates/CompetitorAlternativePageTemplate'));
+const CaseStudyPageTemplate = lazy(() => import('./components/Templates/CaseStudyPageTemplate'));
+const CaseStudiesHubPage = lazy(() => import('./components/Pages/CaseStudiesHubPage'));
+const ProblemSolutionPageTemplate = lazy(() => import('./components/Templates/ProblemSolutionPageTemplate'));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -75,18 +75,26 @@ function AppContent() {
     sidebarProps?: any;
   }) => (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      <CursorFollower />
-      <EnhancedNavigation />
+      <header>
+        <CursorFollower />
+        <EnhancedNavigation />
+      </header>
       {breadcrumbs && breadcrumbs.length > 0 && (
-        <div className="pt-20">
+        <nav aria-label="Breadcrumb" className="pt-20">
           <BreadcrumbNavigation items={breadcrumbs} />
-        </div>
+        </nav>
       )}
-      <div className={breadcrumbs ? '' : 'pt-20'}>
+      <main className={breadcrumbs ? '' : 'pt-20'}>
         {children}
-      </div>
-      {sidebarProps && <ContextualSidebar {...sidebarProps} />}
-      <EnhancedFooter />
+      </main>
+      {sidebarProps && (
+        <aside>
+          <ContextualSidebar {...sidebarProps} />
+        </aside>
+      )}
+      <footer>
+        <EnhancedFooter />
+      </footer>
     </div>
   );
 

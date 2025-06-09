@@ -160,199 +160,182 @@ export const ServiceLocationTemplate: React.FC<ServiceLocationTemplateProps> = (
             </AnimatedSection>
 
             {/* Stats Grid */}
-            <AnimatedSection direction="up" delay={0.2}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                {stats.map((stat, index) => (
-                  <BaseCard
-                    key={stat.label}
-                    title={stat.value}
-                    description={stat.label}
-                    variant="glass"
-                    className="text-center"
-                  >
-                    <div className="flex justify-center mb-4 text-white">
-                      {stat.icon}
-                    </div>
-                  </BaseCard>
-                ))}
-              </div>
-            </AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              {stats.map((stat, index) => (
+                <BaseCard
+                  key={stat.label}
+                  title={stat.value}
+                  description={stat.label}
+                  variant="glass"
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-4 text-white">
+                    {stat.icon}
+                  </div>
+                </BaseCard>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Service Overview */}
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <AnimatedSection direction="left">
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                    Why Choose Our {service.name} in {location.city}?
-                  </h2>
-                  <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                    Our {location.city}-based team specializes in delivering exceptional {service.name.toLowerCase()} 
-                    that drives measurable results for businesses across {location.state}. We understand the unique 
-                    market dynamics of {location.city} and tailor our strategies accordingly.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    {benefits.map((benefit, index) => (
-                      <motion.div
-                        key={benefit}
-                        className="flex items-center space-x-3"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                      >
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{benefit}</span>
-                      </motion.div>
-                    ))}
-                  </div>
+            <AnimatedSection direction="left">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Why Choose Our {service.name} in {location.city}?
+                </h2>
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                  Our {location.city}-based team specializes in delivering exceptional {service.name.toLowerCase()} 
+                  that drives measurable results for businesses across {location.state}. We understand the unique 
+                  market dynamics of {location.city} and tailor our strategies accordingly.
+                </p>
+                <div className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <motion.div
+                      key={benefit}
+                      className="flex items-center space-x-3"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{benefit}</span>
+                    </motion.div>
+                  ))}
                 </div>
-              </AnimatedSection>
-
-              <AnimatedSection direction="right">
-                <BaseCard
-                  title="Get Started Today"
-                  description=""
-                  variant="glass"
-                >
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-white" />
-                      <span className="text-gray-300">+91 9999999999</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Mail className="w-5 h-5 text-white" />
-                      <span className="text-gray-300">contact@goddigitalmarketing.com</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Clock className="w-5 h-5 text-white" />
-                      <span className="text-gray-300">24/7 Support Available</span>
-                    </div>
-                  </div>
-                  
-                  <motion.button
-                    className="w-full mt-6 px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Get Free Consultation
-                  </motion.button>
-                </BaseCard>
-              </AnimatedSection>
-            </div>
+              </div>
+            </AnimatedSection>
+            <BaseCard
+              title="Get Started Today"
+              description=""
+              variant="glass"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-white" />
+                  <span className="text-gray-300">+91 9999999999</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-white" />
+                  <span className="text-gray-300">contact@goddigitalmarketing.com</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Clock className="w-5 h-5 text-white" />
+                  <span className="text-gray-300">24/7 Support Available</span>
+                </div>
+              </div>
+              <motion.button
+                className="w-full mt-6 px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Get Free Consultation
+              </motion.button>
+            </BaseCard>
           </div>
         </section>
 
         {/* Process Section */}
-        <section className="py-20 bg-gray-900/20">
-          <div className="max-w-7xl mx-auto px-4">
-            <AnimatedSection direction="up">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Our {service.name} Process in {location.city}
-                </h2>
-                <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                  Proven methodology that delivers consistent results for {location.city} businesses
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <AnimatedSection key={step.step} direction="up" delay={index * 0.1}>
-                  <BaseCard
-                    title={step.title}
-                    description={step.description}
-                    variant="glass"
-                    className="text-center h-full"
-                  >
-                    <div className="text-4xl font-bold text-white/20 mb-4">{step.step}</div>
-                  </BaseCard>
-                </AnimatedSection>
-              ))}
+        <div className="max-w-7xl mx-auto px-4">
+          <AnimatedSection direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our {service.name} Process in {location.city}
+              </h2>
+              <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+                Proven methodology that delivers consistent results for {location.city} businesses
+              </p>
             </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <AnimatedSection key={step.step} direction="up" delay={index * 0.1}>
+                <BaseCard
+                  title={step.title}
+                  description={step.description}
+                  variant="glass"
+                  className="text-center h-full"
+                >
+                  <div className="text-4xl font-bold text-white/20 mb-4">{step.step}</div>
+                </BaseCard>
+              </AnimatedSection>
+            ))}
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
-        <section className="py-20 bg-black">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <AnimatedSection direction="up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your {location.city} Business?
-              </h2>
-              <p className="text-gray-300 text-lg mb-8">
-                Join hundreds of successful businesses in {location.city} that trust God Digital Marketing 
-                for their {service.name.toLowerCase()} needs.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Free Strategy Session
-                </motion.button>
-                <motion.button
-                  className="px-8 py-4 border border-gray-600 text-white hover:border-white transition-colors duration-300 rounded-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Case Studies
-                </motion.button>
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <AnimatedSection direction="up">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your {location.city} Business?
+            </h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Join hundreds of successful businesses in {location.city} that trust God Digital Marketing 
+              for their {service.name.toLowerCase()} needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Free Strategy Session
+              </motion.button>
+              <motion.button
+                className="px-8 py-4 border border-gray-600 text-white hover:border-white transition-colors duration-300 rounded-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Case Studies
+              </motion.button>
+            </div>
+          </AnimatedSection>
+        </div>
 
         {/* Related Links Section */}
-        <section className="py-12 bg-black border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Related Services */}
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">Related Services</h3>
-              <ul className="space-y-2">
-                {comprehensiveServices.filter(s => s.slug !== service.slug).slice(0, 6).map(s => (
-                  <li key={s.slug}>
-                    <a href={`/${s.slug}/${location.stateSlug}/${location.citySlug}/`} className="text-blue-400 hover:text-white text-sm">
-                      {getAnchorText('service', s, { city: location.city }, usedAnchors)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Related Locations */}
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">Related Locations</h3>
-              <ul className="space-y-2">
-                {allIndianLocations.slice(0, 6).map(state => (
-                  <li key={state.stateSlug}>
-                    <a href={`/${service.slug}/${state.stateSlug}/`} className="text-blue-400 hover:text-white text-sm">
-                      {getAnchorText('location', state, { service: service.name }, usedAnchors)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Related Industries */}
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">Related Industries</h3>
-              <ul className="space-y-2">
-                {comprehensiveIndustries.slice(0, 6).map(i => (
-                  <li key={i.slug}>
-                    <a href={`/${service.slug}/${i.slug}/`} className="text-blue-400 hover:text-white text-sm">
-                      {getAnchorText('industry', i, { service: service.name }, usedAnchors)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Related Services */}
+          <div>
+            <h3 className="text-lg font-bold text-white mb-4">Related Services</h3>
+            <ul className="space-y-2">
+              {comprehensiveServices.filter(s => s.slug !== service.slug).slice(0, 6).map(s => (
+                <li key={s.slug}>
+                  <a href={`/${s.slug}/${location.stateSlug}/${location.citySlug}/`} className="text-blue-400 hover:text-white text-sm">
+                    {getAnchorText('service', s, { city: location.city }, usedAnchors)}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-        </section>
+          {/* Related Locations */}
+          <div>
+            <h3 className="text-lg font-bold text-white mb-4">Related Locations</h3>
+            <ul className="space-y-2">
+              {allIndianLocations.slice(0, 6).map(state => (
+                <li key={state.stateSlug}>
+                  <a href={`/${service.slug}/${state.stateSlug}/`} className="text-blue-400 hover:text-white text-sm">
+                    {getAnchorText('location', state, { service: service.name }, usedAnchors)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Related Industries */}
+          <div>
+            <h3 className="text-lg font-bold text-white mb-4">Related Industries</h3>
+            <ul className="space-y-2">
+              {comprehensiveIndustries.slice(0, 6).map(i => (
+                <li key={i.slug}>
+                  <a href={`/${service.slug}/${i.slug}/`} className="text-blue-400 hover:text-white text-sm">
+                    {getAnchorText('industry', i, { service: service.name }, usedAnchors)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
       <ServiceLocationsFooter service={service} />
     </>
