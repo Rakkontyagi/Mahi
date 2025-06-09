@@ -5,6 +5,7 @@ import { BaseCard } from '../../Shared/BaseCard';
 import { AnimatedSection } from '../../Shared/AnimatedSection';
 import { SEOHead } from '../../SEO/SEOHead';
 import { allIndianLocations } from '../../../data/comprehensiveLocations';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 export const DigitalMarketingServices: React.FC = () => {
   const majorStates = allIndianLocations.slice(0, 8);
@@ -70,32 +71,39 @@ export const DigitalMarketingServices: React.FC = () => {
     "Proven track record with 2000+ successful campaigns"
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/digital-marketing/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Digital Marketing', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Digital Marketing Services India | Best Digital Marketing Agency | God Digital Marketing",
-    description: "Leading digital marketing agency in India offering comprehensive SEO, PPC, social media, and content marketing services. Proven results with 340% average ROI across 500+ cities.",
+    title: "Digital Marketing Services India | Best Digital Marketing Company | God Digital Marketing",
+    description: "Top digital marketing company in India offering 360° digital marketing solutions. Grow your business with our expert team and proven strategies.",
     keywords: [
       "digital marketing services india",
-      "digital marketing agency india",
+      "digital marketing company india",
       "best digital marketing company india",
-      "online marketing services",
+      "digital marketing agency india",
+      "online marketing india",
       "internet marketing india",
-      "digital advertising agency",
-      "seo services india",
-      "ppc management india",
-      "social media marketing india",
-      "content marketing services"
+      "digital advertising india",
+      "performance marketing india",
+      "growth marketing india",
+      "brand marketing india",
+      "digital marketing experts india"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/digital-marketing-services/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Digital Marketing Services",
-      "description": "Comprehensive digital marketing services across India",
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Digital Marketing Services",
+        description: "Comprehensive digital marketing solutions for business growth",
+        provider: "God Digital Marketing",
+        areaServed: "India",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

@@ -6,6 +6,7 @@ import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { Lightbulb, AlertTriangle, CheckSquare, MapPin, ChevronRight, Zap, Settings, Users } from 'lucide-react'; // Example icons
 import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
+import { getArticleSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 // Simplified Location Info Props for this template
 interface LocationInfoProps {
@@ -51,13 +52,30 @@ const ProblemSolutionPageTemplate: React.FC<ProblemSolutionPageTemplateProps> = 
   // Simple icon picker for symptoms, can be expanded
   const symptomIcons = [AlertTriangle, Lightbulb, Zap, Users, Settings];
 
+  const canonicalUrl = `/problems/${problem.problemSlug}/${location.stateSlug}/${location.citySlug}/`;
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Problems', url: 'https://goddigitalmarketing.com/problems/' },
+    { title: problem.problemTitle, url: canonicalUrl }
+  ];
+
   return (
     <>
       <SEOHead
         title={`${pageTitle} | ${YourCompanyName}`}
         description={metaDescription}
         keywords={metaKeywords}
-        canonicalUrl={`/problems/${problem.problemSlug}/${location.stateSlug}/${location.citySlug}/`}
+        canonicalUrl={canonicalUrl}
+        structuredData={[
+          getArticleSchema({
+            headline: pageTitle,
+            description: metaDescription,
+            keywords: metaKeywords,
+            author: YourCompanyName,
+            url: canonicalUrl
+          }),
+          getBreadcrumbSchema(breadcrumbs)
+        ]}
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-gray-200 font-sans">
         {/* Hero Section */}

@@ -4,6 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Zap, Phone, Mail, Clock, Chec
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const DelhiDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -72,53 +73,39 @@ export const DelhiDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/digital-marketing-delhi/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Digital Marketing Delhi', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Digital Marketing Services in Delhi | God Digital Marketing",
-    description: "Leading digital marketing agency in Delhi offering SEO, PPC, social media marketing, and web development. Proven results for Delhi businesses with 340%+ ROI improvement.",
+    title: "Digital Marketing Delhi | Best Digital Marketing Company Delhi | God Digital Marketing",
+    description: "Top digital marketing company in Delhi offering 360° digital marketing solutions. Grow your business with our expert team and proven strategies for Delhi market.",
     keywords: [
-      "digital marketing services delhi",
-      "digital marketing agency delhi",
+      "digital marketing delhi",
       "digital marketing company delhi",
-      "best digital marketing delhi",
+      "best digital marketing company delhi",
+      "digital marketing agency delhi",
       "online marketing delhi",
       "internet marketing delhi",
       "digital advertising delhi",
-      "marketing agency delhi",
-      "seo services delhi",
-      "ppc management delhi",
-      "social media marketing delhi",
-      "website development delhi"
+      "performance marketing delhi",
+      "growth marketing delhi",
+      "brand marketing delhi",
+      "digital marketing experts delhi"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/digital-marketing-delhi/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "God Digital Marketing - Delhi",
-      "description": "Leading digital marketing agency in Delhi offering comprehensive digital solutions",
-      "url": "https://goddigitalmarketing.com/digital-marketing-delhi/",
-      "telephone": "+91-9999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Delhi",
-        "addressRegion": "Delhi",
-        "addressCountry": "India"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "28.6139",
-        "longitude": "77.2090"
-      },
-      "openingHours": "Mo-Su 00:00-23:59",
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "28.6139",
-          "longitude": "77.2090"
-        },
-        "geoRadius": "50000"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Digital Marketing Delhi",
+        description: "Comprehensive digital marketing solutions for Delhi businesses",
+        provider: "God Digital Marketing",
+        areaServed: "Delhi",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

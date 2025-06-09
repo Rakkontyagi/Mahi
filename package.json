@@ -5,12 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-sitemap.js",
     "build:analyze": "vite build --mode analyze",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "start-mcps": "node scripts/start-mcps.js",
+    "start-mcps:core": "node scripts/start-mcps.js core",
+    "start-mcps:browser": "node scripts/start-mcps.js browser",
+    "start-mcps:tools": "node scripts/start-mcps.js tools",
+    "start-mcps:system": "node scripts/start-mcps.js system"
   },
   "dependencies": {
     "@react-three/drei": "^9.92.7",

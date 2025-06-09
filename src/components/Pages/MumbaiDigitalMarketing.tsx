@@ -4,6 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Zap, Phone, Mail, Clock, Chec
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const MumbaiDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,38 +50,39 @@ export const MumbaiDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/digital-marketing-mumbai/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Digital Marketing Mumbai', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Digital Marketing Services in Mumbai | God Digital Marketing",
-    description: "Leading digital marketing agency in Mumbai offering SEO, PPC, social media marketing, and web development. Proven results for Mumbai businesses with 350%+ ROI improvement.",
+    title: "Digital Marketing Mumbai | Best Digital Marketing Company Mumbai | God Digital Marketing",
+    description: "Top digital marketing company in Mumbai offering 360° digital marketing solutions. Grow your business with our expert team and proven strategies for Mumbai market.",
     keywords: [
-      "digital marketing services mumbai",
-      "digital marketing agency mumbai",
+      "digital marketing mumbai",
       "digital marketing company mumbai",
-      "best digital marketing mumbai",
+      "best digital marketing company mumbai",
+      "digital marketing agency mumbai",
       "online marketing mumbai",
       "internet marketing mumbai",
       "digital advertising mumbai",
-      "marketing agency mumbai",
-      "seo services mumbai",
-      "ppc management mumbai",
-      "social media marketing mumbai",
-      "website development mumbai"
+      "performance marketing mumbai",
+      "growth marketing mumbai",
+      "brand marketing mumbai",
+      "digital marketing experts mumbai"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/digital-marketing-mumbai/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "God Digital Marketing - Mumbai",
-      "description": "Leading digital marketing agency in Mumbai offering comprehensive digital solutions",
-      "url": "https://goddigitalmarketing.com/digital-marketing-mumbai/",
-      "telephone": "+91-9999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "India"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Digital Marketing Mumbai",
+        description: "Comprehensive digital marketing solutions for Mumbai businesses",
+        provider: "God Digital Marketing",
+        areaServed: "Mumbai",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

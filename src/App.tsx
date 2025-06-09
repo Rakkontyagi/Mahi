@@ -22,6 +22,7 @@ import { fictionalCompetitors, ourServiceComparisons } from './data/competitors'
 import { allCaseStudies } from './data/caseStudies';
 import { allProblems, allSolutionSets } from './data/problemSolutions'; // New imports
 import ReloadPrompt from './components/Shared/ReloadPrompt';
+import { TrustSignals } from './components/TrustSignals';
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate'));
@@ -570,6 +571,7 @@ function AppContent() {
     <PageWrapper>
       <main>
         <AdvancedHero />
+        <TrustSignals />
         <Suspense fallback={<LoadingFallback />}>
           <IndiaKeywordOptimization />
         </Suspense>

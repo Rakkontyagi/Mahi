@@ -17,6 +17,7 @@ import { SEOHead } from '../SEO/SEOHead';
 import { AnimatedSection } from '../Shared/AnimatedSection';
 import CaseStudyCard from '../Shared/CaseStudyCard';
 import { Filter, ListChecks } from 'lucide-react'; // Icons for filter section
+import { getBreadcrumbSchema, getOrganizationSchema } from '../utils/seoStructuredData';
 
 interface CaseStudiesHubPageProps {
   allCaseStudies: CaseStudyData[];
@@ -56,14 +57,35 @@ const CaseStudiesHubPage: React.FC<CaseStudiesHubPageProps> = ({
     setSelectedService('');
   };
 
+  const canonicalUrl = "https://goddigitalmarketing.com/case-studies/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Case Studies', url: canonicalUrl }
+  ];
+
+  const seoData = {
+    title: "Case Studies | Digital Marketing Success Stories | God Digital Marketing",
+    description: "Explore our digital marketing case studies and success stories. See how we've helped businesses across India achieve outstanding results.",
+    keywords: [
+      "digital marketing case studies",
+      "success stories",
+      "marketing results",
+      "client testimonials",
+      "business growth",
+      "seo case studies",
+      "ppc case studies",
+      "social media case studies"
+    ],
+    canonicalUrl,
+    structuredData: [
+      getOrganizationSchema(),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
+  };
+
   return (
     <>
-      <SEOHead
-        title={`Client Case Studies | Success Stories | ${YourCompanyName}`}
-        description="Explore our client case studies to see how we've helped businesses across various industries achieve their goals with our innovative solutions."
-        keywords={["case studies", "success stories", "client results", "digital marketing case studies", "ai automation case studies"]}
-        canonicalUrl="https://goddigitalmarketing.com/case-studies/" // Placeholder
-      />
+      <SEOHead {...seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-black to-purple-900 text-gray-200 font-sans">
         {/* Hero Section */}
         <AnimatedSection direction="down" duration={1000}>

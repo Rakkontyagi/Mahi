@@ -4,6 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCirc
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const PuneDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,38 +50,39 @@ export const PuneDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/digital-marketing-pune/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Digital Marketing Pune', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Digital Marketing Services in Pune | God Digital Marketing",
-    description: "Leading digital marketing agency in Pune offering SEO, PPC, social media marketing, and web development. Proven results for Pune businesses with 320%+ ROI improvement.",
+    title: "Digital Marketing Pune | Best Digital Marketing Company Pune | God Digital Marketing",
+    description: "Top digital marketing company in Pune offering 360° digital marketing solutions. Grow your business with our expert team and proven strategies for Pune market.",
     keywords: [
-      "digital marketing services pune",
-      "digital marketing agency pune",
+      "digital marketing pune",
       "digital marketing company pune",
-      "best digital marketing pune",
+      "best digital marketing company pune",
+      "digital marketing agency pune",
       "online marketing pune",
       "internet marketing pune",
       "digital advertising pune",
-      "marketing agency pune",
-      "seo services pune",
-      "ppc management pune",
-      "social media marketing pune",
-      "website development pune"
+      "performance marketing pune",
+      "growth marketing pune",
+      "brand marketing pune",
+      "digital marketing experts pune"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/digital-marketing-pune/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "God Digital Marketing - Pune",
-      "description": "Leading digital marketing agency in Pune offering comprehensive digital solutions",
-      "url": "https://goddigitalmarketing.com/digital-marketing-pune/",
-      "telephone": "+91-9999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Pune",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "India"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Digital Marketing Pune",
+        description: "Comprehensive digital marketing solutions for Pune businesses",
+        provider: "God Digital Marketing",
+        areaServed: "Pune",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

@@ -4,6 +4,7 @@ import { Home, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCircle
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const RealEstateDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,35 +50,39 @@ export const RealEstateDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/real-estate-digital-marketing/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Real Estate Digital Marketing', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Real Estate Digital Marketing | Property Marketing | God Digital Marketing",
-    description: "Specialized real estate digital marketing services. Generate 300% more property leads with our proven SEO, PPC, and property marketing strategies for real estate professionals.",
+    title: "Real Estate Digital Marketing | Best Real Estate Marketing Company India | God Digital Marketing",
+    description: "Top real estate digital marketing company in India. Grow your real estate business with our expert team and proven strategies for the real estate industry.",
     keywords: [
       "real estate digital marketing",
-      "property marketing",
-      "real estate seo",
-      "realtor marketing",
-      "property lead generation",
-      "real estate ppc",
-      "property advertising",
-      "real estate social media",
-      "virtual tour marketing",
-      "property listing optimization",
-      "real estate website marketing",
-      "local real estate marketing"
+      "real estate marketing company india",
+      "best real estate marketing company india",
+      "real estate marketing agency india",
+      "real estate marketing india",
+      "digital marketing real estate india",
+      "real estate seo india",
+      "real estate ppc india",
+      "real estate content marketing india",
+      "real estate branding india",
+      "real estate marketing experts india"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/real-estate-digital-marketing/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Real Estate Digital Marketing Services",
-      "description": "Specialized digital marketing services for real estate professionals and property businesses",
-      "url": "https://goddigitalmarketing.com/real-estate-digital-marketing/",
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Real Estate Digital Marketing",
+        description: "Comprehensive digital marketing solutions for real estate businesses",
+        provider: "God Digital Marketing",
+        areaServed: "India",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

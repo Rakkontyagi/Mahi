@@ -4,6 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCirc
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const HyderabadDigitalMarketing: React.FC = () => {
   const benefits = [
@@ -49,38 +50,39 @@ export const HyderabadDigitalMarketing: React.FC = () => {
     }
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/digital-marketing-hyderabad/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'Digital Marketing Hyderabad', url: canonicalUrl }
+  ];
+
   const seoData = {
-    title: "Digital Marketing Services in Hyderabad | God Digital Marketing",
-    description: "Leading digital marketing agency in Hyderabad offering SEO, PPC, social media marketing, and web development. Proven results for Hyderabad businesses with 370%+ ROI improvement.",
+    title: "Digital Marketing Hyderabad | Best Digital Marketing Company Hyderabad | God Digital Marketing",
+    description: "Top digital marketing company in Hyderabad offering 360° digital marketing solutions. Grow your business with our expert team and proven strategies for Hyderabad market.",
     keywords: [
-      "digital marketing services hyderabad",
-      "digital marketing agency hyderabad",
+      "digital marketing hyderabad",
       "digital marketing company hyderabad",
-      "best digital marketing hyderabad",
+      "best digital marketing company hyderabad",
+      "digital marketing agency hyderabad",
       "online marketing hyderabad",
       "internet marketing hyderabad",
       "digital advertising hyderabad",
-      "marketing agency hyderabad",
-      "seo services hyderabad",
-      "ppc management hyderabad",
-      "social media marketing hyderabad",
-      "website development hyderabad"
+      "performance marketing hyderabad",
+      "growth marketing hyderabad",
+      "brand marketing hyderabad",
+      "digital marketing experts hyderabad"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/digital-marketing-hyderabad/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "God Digital Marketing - Hyderabad",
-      "description": "Leading digital marketing agency in Hyderabad offering comprehensive digital solutions",
-      "url": "https://goddigitalmarketing.com/digital-marketing-hyderabad/",
-      "telephone": "+91-9999999999",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "addressCountry": "India"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "Digital Marketing Hyderabad",
+        description: "Comprehensive digital marketing solutions for Hyderabad businesses",
+        provider: "God Digital Marketing",
+        areaServed: "Hyderabad",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (

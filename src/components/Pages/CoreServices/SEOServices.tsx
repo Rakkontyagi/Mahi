@@ -5,6 +5,7 @@ import { BaseCard } from '../../Shared/BaseCard';
 import { AnimatedSection } from '../../Shared/AnimatedSection';
 import { SEOHead } from '../../SEO/SEOHead';
 import { allIndianLocations } from '../../../data/comprehensiveLocations';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 export const SEOServices: React.FC = () => {
   const majorStates = allIndianLocations.slice(0, 8);
@@ -52,6 +53,12 @@ export const SEOServices: React.FC = () => {
     "Monthly SEO reports and analytics"
   ];
 
+  const canonicalUrl = "https://goddigitalmarketing.com/seo-services/";
+  const breadcrumbs = [
+    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
+    { title: 'SEO Services', url: canonicalUrl }
+  ];
+
   const seoData = {
     title: "SEO Services India | Best SEO Company | Professional SEO Agency | God Digital Marketing",
     description: "Leading SEO company in India offering professional SEO services. Rank #1 on Google with our proven SEO strategies. Increase organic traffic by 400% for Indian businesses.",
@@ -69,17 +76,17 @@ export const SEOServices: React.FC = () => {
       "website seo india",
       "seo packages india"
     ],
-    canonicalUrl: "https://goddigitalmarketing.com/seo-services/",
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "SEO Services",
-      "description": "Professional search engine optimization services across India",
-      "provider": {
-        "@type": "Organization",
-        "name": "God Digital Marketing"
-      }
-    }
+    canonicalUrl,
+    structuredData: [
+      getServiceSchema({
+        name: "SEO Services",
+        description: "Professional search engine optimization services across India",
+        provider: "God Digital Marketing",
+        areaServed: "India",
+        url: canonicalUrl
+      }),
+      getBreadcrumbSchema(breadcrumbs)
+    ]
   };
 
   return (
