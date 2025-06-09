@@ -1,8 +1,9 @@
 import React from 'react';
-import SEOHead from '../SEO/SEOHead';
-import AnimatedSection from '../Shared/AnimatedSection';
-import BaseCard from '../Shared/BaseCard';
+import { SEOHead } from '../SEO/SEOHead';
+import { AnimatedSection } from '../Shared/AnimatedSection';
+import { BaseCard } from '../Shared/BaseCard';
 import { ComprehensiveServiceData } from '../../data/comprehensiveLocations'; // Import the main service type
+import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 
 // Prop Interfaces
 // ServiceInfoProps is replaced by ComprehensiveServiceData for the service prop
@@ -33,7 +34,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
     `${industrySize.slug} ${service.slug} ROI`,
     `${service.slug} ROI ${industrySize.name}`,
     `return on investment ${service.name} for ${industrySize.slug}`,
-  ].join(', ');
+  ];
 
   // Icons for drivers - can be expanded or moved to data layer
   const driverIcons: { [key: string]: string } = {
@@ -78,11 +79,12 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
       <SEOHead
         title={`${pageTitle} | God Digital Marketing`}
         description={metaDescription}
-        keywords={metaKeywords}
+        keywords={metaKeywords as string[]}
+        canonicalUrl={`https://goddigitalmarketing.com/roi/${service.slug}/${industrySize.slug}`}
       />
       <div className="min-h-screen bg-gradient-to-br from-black via-slate-900 to-blue-900 text-gray-100 font-sans">
         {/* Hero Section */}
-        <AnimatedSection animationType="fadeInDown" duration={1000}>
+        <AnimatedSection direction="down" duration={1}>
           <section className="py-16 sm:py-20 md:py-32 text-center bg-black/30 backdrop-blur-md">
             <div className="container mx-auto px-4 sm:px-6">
               <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-300 to-green-300 break-words">
@@ -96,7 +98,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
         </AnimatedSection>
 
         {/* Key ROI Drivers Section */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={200}>
+        <AnimatedSection direction="up" duration={1} delay={0.2}>
           <section className="py-12 md:py-16 lg:py-24 container mx-auto px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 md:mb-16 text-teal-300 break-words">
               Key ROI Drivers for {industrySize.name}
@@ -104,7 +106,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
             {specificROIDetail?.drivers && specificROIDetail.drivers.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 {specificROIDetail.drivers.map((driver, index) => (
-                  <BaseCard key={index} variant="glass" className="p-4 sm:p-6 text-center hover:shadow-teal-400/30 transition-shadow duration-300 flex flex-col items-center">
+                  <BaseCard key={index} variant="glass" className="p-4 sm:p-6 text-center hover:shadow-teal-400/30 transition-shadow duration-300 flex flex-col items-center" title={driver} description={driver}>
                     <div className="text-4xl sm:text-5xl mb-4">{getDriverIcon(driver)}</div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white break-words">{driver}</h3>
                   </BaseCard>
@@ -117,7 +119,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
         </AnimatedSection>
 
         {/* Potential ROI Figures/Ranges Section */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={200}>
+        <AnimatedSection direction="up" duration={1} delay={0.2}>
           <section className="py-12 md:py-16 lg:py-24 bg-slate-900/50 container mx-auto px-4 sm:px-6 rounded-xl shadow-2xl my-12 md:my-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 md:mb-16 text-green-300 break-words">
               Potential ROI: What {industrySize.name} Can Expect
@@ -126,7 +128,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
               <>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 text-center">
                   {specificROIDetail.potentialFigures.map((figure, index) => (
-                    <BaseCard key={index} variant="glass" className="p-6 sm:p-8 hover:shadow-green-400/30 transition-shadow duration-300">
+                    <BaseCard key={index} variant="glass" className="p-6 sm:p-8 hover:shadow-green-400/30 transition-shadow duration-300" title={figure} description={figure}>
                       <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 mb-3 break-words">{figure.split(" ")[0]} {figure.split(" ")[1]}</p>
                       <p className="text-gray-300 text-sm sm:text-base break-words">{figure.substring(figure.indexOf(" ") + 1 + (figure.split(" ")[1]?.length || 0) +1 )}</p>
                     </BaseCard>
@@ -143,7 +145,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
         </AnimatedSection>
 
         {/* Factors Influencing Actual ROI Section */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={200}>
+        <AnimatedSection direction="up" duration={1} delay={0.2}>
           <section className="py-12 md:py-16 lg:py-24 container mx-auto px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 md:mb-16 text-blue-300 break-words">
               Maximizing Your {service.name} ROI
@@ -165,7 +167,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
         </AnimatedSection>
 
         {!specificROIDetail && roiInfo && (
-             <AnimatedSection animationType="fadeIn" duration={1000}>
+             <AnimatedSection direction="fade" duration={1}>
                 <section className="py-12 md:py-16 lg:py-24 container mx-auto px-4 sm:px-6 text-center">
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-yellow-400 break-words">ROI Information Tailored For You</h2>
                     <p className="text-md sm:text-lg text-gray-300 max-w-2xl mx-auto px-2">
@@ -177,7 +179,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
         )}
 
         {/* Interactive Element Placeholder Section */}
-        <AnimatedSection animationType="fadeIn" duration={1000} delay={300}>
+        <AnimatedSection direction="fade" duration={1} delay={0.3}>
           <section className="py-12 md:py-16 lg:py-24 text-center container mx-auto px-4 sm:px-6 my-12 md:my-16 bg-black/20 backdrop-blur-sm rounded-xl shadow-xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-teal-300 break-words">
               Calculate Your Personalized ROI for {service.name}
@@ -192,13 +194,13 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
         </AnimatedSection>
 
         {/* Case Study Snippets/Links Section (Placeholder) */}
-        <AnimatedSection animationType="fadeInUp" duration={1000} delay={200}>
+        <AnimatedSection direction="up" duration={1} delay={0.2}>
           <section className="py-12 md:py-16 lg:py-24 container mx-auto px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 md:mb-12 text-green-300 break-words">
               Success Stories for {industrySize.name}
             </h2>
             {specificROIDetail?.fictionalCaseSnippet ? (
-              <BaseCard variant="glass" className="mt-6 max-w-2xl mx-auto p-4 sm:p-6 shadow-lg hover:shadow-green-400/20">
+              <BaseCard variant="glass" className="mt-6 max-w-2xl mx-auto p-4 sm:p-6 shadow-lg hover:shadow-green-400/20" title={specificROIDetail.fictionalCaseSnippet.fictionalCompanyName} description={specificROIDetail.fictionalCaseSnippet.challenge}>
                 <h3 className="text-xl sm:text-2xl font-semibold text-green-400 mb-3 break-words">
                   Success Story Example: {specificROIDetail.fictionalCaseSnippet.fictionalCompanyName}
                 </h3>
@@ -215,7 +217,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
         </AnimatedSection>
 
         {/* Call to Action Section */}
-        <AnimatedSection animationType="pulse" duration={1500} delay={500}>
+        <AnimatedSection direction="fade" duration={1.5} delay={0.5}>
           <section className="py-16 sm:py-20 md:py-32 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 container mx-auto rounded-t-xl mt-12 md:mt-16">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white break-words">
               Ready to Boost Your ROI with {service.name}?
@@ -229,6 +231,7 @@ const ServiceROIPageTemplate: React.FC<ServiceROIPageTemplateProps> = ({
           </section>
         </AnimatedSection>
       </div>
+      <ServiceLocationsFooter service={service} />
     </>
   );
 };

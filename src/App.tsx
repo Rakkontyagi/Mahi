@@ -21,6 +21,7 @@ import { comprehensiveIndustrySizes } from './data/industrySizes';
 import { fictionalCompetitors, ourServiceComparisons } from './data/competitors';
 import { allCaseStudies } from './data/caseStudies';
 import { allProblems, allSolutionSets } from './data/problemSolutions'; // New imports
+import ReloadPrompt from './components/Shared/ReloadPrompt';
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
@@ -573,6 +574,7 @@ function App() {
   return (
     <HelmetProvider>
       <LoadingProvider>
+        <ReloadPrompt />
         <AppContent />
       </LoadingProvider>
     </HelmetProvider>

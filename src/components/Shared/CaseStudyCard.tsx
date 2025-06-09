@@ -1,7 +1,7 @@
 import React from 'react';
 import { CaseStudyData } from '../../data/caseStudies';
 import { comprehensiveIndustries, comprehensiveServices } from '../../data/comprehensiveLocations';
-import BaseCard from './BaseCard'; // Assuming BaseCard is in the same Shared directory
+import { BaseCard } from './BaseCard';
 import { ArrowRight, Briefcase } from 'lucide-react'; // Briefcase for placeholder
 
 interface CaseStudyCardProps {
@@ -29,7 +29,12 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ caseStudy }) => {
   const serviceNames = getServiceNames(caseStudy.serviceSlugs).slice(0, 2); // Take first 2 services for tags
 
   return (
-    <BaseCard variant="glass" className="flex flex-col h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-purple-500/20 hover:border-purple-500/50">
+    <BaseCard 
+      variant="glass" 
+      className="flex flex-col h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-purple-500/20 hover:border-purple-500/50"
+      title={caseStudy.title}
+      description={caseStudy.metaDescription || ''}
+    >
       {/* Hero Image or Placeholder */}
       {caseStudy.heroImage ? (
         <img

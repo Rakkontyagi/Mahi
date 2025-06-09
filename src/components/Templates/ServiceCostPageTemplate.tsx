@@ -1,6 +1,7 @@
 import React from 'react';
-import SEOHead from '../SEO/SEOHead';
+import { SEOHead } from '../SEO/SEOHead';
 import { ComprehensiveServiceData } from '../../data/comprehensiveLocations'; // Updated import
+import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
 
 // Basic Prop Interfaces
 // ServiceProps is now replaced by ComprehensiveServiceData for the service prop
@@ -47,7 +48,8 @@ const ServiceCostPageTemplate: React.FC<ServiceCostPageTemplateProps> = ({
       <SEOHead
         title={title}
         description={description}
-        keywords={keywords}
+        keywords={keywords.split(',').map(k => k.trim())}
+        canonicalUrl={`https://goddigitalmarketing.com/${service.slug}/cost/${businessType.slug}/${location.stateSlug}/${location.citySlug}/`}
       />
       <div className="container mx-auto p-4 sm:p-6 lg:p-8 font-sans">
         {/* Hero Section */}
@@ -153,6 +155,7 @@ const ServiceCostPageTemplate: React.FC<ServiceCostPageTemplateProps> = ({
           </button>
         </section>
       </div>
+      <ServiceLocationsFooter service={service} />
     </>
   );
 };

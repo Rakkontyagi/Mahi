@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, MapPin, Target, Building, ArrowRight, Zap } from 'lucide-react';
 import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from '../../data/comprehensiveLocations';
+import { getAnchorText } from '../Shared/AnchorTextUtils';
 
 interface ContextualSidebarProps {
   currentService?: {
@@ -66,6 +67,9 @@ export const ContextualSidebar: React.FC<ContextualSidebarProps> = ({
   const relatedServices = getRelatedServices();
   const { otherCities, otherStates, currentState } = getRelatedLocations();
   const relatedIndustries = getRelatedIndustries();
+
+  // Deduplication set for anchor text
+  const usedAnchors = new Set<string>();
 
   return (
     <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-40">
@@ -138,32 +142,22 @@ export const ContextualSidebar: React.FC<ContextualSidebarProps> = ({
                       Other Services
                     </h4>
                     <div className="space-y-2">
-                      {relatedServices.map((service, index) => (
-                        <motion.a
-                          key={service.slug}
-                          href={currentLocation 
-                            ? `/${service.slug}/${currentLocation.stateSlug}/${currentLocation.citySlug}/`
-                            : `/${service.slug}/`
-                          }
-                          className="block p-3 border border-gray-800 bg-black/30 hover:bg-white/5 transition-all duration-300 rounded group"
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: index * 0.05 }}
-                          whileHover={{ scale: 1.02 }}
-                        >
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <div className="text-white font-medium text-sm group-hover:text-blue-400 transition-colors">
-                                {service.name}
-                              </div>
-                              {currentLocation && (
-                                <div className="text-gray-400 text-xs">in {currentLocation.city}</div>
-                              )}
-                            </div>
-                            <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
-                          </div>
-                        </motion.a>
-                      ))}
+                      <ul className="space-y-2">
+                        {relatedServices.map((service) => {
+                          const anchor = getAnchorText('service', service, { currentLocation }, usedAnchors);
+                          if (!anchor) return null;
+                          return (
+                            <li key={service.slug}>
+                              <a
+                                href={`/services/${service.slug}/`}
+                                className="text-blue-400 hover:text-white transition-colors text-sm"
+                              >
+                                {anchor}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
                     </div>
                   </motion.div>
                 )}
@@ -183,32 +177,22 @@ export const ContextualSidebar: React.FC<ContextualSidebarProps> = ({
                           Other Cities in {currentState.state}
                         </h4>
                         <div className="space-y-2">
-                          {otherCities.map((city, index) => (
-                            <motion.a
-                              key={city.slug}
-                              href={currentService 
-                                ? `/${currentService.slug}/${currentState.stateSlug}/${city.slug}/`
-                                : `/locations/${currentState.stateSlug}/${city.slug}/`
-                              }
-                              className="block p-3 border border-gray-800 bg-black/30 hover:bg-white/5 transition-all duration-300 rounded group"
-                              initial={{ opacity: 0, x: 20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.3, delay: index * 0.05 }}
-                              whileHover={{ scale: 1.02 }}
-                            >
-                              <div className="flex items-center justify-between">
-                                <div>
-                                  <div className="text-white font-medium text-sm group-hover:text-green-400 transition-colors">
-                                    {city.name}
-                                  </div>
-                                  {currentService && (
-                                    <div className="text-gray-400 text-xs">{currentService.name}</div>
-                                  )}
-                                </div>
-                                <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
-                              </div>
-                            </motion.a>
-                          ))}
+                          <ul className="space-y-2">
+                            {otherCities.map((city) => {
+                              const anchor = getAnchorText('location', city, { currentService }, usedAnchors);
+                              if (!anchor) return null;
+                              return (
+                                <li key={city.slug}>
+                                  <a
+                                    href={`/${city.slug}/digital-marketing/`}
+                                    className="text-blue-400 hover:text-white transition-colors text-sm"
+                                  >
+                                    {anchor}
+                                  </a>
+                                </li>
+                              );
+                            })}
+                          </ul>
                         </div>
                       </div>
                     )}
@@ -258,30 +242,22 @@ export const ContextualSidebar: React.FC<ContextualSidebarProps> = ({
                       Industry Solutions
                     </h4>
                     <div className="space-y-2">
-                      {relatedIndustries.map((industry, index) => (
-                        <motion.a
-                          key={industry.slug}
-                          href={currentService 
-                            ? `/${currentService.slug}/${industry.slug}/`
-                            : `/digital-marketing/${industry.slug}/`
-                          }
-                          className="block p-3 border border-gray-800 bg-black/30 hover:bg-white/5 transition-all duration-300 rounded group"
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: index * 0.05 }}
-                          whileHover={{ scale: 1.02 }}
-                        >
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <div className="text-white font-medium text-sm group-hover:text-purple-400 transition-colors">
-                                {industry.name}
-                              </div>
-                              <div className="text-gray-400 text-xs">{industry.description}</div>
-                            </div>
-                            <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
-                          </div>
-                        </motion.a>
-                      ))}
+                      <ul className="space-y-2">
+                        {relatedIndustries.map((industry) => {
+                          const anchor = getAnchorText('industry', industry, { currentService }, usedAnchors);
+                          if (!anchor) return null;
+                          return (
+                            <li key={industry.slug}>
+                              <a
+                                href={`/industries/${industry.slug}/digital-marketing/`}
+                                className="text-blue-400 hover:text-white transition-colors text-sm"
+                              >
+                                {anchor}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
                     </div>
                   </motion.div>
                 )}
