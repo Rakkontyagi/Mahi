@@ -6,7 +6,7 @@ import { AnimatedSection } from '../Shared/AnimatedSection';
 import { BaseCard } from '../Shared/BaseCard';
 import { Lightbulb, AlertTriangle, CheckSquare, MapPin, ChevronRight, Zap, Settings, Users } from 'lucide-react'; // Example icons
 import { ServiceLocationsFooter } from '../Shared/ServiceLocationsFooter';
-import { getArticleSchema, getBreadcrumbSchema } from '../utils/seoStructuredData.js';
+import { getArticleSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 // Simplified Location Info Props for this template
 interface LocationInfoProps {

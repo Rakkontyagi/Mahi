@@ -5,7 +5,7 @@ import { GlassmorphismCard } from '../../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../../Advanced/ParallaxSection';
 import { SEOHead } from '../../SEO/SEOHead';
 import { allIndianLocations, comprehensiveServices } from '../../../data/comprehensiveLocations';
-import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 export const BusinessAutomationHub: React.FC = () => {
   const businessAutomationService = comprehensiveServices.find(s => s.slug === 'business-automation');

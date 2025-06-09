@@ -2,7 +2,7 @@ import React from 'react';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { ServiceLocationsFooter } from '../../components/Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../../components/Shared/AnchorTextUtils';
-import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 const expert = {
   name: 'Amit Verma',

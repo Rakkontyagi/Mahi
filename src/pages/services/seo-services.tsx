@@ -1,6 +1,6 @@
 import React from "react";
 import { ServiceLocationTemplate } from "../components/Templates/ServiceLocationTemplate";
-import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 import { SEOHead } from '../../components/SEOHead';
 
 const serviceData = {
