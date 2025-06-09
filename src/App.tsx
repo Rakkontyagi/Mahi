@@ -25,7 +25,8 @@ import { comprehensiveIndustrySizes } from './data/industrySizes';
 import { fictionalCompetitors, ourServiceComparisons } from './data/competitors';
 import { allCaseStudies } from './data/caseStudies';
 import { allProblems, allSolutionSets } from './data/problemSolutions';
-import { allLeadMagnets } from './data/leadMagnets'; // New import
+import { allLeadMagnets } from './data/leadMagnets';
+import { allTools } from './data/toolsData'; // New import
 
 // Lazy load components
 const ServiceCostPageTemplate = lazy(() => import('./components/Templates/ServiceCostPageTemplate').then(module => ({ default: module.ServiceCostPageTemplate })));
@@ -42,6 +43,7 @@ const IndustriesHubPage = lazy(() => import('./components/Pages/IndustriesHubPag
 const LocationsHubPage = lazy(() => import('./components/Pages/LocationsHubPage').then(module => ({ default: module.LocationsHubPage })));
 const StateSpecificPage = lazy(() => import('./components/Pages/StateSpecificPage').then(module => ({ default: module.StateSpecificPage })));
 const LocationTierPage = lazy(() => import('./components/Pages/LocationTierPage').then(module => ({ default: module.LocationTierPage })));
+const ToolsHubPage = lazy(() => import('./components/Pages/ToolsHubPage').then(module => ({ default: module.ToolsHubPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
 // Core Service Pages
@@ -352,6 +354,27 @@ function AppContent() {
       );
     }
     // If tierName is not valid, it will fall through (leading to 404 or default page).
+  }
+
+  // Route: /tools/ (Hub Page)
+  // Placed BEFORE /tools/:toolId/
+  if (pathname === '/tools') {
+    const breadcrumbs = [
+      { name: "Home", url: "/" },
+      { name: "Resources", url: "/resources/" }, // Assuming tools are under a general "Resources" umbrella
+      { name: "Tools & Calculators", url: "/tools/", isActive: true }
+    ];
+    const sidebarProps = null;
+
+    return (
+      <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+        <Suspense fallback={<LoadingFallback />}>
+          <ToolsHubPage
+            allTools={allTools}
+          />
+        </Suspense>
+      </PageWrapper>
+    );
   }
 
   // Route: /:serviceSlug/:stateSlug/:citySlug/pricing/
