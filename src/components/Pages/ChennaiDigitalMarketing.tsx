@@ -4,7 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCirc
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
-import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData.js';
 
 export const ChennaiDigitalMarketing: React.FC = () => {
   const benefits = [

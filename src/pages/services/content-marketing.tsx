@@ -2,7 +2,7 @@ import React from 'react';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { ServiceLocationsFooter } from '../../components/Shared/ServiceLocationsFooter';
 import { getAnchorText } from '../../components/Shared/AnchorTextUtils';
-import { getServiceSchema, getFAQSchema, getPersonSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
+import { getServiceSchema, getFAQSchema, getPersonSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData.js';
 
 const expert = {
   name: 'Priya Sharma',
