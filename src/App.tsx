@@ -47,6 +47,7 @@ const StateSpecificPage = lazy(() => import('./components/Pages/StateSpecificPag
 const LocationTierPage = lazy(() => import('./components/Pages/LocationTierPage').then(module => ({ default: module.LocationTierPage })));
 const ToolsHubPage = lazy(() => import('./components/Pages/ToolsHubPage').then(module => ({ default: module.ToolsHubPage })));
 const PortfolioPage = lazy(() => import('./components/Pages/PortfolioPage').then(module => ({ default: module.PortfolioPage })));
+const PortfolioItemDetailPage = lazy(() => import('./components/Pages/PortfolioItemDetailPage').then(module => ({ default: module.PortfolioItemDetailPage })));
 const TestimonialsPage = lazy(() => import('./components/Pages/TestimonialsPage').then(module => ({ default: module.TestimonialsPage })));
 const IndiaKeywordOptimization = lazy(() => import('./components/SEO/IndiaKeywordOptimization').then(module => ({ default: module.IndiaKeywordOptimization })));
 
@@ -173,6 +174,10 @@ function AppContent() {
 
   const findLeadMagnet = (id: string) => {
     return allLeadMagnets.find(lm => lm.id === id);
+  };
+
+  const findPortfolioItem = (itemId: string) => {
+    return allPortfolioItems.find(item => item.id === itemId);
   };
 
   // Generate breadcrumbs
@@ -396,6 +401,33 @@ function AppContent() {
         </Suspense>
       </PageWrapper>
     );
+  }
+
+  // Route: /portfolio/:itemId/ (Portfolio Item Detail Page)
+  // Place this AFTER the /portfolio/ exact match (Hub Page)
+  if (pathParts.length === 2 && pathParts[0] === 'portfolio') {
+    const itemId = pathParts[1];
+    const item = findPortfolioItem(itemId);
+
+    if (item) {
+      const breadcrumbs = [
+        { name: "Home", url: "/" },
+        { name: "Our Work", url: "/portfolio/" }, // Link to Portfolio Hub
+        { name: item.projectName, url: `/portfolio/${item.id}/`, isActive: true }
+      ];
+      const sidebarProps = null;
+
+      return (
+        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+          <Suspense fallback={<LoadingFallback />}>
+            <PortfolioItemDetailPage
+              item={item}
+            />
+          </Suspense>
+        </PageWrapper>
+      );
+    }
+    // If item is not found, it will fall through to other routes or the default page.
   }
 
   // Route: /tools/ (Hub Page)
