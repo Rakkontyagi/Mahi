@@ -78,9 +78,6 @@ const PuneDigitalMarketing = lazy(() => import('./components/Pages/PuneDigitalMa
 const HealthcareDigitalMarketing = lazy(() => import('./components/Pages/HealthcareDigitalMarketing').then(module => ({ default: module.HealthcareDigitalMarketing })));
 const EcommerceDigitalMarketing = lazy(() => import('./components/Pages/EcommerceDigitalMarketing').then(module => ({ default: module.EcommerceDigitalMarketing })));
 const RealEstateDigitalMarketing = lazy(() => import('./components/Pages/RealEstateDigitalMarketing').then(module => ({ default: module.RealEstateDigitalMarketing })));
-import { EnhancedFooter } from './components/Footer/EnhancedFooter';
-import { ContextualSidebar } from './components/Sidebar/ContextualSidebar';
-import { InternalLinkingContent } from './components/Content/InternalLinkingContent';
 // ServiceCostPageTemplate is lazy loaded above with other page components
 
 function AppContent() {
