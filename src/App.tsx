@@ -217,6 +217,11 @@ function AppContent() {
     pathPartsLength: pathParts.length
   });
 
+  // Add alert for debugging
+  if (pathname === '/mumbai/digital-marketing/') {
+    alert(`ROUTING DEBUG: pathname=${pathname}, pathParts=${JSON.stringify(pathParts)}, length=${pathParts.length}`);
+  }
+
   // Core Service Pages (New)
   const coreServicePages: Record<string, React.ComponentType> = {
     'digital-marketing-services': DigitalMarketingServices,
