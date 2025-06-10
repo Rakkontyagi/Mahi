@@ -505,6 +505,9 @@ function AppContent() {
       const componentKey = `${citySlug}-${serviceSlug}`;
       const SpecificPageComponent = specificPageComponents[componentKey];
 
+      // Debug logging
+      console.log('Route Debug:', { citySlug, serviceSlug, componentKey, hasComponent: !!SpecificPageComponent });
+
       // Generate related services and nearby locations
       const relatedServices = comprehensiveServices
         .filter(s => s.slug !== service.slug)
