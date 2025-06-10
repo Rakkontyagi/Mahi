@@ -6,10 +6,28 @@
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
 
+# Specific page redirects for better SEO
+[[redirects]]
+  from = "/mumbai/digital-marketing"
+  to = "/mumbai/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/bangalore/seo-services"
+  to = "/bangalore/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/chennai/ppc-advertising"
+  to = "/chennai/ppc-advertising/"
+  status = 301
+
+# Fallback for SPA routing - only for non-existing files
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
 [[headers]]
   for = "/*"
