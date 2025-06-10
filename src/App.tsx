@@ -86,6 +86,9 @@ import { InternalLinkingContent } from './components/Content/InternalLinkingCont
 function AppContent() {
   const pathname = window.location.pathname.replace(/\/$/, '') || '/';
 
+  // Debug: Change page title to show React is running
+  document.title = `REACT ACTIVE: ${pathname} | God Digital Marketing`;
+
   console.log('🚀 APP CONTENT LOADED - React routing is active!');
   console.log('🔍 Current pathname:', pathname);
 
