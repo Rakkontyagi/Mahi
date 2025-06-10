@@ -217,9 +217,11 @@ function AppContent() {
     pathPartsLength: pathParts.length
   });
 
-  // Add alert for debugging
+  // Enhanced debugging for Mumbai route
   if (pathname === '/mumbai/digital-marketing/') {
-    alert(`ROUTING DEBUG: pathname=${pathname}, pathParts=${JSON.stringify(pathParts)}, length=${pathParts.length}`);
+    console.log('🎯 MUMBAI ROUTE DETECTED!', { pathname, pathParts });
+    console.log('🔍 Service found:', findService('digital-marketing'));
+    console.log('🔍 Location search for mumbai...');
   }
 
   // Core Service Pages (New)
