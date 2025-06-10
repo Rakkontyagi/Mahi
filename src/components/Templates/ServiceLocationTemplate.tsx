@@ -37,7 +37,16 @@ interface ServiceLocationTemplateProps {
       title: string;
       subtitle: string;
       description: string;
-      expandedSection1?: { title: string; content: string; };
+      expandedSection1?: { title: string; content: string;   marketAnalysis?: { title: string; content: string;   expandedSection1?: { title: string; content: string; };
+   expandedSection2?: { title: string; content: string; };
+   expandedSection3?: { title: string; content: string; };
+   expandedSection4?: { title: string; content: string; };
+   expandedSection5?: { title: string; content: string; };
+   expandedSection6?: { title: string; content: string; };
+   expandedSection7?: { title: string; content: string; }; };
+   expertiseShowcase?: { title: string; content: string; };
+   industryInsights?: { title: string; content: string; };
+   competitiveAdvantage?: { title: string; content: string; }; };
 
       expandedSection2?: { title: string; content: string; };
 
@@ -479,6 +488,169 @@ export const ServiceLocationTemplate: React.FC<ServiceLocationTemplateProps> = (
                       variant="glass"
                     >
                       <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection4.content}</p>
+                    </BaseCard>
+                  </AnimatedSection>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
+
+        {/* Market Analysis Section */}
+        {uniqueContent?.marketAnalysis && (
+          <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
+            <div className="max-w-7xl mx-auto px-4">
+              <AnimatedSection direction="up">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    {uniqueContent.marketAnalysis.title}
+                  </h2>
+                  <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                    {uniqueContent.marketAnalysis.content}
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </section>
+        )}
+
+        {/* Expertise Showcase Section */}
+        {uniqueContent?.expertiseShowcase && (
+          <section className="py-20 bg-black">
+            <div className="max-w-7xl mx-auto px-4">
+              <AnimatedSection direction="left">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    {uniqueContent.expertiseShowcase.title}
+                  </h2>
+                  <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                    {uniqueContent.expertiseShowcase.content}
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </section>
+        )}
+
+        {/* Industry Insights Section */}
+        {uniqueContent?.industryInsights && (
+          <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+            <div className="max-w-7xl mx-auto px-4">
+              <AnimatedSection direction="right">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    {uniqueContent.industryInsights.title}
+                  </h2>
+                  <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                    {uniqueContent.industryInsights.content}
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </section>
+        )}
+
+        {/* Competitive Advantage Section */}
+        {uniqueContent?.competitiveAdvantage && (
+          <section className="py-20 bg-black">
+            <div className="max-w-7xl mx-auto px-4">
+              <AnimatedSection direction="up">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    {uniqueContent.competitiveAdvantage.title}
+                  </h2>
+                  <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                    {uniqueContent.competitiveAdvantage.content}
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </section>
+        )}
+
+
+        {/* Additional Expanded Content Sections */}
+        {(uniqueContent?.expandedSection1 || uniqueContent?.expandedSection2 || uniqueContent?.expandedSection3 ||
+          uniqueContent?.expandedSection4 || uniqueContent?.expandedSection5 || uniqueContent?.expandedSection6 ||
+          uniqueContent?.expandedSection7) && (
+          <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="space-y-16">
+                {uniqueContent?.expandedSection1 && (
+                  <AnimatedSection direction="up">
+                    <BaseCard
+                      title={uniqueContent.expandedSection1.title}
+                      description=""
+                      variant="glass"
+                    >
+                      <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection1.content}</p>
+                    </BaseCard>
+                  </AnimatedSection>
+                )}
+                {uniqueContent?.expandedSection2 && (
+                  <AnimatedSection direction="left" delay={0.1}>
+                    <BaseCard
+                      title={uniqueContent.expandedSection2.title}
+                      description=""
+                      variant="glass"
+                    >
+                      <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection2.content}</p>
+                    </BaseCard>
+                  </AnimatedSection>
+                )}
+                {uniqueContent?.expandedSection3 && (
+                  <AnimatedSection direction="right" delay={0.2}>
+                    <BaseCard
+                      title={uniqueContent.expandedSection3.title}
+                      description=""
+                      variant="glass"
+                    >
+                      <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection3.content}</p>
+                    </BaseCard>
+                  </AnimatedSection>
+                )}
+                {uniqueContent?.expandedSection4 && (
+                  <AnimatedSection direction="up" delay={0.3}>
+                    <BaseCard
+                      title={uniqueContent.expandedSection4.title}
+                      description=""
+                      variant="glass"
+                    >
+                      <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection4.content}</p>
+                    </BaseCard>
+                  </AnimatedSection>
+                )}
+                {uniqueContent?.expandedSection5 && (
+                  <AnimatedSection direction="left" delay={0.4}>
+                    <BaseCard
+                      title={uniqueContent.expandedSection5.title}
+                      description=""
+                      variant="glass"
+                    >
+                      <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection5.content}</p>
+                    </BaseCard>
+                  </AnimatedSection>
+                )}
+                {uniqueContent?.expandedSection6 && (
+                  <AnimatedSection direction="right" delay={0.5}>
+                    <BaseCard
+                      title={uniqueContent.expandedSection6.title}
+                      description=""
+                      variant="glass"
+                    >
+                      <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection6.content}</p>
+                    </BaseCard>
+                  </AnimatedSection>
+                )}
+                {uniqueContent?.expandedSection7 && (
+                  <AnimatedSection direction="up" delay={0.6}>
+                    <BaseCard
+                      title={uniqueContent.expandedSection7.title}
+                      description=""
+                      variant="glass"
+                    >
+                      <p className="text-gray-300 leading-relaxed">{uniqueContent.expandedSection7.content}</p>
                     </BaseCard>
                   </AnimatedSection>
                 )}
