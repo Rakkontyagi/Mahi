@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# High-priority pages for crawling
+Allow: /services/
+Allow: /locations/
+Allow: /industries/
+Allow: /about/
+Allow: /contact/
+
+# Block admin and development files
+Disallow: /admin/
+Disallow: /.env
+Disallow: /config/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+
+# Allow important files
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /favicon.ico
+
+# Sitemap location
+Sitemap: https://kaleidoscopic-paletas-9f9af7.netlify.app/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
