@@ -1,6 +1,6 @@
 import { generateSitemap, generateRobotsTxt } from '../src/utils/sitemapGenerator.js';
-import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from '../src/data/comprehensiveLocations.js';
-import { allCaseStudies } from '../src/data/caseStudies.js';
+import { allIndianLocations, comprehensiveServices, comprehensiveIndustries } from '../src/data/comprehensiveLocations.ts';
+import { allCaseStudies } from '../src/data/caseStudies.ts';
 
 const BASE_URL = 'https://goddigitalmarketing.com';
 

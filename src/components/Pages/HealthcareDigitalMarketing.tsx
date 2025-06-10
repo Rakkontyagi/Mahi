@@ -4,7 +4,7 @@ import { Heart, TrendingUp, Award, Users, Target, Phone, Mail, Clock, CheckCircl
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
-import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
+import { getServiceSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
 
 export const HealthcareDigitalMarketing: React.FC = () => {
   const benefits = [
