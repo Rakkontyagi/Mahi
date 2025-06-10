@@ -92,6 +92,17 @@ function AppContent() {
   console.log('🚀 APP CONTENT LOADED - React routing is active!');
   console.log('🔍 Current pathname:', pathname);
 
+  // AGGRESSIVE DEBUG: Add visible debug info to page
+  const debugInfo = `DEBUG: pathname=${pathname}, length=${pathname.length}`;
+  const debugElement = document.getElementById('debug-info');
+  if (!debugElement) {
+    const div = document.createElement('div');
+    div.id = 'debug-info';
+    div.style.cssText = 'position:fixed;top:0;left:0;background:red;color:white;padding:10px;z-index:9999;';
+    div.textContent = debugInfo;
+    document.body.appendChild(div);
+  }
+
   const LoadingFallback = () => (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
