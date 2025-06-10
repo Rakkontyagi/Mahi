@@ -16,12 +16,6 @@ Disallow: /node_modules/
 Disallow: /src/
 Disallow: /.git/
 
-# Block duplicate content patterns (if any exist)
-Disallow: /*?*
-Disallow: /search/
-Disallow: /tag/
-Disallow: /category/
-
 # Allow important files
 Allow: /robots.txt
 Allow: /sitemap.xml
