@@ -1,0 +1,2 @@
+Force deployment timestamp: 2025-01-10-12:20:00
+This file forces a new Netlify deployment to clear cache and serve the new static HTML website.

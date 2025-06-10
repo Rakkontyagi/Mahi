@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && node scripts/generate-sitemap.js",
+    "build": "vite build && node scripts/generateStaticSite.cjs && node scripts/generate-sitemap.cjs",
     "build:analyze": "vite build --mode analyze",
     "preview": "vite preview",
     "lint": "eslint .",
@@ -15,7 +15,10 @@
     "start-mcps:core": "node scripts/start-mcps.js core",
     "start-mcps:browser": "node scripts/start-mcps.js browser",
     "start-mcps:tools": "node scripts/start-mcps.js tools",
-    "start-mcps:system": "node scripts/start-mcps.js system"
+    "start-mcps:system": "node scripts/start-mcps.js system",
+    "build:ci": "CI=false npm run build",
+    "build:netlify": "npm run build",
+    "postbuild": "echo \"Build completed successfully\""
   },
   "dependencies": {
     "@react-three/drei": "^9.92.7",
@@ -51,5 +54,9 @@
     "vite": "^5.4.2",
     "vite-bundle-analyzer": "^0.7.0",
     "vite-plugin-pwa": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }

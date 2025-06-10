@@ -10,6 +10,7 @@ import { BreadcrumbNavigation } from './components/Layout/BreadcrumbNavigation';
 import { ServiceLocationTemplate } from './components/Templates/ServiceLocationTemplate';
 import { IndustryLocationTemplate } from './components/Templates/IndustryLocationTemplate';
 import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './components/Templates/ServiceCostPageTemplate'; // For type only
+import { GodDigitalMarketing2025 } from './components/GodDigitalMarketing2025';
 // ServiceROIPageTemplate is not used for type-only import
 // CompetitorAlternativePageTemplate is not used for type-only import
 // CaseStudyPageTemplate is not used for type-only import
@@ -44,28 +45,61 @@ const AIAutomationHub = lazy(() => import('./components/Pages/ServiceHubPages/AI
 const LeadGenerationHub = lazy(() => import('./components/Pages/ServiceHubPages/LeadGenerationHub').then(module => ({ default: module.LeadGenerationHub })));
 const BusinessAutomationHub = lazy(() => import('./components/Pages/ServiceHubPages/BusinessAutomationHub').then(module => ({ default: module.BusinessAutomationHub })));
 
-// Existing city pages
+// Specific city-service page components
+const MumbaiDigitalMarketing = lazy(() => import('./pages/mumbai/digital-marketing'));
+const MumbaiSEOServices = lazy(() => import('./pages/mumbai/seo-services'));
+const MumbaiPPCAdvertising = lazy(() => import('./pages/mumbai/ppc-advertising'));
+const MumbaiSocialMediaMarketing = lazy(() => import('./pages/mumbai/social-media-marketing'));
+const MumbaiAIAutomation = lazy(() => import('./pages/mumbai/ai-automation'));
+const MumbaiBusinessAutomation = lazy(() => import('./pages/mumbai/business-automation'));
+
+const BangaloreDigitalMarketing = lazy(() => import('./pages/bangalore/digital-marketing'));
+const BangaloreSEOServices = lazy(() => import('./pages/bangalore/seo-services'));
+const BangalorePPCAdvertising = lazy(() => import('./pages/bangalore/ppc-advertising'));
+const BangaloreSocialMediaMarketing = lazy(() => import('./pages/bangalore/social-media-marketing'));
+const BangaloreAIAutomation = lazy(() => import('./pages/bangalore/ai-automation'));
+const BangaloreBusinessAutomation = lazy(() => import('./pages/bangalore/business-automation'));
+
+const ChennaiDigitalMarketing = lazy(() => import('./pages/chennai/digital-marketing'));
+const ChennaiSEOServices = lazy(() => import('./pages/chennai/seo-services'));
+const ChennaiPPCAdvertising = lazy(() => import('./pages/chennai/ppc-advertising'));
+const ChennaiSocialMediaMarketing = lazy(() => import('./pages/chennai/social-media-marketing'));
+const ChennaiAIAutomation = lazy(() => import('./pages/chennai/ai-automation'));
+const ChennaiBusinessAutomation = lazy(() => import('./pages/chennai/business-automation'));
+
 const DelhiDigitalMarketing = lazy(() => import('./components/Pages/DelhiDigitalMarketing').then(module => ({ default: module.DelhiDigitalMarketing })));
 const DelhiAIAutomation = lazy(() => import('./components/Pages/DelhiAIAutomation').then(module => ({ default: module.DelhiAIAutomation })));
 const DelhiBusinessAutomation = lazy(() => import('./components/Pages/DelhiBusinessAutomation').then(module => ({ default: module.DelhiBusinessAutomation })));
 const DelhiSEOServices = lazy(() => import('./components/Pages/DelhiSEOServices').then(module => ({ default: module.DelhiSEOServices })));
 const DelhiPPCManagement = lazy(() => import('./components/Pages/DelhiPPCManagement').then(module => ({ default: module.DelhiPPCManagement })));
 const DelhiSocialMediaMarketing = lazy(() => import('./components/Pages/DelhiSocialMediaMarketing').then(module => ({ default: module.DelhiSocialMediaMarketing })));
-const MumbaiDigitalMarketing = lazy(() => import('./components/Pages/MumbaiDigitalMarketing').then(module => ({ default: module.MumbaiDigitalMarketing })));
-const BangaloreDigitalMarketing = lazy(() => import('./components/Pages/BangaloreDigitalMarketing').then(module => ({ default: module.BangaloreDigitalMarketing })));
-const ChennaiDigitalMarketing = lazy(() => import('./components/Pages/ChennaiDigitalMarketing').then(module => ({ default: module.ChennaiDigitalMarketing })));
+
 const HyderabadDigitalMarketing = lazy(() => import('./components/Pages/HyderabadDigitalMarketing').then(module => ({ default: module.HyderabadDigitalMarketing })));
 const PuneDigitalMarketing = lazy(() => import('./components/Pages/PuneDigitalMarketing').then(module => ({ default: module.PuneDigitalMarketing })));
 const HealthcareDigitalMarketing = lazy(() => import('./components/Pages/HealthcareDigitalMarketing').then(module => ({ default: module.HealthcareDigitalMarketing })));
 const EcommerceDigitalMarketing = lazy(() => import('./components/Pages/EcommerceDigitalMarketing').then(module => ({ default: module.EcommerceDigitalMarketing })));
 const RealEstateDigitalMarketing = lazy(() => import('./components/Pages/RealEstateDigitalMarketing').then(module => ({ default: module.RealEstateDigitalMarketing })));
-import { EnhancedFooter } from './components/Footer/EnhancedFooter';
-import { ContextualSidebar } from './components/Sidebar/ContextualSidebar';
-import { InternalLinkingContent } from './components/Content/InternalLinkingContent';
 // ServiceCostPageTemplate is lazy loaded above with other page components
 
 function AppContent() {
   const pathname = window.location.pathname.replace(/\/$/, '') || '/';
+
+  // Debug: Change page title to show React is running
+  document.title = `REACT ACTIVE: ${pathname} | God Digital Marketing`;
+
+  console.log('🚀 APP CONTENT LOADED - React routing is active!');
+  console.log('🔍 Current pathname:', pathname);
+
+  // AGGRESSIVE DEBUG: Add visible debug info to page - FORCE DEPLOYMENT v2
+  const debugInfo = `DEBUG v2: pathname=${pathname}, length=${pathname.length}, timestamp=${Date.now()}`;
+  const debugElement = document.getElementById('debug-info');
+  if (!debugElement) {
+    const div = document.createElement('div');
+    div.id = 'debug-info';
+    div.style.cssText = 'position:fixed;top:0;left:0;background:red;color:white;padding:10px;z-index:9999;font-size:14px;';
+    div.textContent = debugInfo;
+    document.body.appendChild(div);
+  }
 
   const LoadingFallback = () => (
     <div className="flex items-center justify-center min-h-screen bg-black">
@@ -191,6 +225,20 @@ function AppContent() {
   // Dynamic route matching
   const pathParts = pathname.split('/').filter(Boolean);
 
+  // Debug logging
+  console.log('🔍 ROUTING DEBUG:', {
+    pathname,
+    pathParts,
+    pathPartsLength: pathParts.length
+  });
+
+  // Enhanced debugging for Mumbai route
+  if (pathname === '/mumbai/digital-marketing/') {
+    console.log('🎯 MUMBAI ROUTE DETECTED!', { pathname, pathParts });
+    console.log('🔍 Service found:', findService('digital-marketing'));
+    console.log('🔍 Location search for mumbai...');
+  }
+
   // Core Service Pages (New)
   const coreServicePages: Record<string, React.ComponentType> = {
     'digital-marketing-services': DigitalMarketingServices,
@@ -212,6 +260,7 @@ function AppContent() {
 
   // Route: /[service]/ (Service Hub Pages)
   if (pathParts.length === 1) {
+    console.log('🎯 Checking 1-part route (Service Hub):', pathParts[0]);
     const [serviceSlug] = pathParts;
     const service = findService(serviceSlug);
 
@@ -434,14 +483,64 @@ function AppContent() {
     }
   }
 
-  // Route: /[service]/[state]/[city]/
-  // This existing 3-part route is for ServiceLocationTemplate, ensure it's distinct from the ROI route
-  if (pathParts.length === 3 && pathParts[2] !== 'roi') { // Added condition to avoid conflict with ROI route
-    const [serviceSlug, stateSlug, citySlug] = pathParts;
+  // Route: /[city]/[service]/ - NEW PATTERN
+  if (pathParts.length === 2) {
+    console.log('🎯 Checking 2-part route (City/Service):', pathParts);
+    const [citySlug, serviceSlug] = pathParts;
     const service = findService(serviceSlug);
-    const location = findLocation(stateSlug, citySlug);
+    console.log('🔍 Service found:', service ? service.name : 'NOT FOUND');
+
+    // Find city across all states
+    let location = null;
+    for (const state of allIndianLocations) {
+      const city = state.cities.find(c => c.slug === citySlug);
+      if (city) {
+        location = {
+          city: city.name,
+          state: state.state,
+          citySlug: city.slug,
+          stateSlug: state.stateSlug,
+          population: city.population,
+          isMetro: city.isMetro,
+          industries: city.industries,
+          tier: city.tier
+        };
+        break;
+      }
+    }
+    console.log('🔍 Location found:', location ? location.city : 'NOT FOUND');
 
     if (service && location) {
+      // Mapping of specific page components
+      const specificPageComponents: Record<string, React.ComponentType> = {
+        'mumbai-digital-marketing': MumbaiDigitalMarketing,
+        'mumbai-seo-services': MumbaiSEOServices,
+        'mumbai-ppc-advertising': MumbaiPPCAdvertising,
+        'mumbai-social-media-marketing': MumbaiSocialMediaMarketing,
+        'mumbai-ai-automation': MumbaiAIAutomation,
+        'mumbai-business-automation': MumbaiBusinessAutomation,
+
+        'bangalore-digital-marketing': BangaloreDigitalMarketing,
+        'bangalore-seo-services': BangaloreSEOServices,
+        'bangalore-ppc-advertising': BangalorePPCAdvertising,
+        'bangalore-social-media-marketing': BangaloreSocialMediaMarketing,
+        'bangalore-ai-automation': BangaloreAIAutomation,
+        'bangalore-business-automation': BangaloreBusinessAutomation,
+
+        'chennai-digital-marketing': ChennaiDigitalMarketing,
+        'chennai-seo-services': ChennaiSEOServices,
+        'chennai-ppc-advertising': ChennaiPPCAdvertising,
+        'chennai-social-media-marketing': ChennaiSocialMediaMarketing,
+        'chennai-ai-automation': ChennaiAIAutomation,
+        'chennai-business-automation': ChennaiBusinessAutomation,
+      };
+
+      const componentKey = `${citySlug}-${serviceSlug}`;
+      const SpecificPageComponent = specificPageComponents[componentKey];
+
+      // Debug logging
+      console.log('Route Debug:', { citySlug, serviceSlug, componentKey, hasComponent: !!SpecificPageComponent });
+
       // Generate related services and nearby locations
       const relatedServices = comprehensiveServices
         .filter(s => s.slug !== service.slug)
@@ -449,10 +548,10 @@ function AppContent() {
         .map(s => ({
           name: s.name,
           slug: s.slug,
-          url: `/${s.slug}/${stateSlug}/${citySlug}/`
+          url: `/${citySlug}/${s.slug}/`
         }));
 
-      const state = allIndianLocations.find(s => s.stateSlug === stateSlug);
+      const state = allIndianLocations.find(s => s.stateSlug === location.stateSlug);
       const nearbyLocations = state ? state.cities
         .filter(c => c.slug !== citySlug)
         .slice(0, 8)
@@ -460,7 +559,7 @@ function AppContent() {
           city: c.name,
           citySlug: c.slug,
           stateSlug: state.stateSlug,
-          url: `/${serviceSlug}/${state.stateSlug}/${c.slug}/`
+          url: `/${c.slug}/${serviceSlug}/`
         })) : [];
 
       const breadcrumbs = generateBreadcrumbs(service, location);
@@ -469,18 +568,30 @@ function AppContent() {
         currentLocation: location
       };
 
-      return (
-        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
-          <Suspense fallback={<LoadingFallback />}>
-            <ServiceLocationTemplate 
-              service={service}
-              location={location}
-              relatedServices={relatedServices}
-              nearbyLocations={nearbyLocations}
-            />
-          </Suspense>
-        </PageWrapper>
-      );
+      if (SpecificPageComponent) {
+        // Use specific page component with unique content
+        return (
+          <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+            <Suspense fallback={<LoadingFallback />}>
+              <SpecificPageComponent />
+            </Suspense>
+          </PageWrapper>
+        );
+      } else {
+        // Fallback to generic template for cities without specific components
+        return (
+          <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+            <Suspense fallback={<LoadingFallback />}>
+              <ServiceLocationTemplate
+                service={service}
+                location={location}
+                relatedServices={relatedServices}
+                nearbyLocations={nearbyLocations}
+              />
+            </Suspense>
+          </PageWrapper>
+        );
+      }
     }
   }
 
@@ -569,17 +680,153 @@ function AppContent() {
     );
   }
 
-  // Default homepage
+  // Default homepage - Simple 2025 Design Test
   return (
-    <PageWrapper>
-      <main>
-        <AdvancedHero />
-        <TrustSignals />
-        <Suspense fallback={<LoadingFallback />}>
-          <IndiaKeywordOptimization />
-        </Suspense>
-      </main>
-    </PageWrapper>
+    <div className="min-h-screen bg-black text-white">
+      {/* Simple Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+        </div>
+
+        <div className="container relative z-10 max-w-6xl mx-auto px-6">
+          <div className="text-center">
+            {/* Main Headline */}
+            <h1 className="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+              God Digital Marketing
+            </h1>
+
+            <div className="text-2xl md:text-4xl text-gray-300 mb-4">
+              India's Leading <span className="text-white font-bold">Digital Growth Strategy Agency</span>
+            </div>
+
+            <div className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12">
+              <strong className="text-white">Divine Digital Solutions for Godly Growth</strong> - Transforming businesses across 500+ Indian cities with
+              comprehensive digital marketing services, AI-powered automation, and data-driven strategies that deliver guaranteed ROI growth.
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <button className="bg-white text-black px-10 py-5 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                🚀 Start Your Digital Transformation
+              </button>
+
+              <button className="border-2 border-white text-white px-10 py-5 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition-all transform hover:scale-105">
+                ▶️ Watch Success Stories
+              </button>
+            </div>
+
+            {/* Hero Statistics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">2000+</div>
+                <div className="text-gray-300 text-sm">Clients Transformed</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Cities Covered</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">350%</div>
+                <div className="text-gray-300 text-sm">Average ROI Growth</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">99.8%</div>
+                <div className="text-gray-300 text-sm">Success Rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Why Choose India's Most Trusted Internet Marketing Services Provider
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Our comprehensive digital marketing solutions combine cutting-edge technology with proven strategies
+              to deliver exceptional results across all digital channels.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Strategic Digital Marketing Excellence",
+                description: "Comprehensive digital marketing solutions combining advanced SEO mastery, performance PPC optimization, and social media dominance.",
+                features: ["Advanced SEO Strategies", "Performance PPC Campaigns", "Social Media Mastery", "Content Marketing Excellence"],
+                stats: { clients: "800+", growth: "285%" }
+              },
+              {
+                title: "AI-Powered Marketing Automation",
+                description: "Revolutionary marketing automation solutions leveraging artificial intelligence and machine learning to streamline customer journeys.",
+                features: ["AI-Driven Automation", "Smart Lead Nurturing", "Behavioral Targeting", "Predictive Analytics"],
+                stats: { clients: "600+", growth: "420%" }
+              },
+              {
+                title: "Data-Driven Business Growth",
+                description: "Transform raw data into actionable insights with our advanced analytics platform, driving strategic decisions.",
+                features: ["Advanced Analytics", "Performance Tracking", "ROI Optimization", "Growth Strategies"],
+                stats: { clients: "700+", growth: "365%" }
+              },
+              {
+                title: "Enterprise Web Development",
+                description: "Cutting-edge web development solutions featuring responsive design, e-commerce integration, and mobile-first architecture.",
+                features: ["Responsive Design", "E-commerce Solutions", "Mobile Optimization", "Performance Focus"],
+                stats: { clients: "500+", growth: "310%" }
+              }
+            ].map((service, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700 hover:scale-105 transition-all duration-500">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="text-4xl">🎯</div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">{service.stats.clients}</div>
+                    <div className="text-xs text-gray-400">Happy Clients</div>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-gray-300">
+                      <span className="text-green-400">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-lg font-bold text-white">{service.stats.growth}</div>
+                    <div className="text-xs text-gray-400">Avg Growth</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-lg font-bold text-white">99.8%</div>
+                    <div className="text-xs text-gray-400">Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black border-t border-gray-800 py-16">
+        <div className="container max-w-6xl mx-auto px-6 text-center">
+          <div className="text-white font-bold text-2xl mb-4">God Digital Marketing</div>
+          <div className="text-gray-400 mb-8">Divine Digital Solutions for Godly Growth</div>
+          <div className="text-gray-500">© 2025 God Digital Marketing. All rights reserved.</div>
+        </div>
+      </footer>
+    </div>
   );
 }
 

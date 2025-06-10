@@ -21,7 +21,7 @@ export const AdvancedHero: React.FC = () => {
         text: "AI-Powered Digital Excellence • Live",
         color: "text-green-400"
       }}
-      title="Revolutionary Digital Excellence"
+      title="Revolutionary Digital Excellence [DEPLOY TEST v3]"
       description="Transforming businesses across India with AI-powered automation, advanced lead generation, and exponential ROI growth"
       primaryCTA={{
         text: "Start Your Transformation"

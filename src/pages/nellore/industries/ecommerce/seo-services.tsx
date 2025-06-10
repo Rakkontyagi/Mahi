@@ -4,7 +4,7 @@ import { TrustSignals } from '../../components/TrustSignals';
 import { Testimonials } from '../../components/Testimonials';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 
-export default function NelloreSEOServicesE-commercePage() {
+export default function NelloreSEOServicesEcommercePage() {
   return (
     <>
       <SEOHead
