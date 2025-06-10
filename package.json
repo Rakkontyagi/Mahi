@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && node scripts/generate-sitemap.cjs",
+    "build": "vite build && node scripts/generateStaticSite.cjs && node scripts/generate-sitemap.cjs",
     "build:analyze": "vite build --mode analyze",
     "preview": "vite preview",
     "lint": "eslint .",
