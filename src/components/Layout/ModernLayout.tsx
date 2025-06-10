@@ -125,7 +125,7 @@ export const ModernLayout: React.FC<LayoutProps> = ({ children, className = '' }
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsMobileMenuOpen(\!isMobileMenuOpen)}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
