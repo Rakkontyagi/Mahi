@@ -122,7 +122,7 @@ const uniqueContent = {
       },
       {
         question: "What makes your digital marketing different from other agencies in Erode?",
-        answer: "Our award-winning marketing agency and proven track record set us apart in the Erode market. We combine undefined with deep local market knowledge to deliver results that consistently outperform industry benchmarks."
+        answer: "Our award-winning marketing agency and proven track record set us apart in the Erode market. We combine advanced SEO techniques with deep local market knowledge to deliver results that consistently outperform industry benchmarks."
       },
       {
         question: "How long does it take to see results from digital marketing in Erode?",
