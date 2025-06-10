@@ -1,237 +1,457 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEOHead } from '../components/SEO/SEOHead';
-import { TrustSignals } from '../components/TrustSignals';
-import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
-import { getContactSchema, getBreadcrumbSchema } from '../../utils/seoStructuredData';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ModernLayout } from '../components/Layout/ModernLayout';
 
-export default function ContactPage() {
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Phone",
-      details: ["+91 9999999999", "+91 8888888888"],
-      color: "text-green-400"
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      details: ["contact@goddigitalmarketing.com", "support@goddigitalmarketing.com"],
-      color: "text-blue-400"
-    },
-    {
-      icon: MapPin,
-      title: "Office",
-      details: ["123 Digital Plaza, Cyber City", "Gurgaon, Haryana 122002"],
-      color: "text-purple-400"
-    },
-    {
-      icon: Clock,
-      title: "Hours",
-      details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 4:00 PM"],
-      color: "text-orange-400"
-    }
-  ];
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    service: '',
+    budget: '',
+    message: ''
+  });
 
-  const canonicalUrl = "https://goddigitalmarketing.com/contact/";
-  const breadcrumbs = [
-    { title: 'Home', url: 'https://goddigitalmarketing.com/' },
-    { title: 'Contact', url: canonicalUrl }
-  ];
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    // You can integrate with your backend API or form handling service
+  };
 
   return (
     <>
-      <SEOHead
-        title="Contact Us | God Digital Marketing"
-        description="Get in touch with India's leading digital marketing agency. Contact us for a free consultation and discover how we can transform your digital presence."
-        keywords={["contact us", "digital marketing agency contact", "free consultation", "get in touch"]}
-        canonicalUrl={canonicalUrl}
-        structuredData={[
-          getContactSchema(),
-          getBreadcrumbSchema(breadcrumbs)
-        ]}
-      />
-      
-      <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Contact God Digital Marketing | Get Free Consultation & Quote | India's Leading Digital Marketing Agency</title>
+        <meta name="description" content="Contact God Digital Marketing for expert digital marketing services across India. Get free consultation, custom quotes, and strategic advice from our certified experts. Available 24/7 for all your digital marketing needs." />
+        <meta name="keywords" content="contact God Digital Marketing, digital marketing consultation, free quote, digital marketing agency contact, expert advice, consultation booking, digital marketing services inquiry" />
+        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/contact/" />
+        
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact God Digital Marketing",
+            "description": "Contact page for God Digital Marketing - India's leading digital marketing agency",
+            "url": "https://courageous-daffodil-2020b6.netlify.app/contact/",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "God Digital Marketing",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-9999999999",
+                  "contactType": "customer service",
+                  "areaServed": "IN",
+                  "availableLanguage": ["English", "Hindi"],
+                  "hoursAvailable": "Mo-Su 09:00-18:00"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "email": "info@goddigitalmarketing.com",
+                  "contactType": "customer service",
+                  "areaServed": "IN"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "India"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
+
+      <ModernLayout>
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10" />
+        <section className="relative py-24 bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-black/5 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-gray-900/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 relative z-10">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Contact Us
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+                <span className="bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
+                  Contact Us
+                </span>
+                <br />
+                <span className="text-black">Today</span>
               </h1>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Ready to transform your digital presence? Get in touch with our team of experts for a free consultation.
+              
+              <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                Get Expert Digital Marketing Consultation
+                <br />
+                <span className="font-semibold text-black">Free Strategy Session • Custom Solutions • 24/7 Support</span>
               </p>
-            </motion.div>
-          </div>
-        </section>
+              
+              <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Ready to transform your digital presence? Contact God Digital Marketing today for a free 
+                consultation and discover how our divine digital solutions can accelerate your business growth. 
+                Our experts are standing by to help you achieve extraordinary results.
+              </p>
 
-        {/* Contact Information Grid */}
-        <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {contactInfo.map((info) => (
-                <motion.div
-                  key={info.title}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div className="flex items-center space-x-3 mb-4">
-                    <info.icon className={`w-6 h-6 ${info.color}`} />
-                    <h3 className="text-xl font-semibold text-white">{info.title}</h3>
-                  </div>
-                  <div className="space-y-2">
-                    {info.details.map((detail, index) => (
-                      <p key={index} className="text-gray-300">{detail}</p>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-black text-black mb-2">24/7</div>
+                  <div className="text-gray-600 font-medium">Support Available</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black text-black mb-2">Free</div>
+                  <div className="text-gray-600 font-medium">Initial Consultation</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black text-black mb-2">24hrs</div>
+                  <div className="text-gray-600 font-medium">Response Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black text-black mb-2">500+</div>
+                  <div className="text-gray-600 font-medium">Cities Served</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Form Section */}
-        <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                      placeholder="Your name"
-                    />
+        {/* Contact Form & Information */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-black transition-all duration-300">
+                <h2 className="text-3xl font-bold text-black mb-6">Get Your Free Consultation</h2>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Fill out the form below and our digital marketing experts will contact you within 24 hours 
+                  with a customized strategy proposal for your business.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-semibold text-black mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none transition-colors duration-200"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-semibold text-black mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none transition-colors duration-200"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                      placeholder="Your email"
-                    />
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-semibold text-black mb-2">
+                        Phone Number *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none transition-colors duration-200"
+                        placeholder="Enter your phone number"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-semibold text-black mb-2">
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none transition-colors duration-200"
+                        placeholder="Enter your company name"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-gray-300 mb-2">Phone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                      placeholder="Your phone number"
-                    />
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-semibold text-black mb-2">
+                        Service Interest *
+                      </label>
+                      <select
+                        id="service"
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none transition-colors duration-200"
+                      >
+                        <option value="">Select a service</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="seo-services">SEO Services</option>
+                        <option value="ppc-advertising">PPC Advertising</option>
+                        <option value="social-media-marketing">Social Media Marketing</option>
+                        <option value="ai-automation">AI Automation</option>
+                        <option value="business-automation">Business Automation</option>
+                        <option value="content-marketing">Content Marketing</option>
+                        <option value="email-marketing">Email Marketing</option>
+                        <option value="multiple-services">Multiple Services</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="budget" className="block text-sm font-semibold text-black mb-2">
+                        Monthly Budget
+                      </label>
+                      <select
+                        id="budget"
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none transition-colors duration-200"
+                      >
+                        <option value="">Select budget range</option>
+                        <option value="under-50k">Under ₹50,000</option>
+                        <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                        <option value="1l-2l">₹1,00,000 - ₹2,00,000</option>
+                        <option value="2l-5l">₹2,00,000 - ₹5,00,000</option>
+                        <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                        <option value="above-10l">Above ₹10,00,000</option>
+                      </select>
+                    </div>
                   </div>
+
                   <div>
-                    <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
+                    <label htmlFor="message" className="block text-sm font-semibold text-black mb-2">
+                      Project Details
+                    </label>
                     <textarea
                       id="message"
-                      rows={4}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                      placeholder="Your message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={5}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-black focus:outline-none transition-colors duration-200"
+                      placeholder="Tell us about your project, goals, and any specific requirements..."
                     ></textarea>
                   </div>
-                  <motion.button
-                    type="submit"
-                    className="w-full px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors duration-300"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Send Message
-                  </motion.button>
-                </form>
-              </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
-              >
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">Why Choose Us?</h3>
+                  <button
+                    type="submit"
+                    className="w-full bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-all duration-300 transform hover:scale-105"
+                  >
+                    🚀 Get Free Consultation
+                  </button>
+
+                  <p className="text-sm text-gray-600 text-center">
+                    By submitting this form, you agree to our privacy policy and terms of service. 
+                    We'll never share your information with third parties.
+                  </p>
+                </form>
+              </div>
+
+              {/* Contact Information */}
+              <div className="space-y-8">
+                <div className="bg-gray-50 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold text-black mb-6">Get In Touch</h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="text-2xl mr-4">📞</div>
+                      <div>
+                        <div className="font-semibold text-black">Phone</div>
+                        <div className="text-gray-600">+91-9999999999</div>
+                        <div className="text-sm text-gray-500">Available 24/7 for urgent inquiries</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="text-2xl mr-4">📧</div>
+                      <div>
+                        <div className="font-semibold text-black">Email</div>
+                        <div className="text-gray-600">info@goddigitalmarketing.com</div>
+                        <div className="text-sm text-gray-500">Response within 24 hours</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="text-2xl mr-4">🌍</div>
+                      <div>
+                        <div className="font-semibold text-black">Coverage</div>
+                        <div className="text-gray-600">All Major Indian Cities</div>
+                        <div className="text-sm text-gray-500">500+ cities across India</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="text-2xl mr-4">⏰</div>
+                      <div>
+                        <div className="font-semibold text-black">Business Hours</div>
+                        <div className="text-gray-600">Mon - Sat: 9:00 AM - 6:00 PM</div>
+                        <div className="text-sm text-gray-500">Emergency support available 24/7</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-black text-white rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold mb-6">Why Contact Us?</h3>
                   <ul className="space-y-4">
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                      <span className="text-gray-300">Free initial consultation and strategy session</span>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Free initial consultation and strategy session</span>
                     </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                      <span className="text-gray-300">Dedicated account manager for personalized service</span>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Custom digital marketing proposal within 48 hours</span>
                     </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                      <span className="text-gray-300">Transparent reporting and regular updates</span>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Expert advice from certified digital marketing professionals</span>
                     </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1" />
-                      <span className="text-gray-300">Proven track record of delivering results</span>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>No obligation - just valuable insights for your business</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Transparent pricing and clear project timelines</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">Response Time</h3>
-                  <p className="text-gray-300">
-                    We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call our support line.
+                <div className="bg-white border-2 border-gray-100 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold text-black mb-6">Follow Us</h3>
+                  <div className="flex space-x-4">
+                    <a href="#" className="w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors duration-200">
+                      <span className="text-xl">📘</span>
+                    </a>
+                    <a href="#" className="w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors duration-200">
+                      <span className="text-xl">💼</span>
+                    </a>
+                    <a href="#" className="w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors duration-200">
+                      <span className="text-xl">🐦</span>
+                    </a>
+                    <a href="#" className="w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors duration-200">
+                      <span className="text-xl">📷</span>
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mt-4">
+                    Stay updated with the latest digital marketing trends, tips, and insights 
+                    from our expert team.
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Trust Signals Section */}
-        <TrustSignals />
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
+        {/* FAQ Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
+                Frequently Asked Questions
               </h2>
-              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                Schedule a free consultation with our experts and discover how we can help transform your digital presence.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Get quick answers to common questions about our digital marketing services, 
+                processes, and how we can help transform your business.
               </p>
-              <motion.button
-                className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Schedule Free Consultation
-              </motion.button>
-            </motion.div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-xl font-bold text-black mb-4">How quickly can I see results?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Results vary by service: PPC campaigns can show immediate traffic, SEO typically 
+                  shows significant improvements in 3-6 months, and social media marketing builds 
+                  momentum over 2-3 months. We provide detailed timelines during consultation.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-xl font-bold text-black mb-4">What makes you different from other agencies?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Our 15+ years of experience, 2000+ successful campaigns, AI automation expertise, 
+                  and data-driven approach set us apart. We focus on measurable ROI and long-term 
+                  partnerships rather than short-term gains.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-xl font-bold text-black mb-4">Do you work with small businesses?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Absolutely\! We work with businesses of all sizes, from startups to enterprises. 
+                  Our scalable solutions and flexible pricing ensure that every business can access 
+                  professional digital marketing services.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-xl font-bold text-black mb-4">What's included in the free consultation?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Our free consultation includes a comprehensive audit of your current digital presence, 
+                  competitor analysis, strategy recommendations, and a custom proposal with clear 
+                  timelines and expected outcomes.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
-      </div>
+
+        {/* CTA Section */}
+        <section className="py-24 bg-black text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
+              Ready to Start Your Digital Transformation?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Don't wait another day to transform your digital presence. Contact God Digital Marketing 
+              now and discover how our divine digital solutions can accelerate your business growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <a
+                href="tel:+919999999999"
+                className="bg-white text-black px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                📞 Call Now: +91-9999999999
+              </a>
+              <a
+                href="mailto:info@goddigitalmarketing.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-black transition-all duration-300"
+              >
+                📧 Email Us Today
+              </a>
+            </div>
+          </div>
+        </section>
+      </ModernLayout>
     </>
   );
-} 
+};
+
+export default ContactPage;

@@ -1,4 +1,34 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://goddigitalmarketing.com/sitemap.xml
+# High-priority pages for crawling
+Allow: /services/
+Allow: /locations/
+Allow: /industries/
+Allow: /about/
+Allow: /contact/
+
+# Block admin and development files
+Disallow: /admin/
+Disallow: /.env
+Disallow: /config/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+
+# Block duplicate content patterns (if any exist)
+Disallow: /*?*
+Disallow: /search/
+Disallow: /tag/
+Disallow: /category/
+
+# Allow important files
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /favicon.ico
+
+# Sitemap location
+Sitemap: https://courageous-daffodil-2020b6.netlify.app/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
