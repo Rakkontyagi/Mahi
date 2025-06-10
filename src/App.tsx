@@ -4,7 +4,7 @@ import { LoadingProvider } from './components/Loading/LoadingProvider';
 import { EnhancedNavigation } from './components/Navigation/EnhancedNavigation';
 import { AdvancedHero } from './components/Advanced/AdvancedHero';
 import { CursorFollower } from './components/Shared/AnimatedSection';
-import { EnhancedFooter } from './components/Layout/EnhancedFooter';
+import { EnhancedFooter } from './components/Footer/EnhancedFooter';
 import { ContextualSidebar } from './components/Layout/ContextualSidebar';
 import { BreadcrumbNavigation } from './components/Layout/BreadcrumbNavigation';
 import { ServiceLocationTemplate } from './components/Templates/ServiceLocationTemplate';
@@ -59,6 +59,9 @@ const PuneDigitalMarketing = lazy(() => import('./components/Pages/PuneDigitalMa
 const HealthcareDigitalMarketing = lazy(() => import('./components/Pages/HealthcareDigitalMarketing').then(module => ({ default: module.HealthcareDigitalMarketing })));
 const EcommerceDigitalMarketing = lazy(() => import('./components/Pages/EcommerceDigitalMarketing').then(module => ({ default: module.EcommerceDigitalMarketing })));
 const RealEstateDigitalMarketing = lazy(() => import('./components/Pages/RealEstateDigitalMarketing').then(module => ({ default: module.RealEstateDigitalMarketing })));
+import { EnhancedFooter } from './components/Footer/EnhancedFooter';
+import { ContextualSidebar } from './components/Sidebar/ContextualSidebar';
+import { InternalLinkingContent } from './components/Content/InternalLinkingContent';
 // ServiceCostPageTemplate is lazy loaded above with other page components
 
 function AppContent() {

@@ -2,6 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, MapPin, Building2, Zap, Users, CheckCircle, Star, TrendingUp, Phone, Mail, Clock, Award, Target, Shield, BarChart } from 'lucide-react';
 
+// Enhanced Internal Linking Components
+import { InternalLinkingContent } from '../../components/Content/InternalLinkingContent';
+import { ContextualSidebar } from '../../components/Sidebar/ContextualSidebar';
+import { Target, MapPin, Building2 } from 'lucide-react';
+
 export function NagpurFinancialServicesBusinessAutomationPage() {
   const industryFeatures = [
   "Regulatory Compliance",
@@ -478,7 +483,119 @@ export function NagpurFinancialServicesBusinessAutomationPage() {
           </div>
         </section>
       </div>
-    </>
+    
+        {/* Enhanced Internal Linking Content */}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Enhanced Content Wrapper */}
+            <div className="lg:col-span-3">
+              <InternalLinkingContent 
+                currentCity="nagpur"
+                currentService="business-automation"
+                currentIndustry="financial-services"
+              />
+
+              {/* Professional Cross-Linking Section */}
+              <section className="mt-16 py-12 bg-gradient-to-r from-gray-900 to-black rounded-2xl">
+                <div className="max-w-6xl mx-auto px-8">
+                  <h2 className="text-3xl font-bold mb-8 text-center text-white">
+                    Related Services & Locations
+                  </h2>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* Service Cross-Links */}
+                    <div className="bg-gray-800 rounded-xl p-6">
+                      <h3 className="text-lg font-semibold mb-4 text-purple-400 flex items-center">
+                        <Target className="w-5 h-5 mr-2" />
+                        Our Services
+                      </h3>
+                      <div className="space-y-2">
+                        <a href="/nagpur/digital-marketing/" className="block text-gray-300 hover:text-white text-sm py-1">Digital Marketing</a>
+                        <a href="/nagpur/ai-automation/" className="block text-gray-300 hover:text-white text-sm py-1">AI Automation</a>
+                        <a href="/nagpur/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Business Automation</a>
+                        <a href="/nagpur/seo-services/" className="block text-gray-300 hover:text-white text-sm py-1">SEO Services</a>
+                        <a href="/nagpur/ppc-advertising/" className="block text-gray-300 hover:text-white text-sm py-1">PPC Advertising</a>
+                      </div>
+                    </div>
+
+                    {/* Geographic Cross-Links */}
+                    <div className="bg-gray-800 rounded-xl p-6">
+                      <h3 className="text-lg font-semibold mb-4 text-green-400 flex items-center">
+                        <MapPin className="w-5 h-5 mr-2" />
+                        Other Cities
+                      </h3>
+                      <div className="space-y-2">
+                        <a href="/mumbai/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Mumbai</a>
+                        <a href="/delhi/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Delhi</a>
+                        <a href="/bangalore/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Bangalore</a>
+                        <a href="/chennai/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Chennai</a>
+                        <a href="/hyderabad/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Hyderabad</a>
+                        <a href="/pune/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Pune</a>
+                      </div>
+                    </div>
+
+                    {/* Industry Cross-Links */}
+                    <div className="bg-gray-800 rounded-xl p-6">
+                      <h3 className="text-lg font-semibold mb-4 text-blue-400 flex items-center">
+                        <Building2 className="w-5 h-5 mr-2" />
+                        Industries
+                      </h3>
+                      <div className="space-y-2">
+                        <a href="/nagpur/industries/healthcare/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Healthcare</a>
+                        <a href="/nagpur/industries/real-estate/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Real Estate</a>
+                        <a href="/nagpur/industries/ecommerce/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">E-commerce</a>
+                        <a href="/nagpur/industries/education/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Education</a>
+                        <a href="/nagpur/industries/technology/business-automation/" className="block text-gray-300 hover:text-white text-sm py-1">Technology</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Enhanced CTA Section */}
+                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-xl p-6">
+                      <h3 className="text-xl font-bold mb-4 text-white">Why Choose Us?</h3>
+                      <div className="space-y-3">
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                          <span className="text-gray-300">1000+ Successful Projects</span>
+                        </div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                          <span className="text-gray-300">500+ Cities Across India</span>
+                        </div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                          <span className="text-gray-300">300% Average ROI</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-xl p-6">
+                      <h3 className="text-xl font-bold mb-4 text-white">Get Started Today</h3>
+                      <p className="text-gray-300 mb-4">Free consultation & custom strategy</p>
+                      <a
+                        href="/contact/"
+                        className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                      >
+                        Contact Us Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            {/* Enhanced Sidebar */}
+            <div className="lg:col-span-1">
+              <ContextualSidebar 
+                currentCity="nagpur"
+                currentService="business-automation"
+                currentIndustry="financial-services"
+              />
+            </div>
+          </div>
+        </div>
+</>
   );
 }
 
