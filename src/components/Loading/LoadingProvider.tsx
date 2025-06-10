@@ -53,7 +53,9 @@ export const LoadingProvider: React.FC<LoadingProviderProps> = ({ children }) =>
     setIsLoading(false);
   };
 
-  // TEMPORARY DEBUG: Skip loading screen to test AppContent
-  console.log('🔧 DEBUG: LoadingProvider - skipping loading screen');
+  if (!isInitialized || isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return <>{children}</>;
 };

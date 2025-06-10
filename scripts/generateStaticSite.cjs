@@ -274,13 +274,13 @@ function generateStaticFiles() {
 function generateNetlifyRedirects() {
   const redirectsPath = path.join('dist', '_redirects');
   const redirectsContent = `# Netlify redirects for SPA with client-side routing
-# Force all city-service routes to use client-side routing for dynamic content
-/*/digital-marketing/    /index.html   200
-/*/seo-services/         /index.html   200
-/*/ppc-advertising/      /index.html   200
-/*/social-media-marketing/ /index.html   200
-/*/ai-automation/        /index.html   200
-/*/business-automation/  /index.html   200
+# FORCE all city-service routes to use client-side routing (! flag forces redirect even if static file exists)
+/*/digital-marketing/    /index.html   200!
+/*/seo-services/         /index.html   200!
+/*/ppc-advertising/      /index.html   200!
+/*/social-media-marketing/ /index.html   200!
+/*/ai-automation/        /index.html   200!
+/*/business-automation/  /index.html   200!
 
 # Specific redirects for better SEO (without trailing slash)
 /mumbai/digital-marketing    /mumbai/digital-marketing/    301
