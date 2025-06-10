@@ -34,7 +34,7 @@ const ContactPage = () => {
         <title>Contact God Digital Marketing | Get Free Consultation & Quote | India's Leading Digital Marketing Agency</title>
         <meta name="description" content="Contact God Digital Marketing for expert digital marketing services across India. Get free consultation, custom quotes, and strategic advice from our certified experts. Available 24/7 for all your digital marketing needs." />
         <meta name="keywords" content="contact God Digital Marketing, digital marketing consultation, free quote, digital marketing agency contact, expert advice, consultation booking, digital marketing services inquiry" />
-        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/contact/" />
+        <link rel="canonical" href="https://kaleidoscopic-paletas-9f9af7.netlify.app/contact/" />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -43,7 +43,7 @@ const ContactPage = () => {
             "@type": "ContactPage",
             "name": "Contact God Digital Marketing",
             "description": "Contact page for God Digital Marketing - India's leading digital marketing agency",
-            "url": "https://courageous-daffodil-2020b6.netlify.app/contact/",
+            "url": "https://kaleidoscopic-paletas-9f9af7.netlify.app/contact/",
             "mainEntity": {
               "@type": "Organization",
               "name": "God Digital Marketing",

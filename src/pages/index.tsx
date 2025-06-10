@@ -9,7 +9,7 @@ const HomePage = () => {
         <title>God Digital Marketing - India's Leading Digital Marketing Agency | Expert Services Across All States</title>
         <meta name="description" content="Transform your business with God Digital Marketing's comprehensive digital marketing services across 500+ Indian cities. Expert SEO, PPC, social media marketing, AI automation, and business growth solutions delivering guaranteed ROI results." />
         <meta name="keywords" content="digital marketing India, SEO services, PPC advertising, social media marketing, AI automation, business automation, digital marketing agency, online marketing, internet marketing, digital transformation" />
-        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/" />
+        <link rel="canonical" href="https://kaleidoscopic-paletas-9f9af7.netlify.app/" />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -18,8 +18,8 @@ const HomePage = () => {
             "@type": "Organization",
             "name": "God Digital Marketing",
             "description": "India's leading digital marketing agency providing comprehensive solutions for businesses across 500+ cities",
-            "url": "https://courageous-daffodil-2020b6.netlify.app",
-            "logo": "https://courageous-daffodil-2020b6.netlify.app/logo.png",
+            "url": "https://kaleidoscopic-paletas-9f9af7.netlify.app",
+            "logo": "https://kaleidoscopic-paletas-9f9af7.netlify.app/logo.png",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+91-9999999999",

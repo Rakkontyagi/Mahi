@@ -28,7 +28,7 @@ Allow: /sitemap.xml
 Allow: /favicon.ico
 
 # Sitemap location
-Sitemap: https://courageous-daffodil-2020b6.netlify.app/sitemap.xml
+Sitemap: https://kaleidoscopic-paletas-9f9af7.netlify.app/sitemap.xml
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1

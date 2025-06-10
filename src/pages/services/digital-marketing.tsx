@@ -9,7 +9,7 @@ const DigitalMarketingPage = () => {
         <title>Digital Marketing Services India | Expert SEO, PPC & Social Media Marketing | God Digital Marketing</title>
         <meta name="description" content="Transform your business with comprehensive digital marketing services across India. Expert SEO, PPC advertising, social media marketing, content strategy & email campaigns. Proven ROI results for 2000+ clients across 500+ cities." />
         <meta name="keywords" content="digital marketing services India, SEO services, PPC advertising, social media marketing, content marketing, email marketing, online marketing agency, internet marketing, digital marketing company, digital marketing strategy" />
-        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/services/digital-marketing/" />
+        <link rel="canonical" href="https://kaleidoscopic-paletas-9f9af7.netlify.app/services/digital-marketing/" />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -21,8 +21,8 @@ const DigitalMarketingPage = () => {
             "provider": {
               "@type": "Organization",
               "name": "God Digital Marketing",
-              "url": "https://courageous-daffodil-2020b6.netlify.app",
-              "logo": "https://courageous-daffodil-2020b6.netlify.app/logo.png"
+              "url": "https://kaleidoscopic-paletas-9f9af7.netlify.app",
+              "logo": "https://kaleidoscopic-paletas-9f9af7.netlify.app/logo.png"
             },
             "areaServed": {
               "@type": "Country",

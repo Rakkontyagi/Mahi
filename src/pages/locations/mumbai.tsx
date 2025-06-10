@@ -9,7 +9,7 @@ const MumbaiPage = () => {
         <title>Digital Marketing Services Mumbai | Expert SEO, PPC & Social Media Marketing | God Digital Marketing</title>
         <meta name="description" content="Leading digital marketing agency in Mumbai offering expert SEO, PPC advertising, social media marketing, AI automation & business growth solutions. Serving 500+ Mumbai businesses with proven ROI results across all industries." />
         <meta name="keywords" content="digital marketing Mumbai, SEO services Mumbai, PPC advertising Mumbai, social media marketing Mumbai, digital marketing agency Mumbai, online marketing Mumbai, internet marketing Mumbai, Mumbai digital marketing company" />
-        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/locations/mumbai/" />
+        <link rel="canonical" href="https://kaleidoscopic-paletas-9f9af7.netlify.app/locations/mumbai/" />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -18,7 +18,7 @@ const MumbaiPage = () => {
             "@type": "LocalBusiness",
             "name": "God Digital Marketing - Mumbai",
             "description": "Leading digital marketing agency in Mumbai providing comprehensive SEO, PPC, social media marketing, and business automation services",
-            "url": "https://courageous-daffodil-2020b6.netlify.app/locations/mumbai/",
+            "url": "https://kaleidoscopic-paletas-9f9af7.netlify.app/locations/mumbai/",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Mumbai",

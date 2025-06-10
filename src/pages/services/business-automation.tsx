@@ -9,7 +9,7 @@ const BusinessAutomationPage = () => {
         <title>Business Process Automation Services India | Workflow Optimization & RPA Solutions | God Digital Marketing</title>
         <meta name="description" content="Streamline your business operations with comprehensive automation solutions. Workflow optimization, RPA, CRM integration, sales automation & process digitization across India. Reduce operational costs by 70% while boosting productivity." />
         <meta name="keywords" content="business process automation, workflow automation, RPA services, business automation solutions, process optimization, workflow management, CRM automation, sales automation, operational efficiency, digital transformation" />
-        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/services/business-automation/" />
+        <link rel="canonical" href="https://kaleidoscopic-paletas-9f9af7.netlify.app/services/business-automation/" />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -21,7 +21,7 @@ const BusinessAutomationPage = () => {
             "provider": {
               "@type": "Organization",
               "name": "God Digital Marketing",
-              "url": "https://courageous-daffodil-2020b6.netlify.app"
+              "url": "https://kaleidoscopic-paletas-9f9af7.netlify.app"
             },
             "areaServed": {
               "@type": "Country",

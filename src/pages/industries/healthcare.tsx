@@ -9,7 +9,7 @@ const HealthcarePage = () => {
         <title>Healthcare Digital Marketing Services India | Medical SEO, Hospital Marketing & Patient Acquisition | God Digital Marketing</title>
         <meta name="description" content="Specialized healthcare digital marketing services for hospitals, clinics, doctors & medical practices across India. HIPAA-compliant SEO, patient acquisition, medical content marketing & reputation management. Proven results for 200+ healthcare providers." />
         <meta name="keywords" content="healthcare digital marketing, medical SEO, hospital marketing, doctor marketing, patient acquisition, medical practice marketing, healthcare content marketing, medical website design, healthcare social media, telemedicine marketing" />
-        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/industries/healthcare/" />
+        <link rel="canonical" href="https://kaleidoscopic-paletas-9f9af7.netlify.app/industries/healthcare/" />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -21,7 +21,7 @@ const HealthcarePage = () => {
             "provider": {
               "@type": "Organization",
               "name": "God Digital Marketing",
-              "url": "https://courageous-daffodil-2020b6.netlify.app"
+              "url": "https://kaleidoscopic-paletas-9f9af7.netlify.app"
             },
             "areaServed": {
               "@type": "Country",

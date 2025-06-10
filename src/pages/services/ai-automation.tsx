@@ -9,7 +9,7 @@ const AIAutomationPage = () => {
         <title>AI Automation Services India | Intelligent Business Process Automation | God Digital Marketing</title>
         <meta name="description" content="Transform your business with cutting-edge AI automation solutions. Intelligent process automation, machine learning, chatbots, predictive analytics & workflow optimization across India. Reduce costs by 60% while increasing efficiency." />
         <meta name="keywords" content="AI automation services, artificial intelligence automation, machine learning solutions, business process automation, intelligent automation, AI chatbots, predictive analytics, workflow automation, RPA services, AI consulting India" />
-        <link rel="canonical" href="https://courageous-daffodil-2020b6.netlify.app/services/ai-automation/" />
+        <link rel="canonical" href="https://kaleidoscopic-paletas-9f9af7.netlify.app/services/ai-automation/" />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -21,7 +21,7 @@ const AIAutomationPage = () => {
             "provider": {
               "@type": "Organization",
               "name": "God Digital Marketing",
-              "url": "https://courageous-daffodil-2020b6.netlify.app"
+              "url": "https://kaleidoscopic-paletas-9f9af7.netlify.app"
             },
             "areaServed": {
               "@type": "Country",
