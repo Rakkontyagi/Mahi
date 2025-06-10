@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function New-delhiPpcAdvertisingPage() {
+export default function NewdelhiPpcAdvertisingPage() {
   return (
     <>
       <Helmet>

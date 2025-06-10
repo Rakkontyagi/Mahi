@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function SolapurSocialMedia-MarketingPage() {
+export default function SolapurSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function SangliSocialMedia-MarketingPage() {
+export default function SangliSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

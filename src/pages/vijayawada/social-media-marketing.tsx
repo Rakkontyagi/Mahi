@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function VijayawadaSocialMedia-MarketingPage() {
+export default function VijayawadaSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

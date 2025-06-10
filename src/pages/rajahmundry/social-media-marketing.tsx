@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function RajahmundrySocialMedia-MarketingPage() {
+export default function RajahmundrySocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

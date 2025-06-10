@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function MumbaiSocialMedia-MarketingPage() {
+export default function MumbaiSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

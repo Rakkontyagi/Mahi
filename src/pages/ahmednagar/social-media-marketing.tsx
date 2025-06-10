@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function AhmednagarSocialMedia-MarketingPage() {
+export default function AhmednagarSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

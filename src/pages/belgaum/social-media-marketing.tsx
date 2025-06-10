@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function BelgaumSocialMedia-MarketingPage() {
+export default function BelgaumSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function BangaloreSocialMedia-MarketingPage() {
+export default function BangaloreSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

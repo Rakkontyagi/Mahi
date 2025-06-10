@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function KolhapurSocialMedia-MarketingPage() {
+export default function KolhapurSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

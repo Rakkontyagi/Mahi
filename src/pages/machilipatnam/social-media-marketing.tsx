@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function MachilipatnamSocialMedia-MarketingPage() {
+export default function MachilipatnamSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

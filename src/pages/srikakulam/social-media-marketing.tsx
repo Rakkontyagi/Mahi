@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function SrikakulamSocialMedia-MarketingPage() {
+export default function SrikakulamSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

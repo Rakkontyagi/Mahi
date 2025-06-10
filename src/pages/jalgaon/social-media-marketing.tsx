@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function JalgaonSocialMedia-MarketingPage() {
+export default function JalgaonSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

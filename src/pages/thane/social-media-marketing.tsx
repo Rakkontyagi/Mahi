@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function ThaneSocialMedia-MarketingPage() {
+export default function ThaneSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

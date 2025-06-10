@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function AkolaSocialMedia-MarketingPage() {
+export default function AkolaSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

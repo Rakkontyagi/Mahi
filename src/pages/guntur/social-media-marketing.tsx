@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function GunturSocialMedia-MarketingPage() {
+export default function GunturSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

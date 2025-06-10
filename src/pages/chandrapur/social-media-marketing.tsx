@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function ChandrapurSocialMedia-MarketingPage() {
+export default function ChandrapurSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

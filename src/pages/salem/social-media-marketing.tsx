@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function SalemSocialMedia-MarketingPage() {
+export default function SalemSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

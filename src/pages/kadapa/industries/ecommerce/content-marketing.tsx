@@ -4,7 +4,7 @@ import { TrustSignals } from '../../components/TrustSignals';
 import { Testimonials } from '../../components/Testimonials';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 
-export default function KadapaContentMarketingE-commercePage() {
+export default function KadapaContentMarketingEcommercePage() {
   return (
     <>
       <SEOHead

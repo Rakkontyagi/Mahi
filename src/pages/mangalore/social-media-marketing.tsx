@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function MangaloreSocialMedia-MarketingPage() {
+export default function MangaloreSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

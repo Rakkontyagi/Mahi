@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function Hubli-dharwadAiAutomationPage() {
+export default function HublidharwadAiAutomationPage() {
   return (
     <>
       <Helmet>

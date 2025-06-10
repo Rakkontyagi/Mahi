@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function LaturSocialMedia-MarketingPage() {
+export default function LaturSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

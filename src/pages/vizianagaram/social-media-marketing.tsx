@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function VizianagaramSocialMedia-MarketingPage() {
+export default function VizianagaramSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

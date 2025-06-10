@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function MaduraiSocialMedia-MarketingPage() {
+export default function MaduraiSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

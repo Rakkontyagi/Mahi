@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function VisakhapatnamSocialMedia-MarketingPage() {
+export default function VisakhapatnamSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

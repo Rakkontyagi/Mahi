@@ -4,7 +4,7 @@ import { TrustSignals } from '../../components/TrustSignals';
 import { Testimonials } from '../../components/Testimonials';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 
-export default function TirupatiPPCAdvertisingE-commercePage() {
+export default function TirupatiPPCAdvertisingEcommercePage() {
   return (
     <>
       <SEOHead

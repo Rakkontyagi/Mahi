@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function BellarySocialMedia-MarketingPage() {
+export default function BellarySocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

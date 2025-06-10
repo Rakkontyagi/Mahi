@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function NashikSocialMedia-MarketingPage() {
+export default function NashikSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

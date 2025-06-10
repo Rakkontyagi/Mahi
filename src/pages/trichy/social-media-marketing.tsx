@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function TrichySocialMedia-MarketingPage() {
+export default function TrichySocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

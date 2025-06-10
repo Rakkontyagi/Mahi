@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function PuneSocialMedia-MarketingPage() {
+export default function PuneSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

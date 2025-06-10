@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function ChennaiSocialMedia-MarketingPage() {
+export default function ChennaiSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

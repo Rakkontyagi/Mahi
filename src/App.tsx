@@ -44,16 +44,35 @@ const AIAutomationHub = lazy(() => import('./components/Pages/ServiceHubPages/AI
 const LeadGenerationHub = lazy(() => import('./components/Pages/ServiceHubPages/LeadGenerationHub').then(module => ({ default: module.LeadGenerationHub })));
 const BusinessAutomationHub = lazy(() => import('./components/Pages/ServiceHubPages/BusinessAutomationHub').then(module => ({ default: module.BusinessAutomationHub })));
 
-// Existing city pages
+// Specific city-service page components
+const MumbaiDigitalMarketing = lazy(() => import('./pages/mumbai/digital-marketing'));
+const MumbaiSEOServices = lazy(() => import('./pages/mumbai/seo-services'));
+const MumbaiPPCAdvertising = lazy(() => import('./pages/mumbai/ppc-advertising'));
+const MumbaiSocialMediaMarketing = lazy(() => import('./pages/mumbai/social-media-marketing'));
+const MumbaiAIAutomation = lazy(() => import('./pages/mumbai/ai-automation'));
+const MumbaiBusinessAutomation = lazy(() => import('./pages/mumbai/business-automation'));
+
+const BangaloreDigitalMarketing = lazy(() => import('./pages/bangalore/digital-marketing'));
+const BangaloreSEOServices = lazy(() => import('./pages/bangalore/seo-services'));
+const BangalorePPCAdvertising = lazy(() => import('./pages/bangalore/ppc-advertising'));
+const BangaloreSocialMediaMarketing = lazy(() => import('./pages/bangalore/social-media-marketing'));
+const BangaloreAIAutomation = lazy(() => import('./pages/bangalore/ai-automation'));
+const BangaloreBusinessAutomation = lazy(() => import('./pages/bangalore/business-automation'));
+
+const ChennaiDigitalMarketing = lazy(() => import('./pages/chennai/digital-marketing'));
+const ChennaiSEOServices = lazy(() => import('./pages/chennai/seo-services'));
+const ChennaiPPCAdvertising = lazy(() => import('./pages/chennai/ppc-advertising'));
+const ChennaiSocialMediaMarketing = lazy(() => import('./pages/chennai/social-media-marketing'));
+const ChennaiAIAutomation = lazy(() => import('./pages/chennai/ai-automation'));
+const ChennaiBusinessAutomation = lazy(() => import('./pages/chennai/business-automation'));
+
 const DelhiDigitalMarketing = lazy(() => import('./components/Pages/DelhiDigitalMarketing').then(module => ({ default: module.DelhiDigitalMarketing })));
 const DelhiAIAutomation = lazy(() => import('./components/Pages/DelhiAIAutomation').then(module => ({ default: module.DelhiAIAutomation })));
 const DelhiBusinessAutomation = lazy(() => import('./components/Pages/DelhiBusinessAutomation').then(module => ({ default: module.DelhiBusinessAutomation })));
 const DelhiSEOServices = lazy(() => import('./components/Pages/DelhiSEOServices').then(module => ({ default: module.DelhiSEOServices })));
 const DelhiPPCManagement = lazy(() => import('./components/Pages/DelhiPPCManagement').then(module => ({ default: module.DelhiPPCManagement })));
 const DelhiSocialMediaMarketing = lazy(() => import('./components/Pages/DelhiSocialMediaMarketing').then(module => ({ default: module.DelhiSocialMediaMarketing })));
-const MumbaiDigitalMarketing = lazy(() => import('./components/Pages/MumbaiDigitalMarketing').then(module => ({ default: module.MumbaiDigitalMarketing })));
-const BangaloreDigitalMarketing = lazy(() => import('./components/Pages/BangaloreDigitalMarketing').then(module => ({ default: module.BangaloreDigitalMarketing })));
-const ChennaiDigitalMarketing = lazy(() => import('./components/Pages/ChennaiDigitalMarketing').then(module => ({ default: module.ChennaiDigitalMarketing })));
+
 const HyderabadDigitalMarketing = lazy(() => import('./components/Pages/HyderabadDigitalMarketing').then(module => ({ default: module.HyderabadDigitalMarketing })));
 const PuneDigitalMarketing = lazy(() => import('./components/Pages/PuneDigitalMarketing').then(module => ({ default: module.PuneDigitalMarketing })));
 const HealthcareDigitalMarketing = lazy(() => import('./components/Pages/HealthcareDigitalMarketing').then(module => ({ default: module.HealthcareDigitalMarketing })));
@@ -434,14 +453,58 @@ function AppContent() {
     }
   }
 
-  // Route: /[service]/[state]/[city]/
-  // This existing 3-part route is for ServiceLocationTemplate, ensure it's distinct from the ROI route
-  if (pathParts.length === 3 && pathParts[2] !== 'roi') { // Added condition to avoid conflict with ROI route
-    const [serviceSlug, stateSlug, citySlug] = pathParts;
+  // Route: /[city]/[service]/ - NEW PATTERN
+  if (pathParts.length === 2) {
+    const [citySlug, serviceSlug] = pathParts;
     const service = findService(serviceSlug);
-    const location = findLocation(stateSlug, citySlug);
+
+    // Find city across all states
+    let location = null;
+    for (const state of allIndianLocations) {
+      const city = state.cities.find(c => c.slug === citySlug);
+      if (city) {
+        location = {
+          city: city.name,
+          state: state.state,
+          citySlug: city.slug,
+          stateSlug: state.stateSlug,
+          population: city.population,
+          isMetro: city.isMetro,
+          industries: city.industries,
+          tier: city.tier
+        };
+        break;
+      }
+    }
 
     if (service && location) {
+      // Mapping of specific page components
+      const specificPageComponents: Record<string, React.ComponentType> = {
+        'mumbai-digital-marketing': MumbaiDigitalMarketing,
+        'mumbai-seo-services': MumbaiSEOServices,
+        'mumbai-ppc-advertising': MumbaiPPCAdvertising,
+        'mumbai-social-media-marketing': MumbaiSocialMediaMarketing,
+        'mumbai-ai-automation': MumbaiAIAutomation,
+        'mumbai-business-automation': MumbaiBusinessAutomation,
+
+        'bangalore-digital-marketing': BangaloreDigitalMarketing,
+        'bangalore-seo-services': BangaloreSEOServices,
+        'bangalore-ppc-advertising': BangalorePPCAdvertising,
+        'bangalore-social-media-marketing': BangaloreSocialMediaMarketing,
+        'bangalore-ai-automation': BangaloreAIAutomation,
+        'bangalore-business-automation': BangaloreBusinessAutomation,
+
+        'chennai-digital-marketing': ChennaiDigitalMarketing,
+        'chennai-seo-services': ChennaiSEOServices,
+        'chennai-ppc-advertising': ChennaiPPCAdvertising,
+        'chennai-social-media-marketing': ChennaiSocialMediaMarketing,
+        'chennai-ai-automation': ChennaiAIAutomation,
+        'chennai-business-automation': ChennaiBusinessAutomation,
+      };
+
+      const componentKey = `${citySlug}-${serviceSlug}`;
+      const SpecificPageComponent = specificPageComponents[componentKey];
+
       // Generate related services and nearby locations
       const relatedServices = comprehensiveServices
         .filter(s => s.slug !== service.slug)
@@ -449,10 +512,10 @@ function AppContent() {
         .map(s => ({
           name: s.name,
           slug: s.slug,
-          url: `/${s.slug}/${stateSlug}/${citySlug}/`
+          url: `/${citySlug}/${s.slug}/`
         }));
 
-      const state = allIndianLocations.find(s => s.stateSlug === stateSlug);
+      const state = allIndianLocations.find(s => s.stateSlug === location.stateSlug);
       const nearbyLocations = state ? state.cities
         .filter(c => c.slug !== citySlug)
         .slice(0, 8)
@@ -460,7 +523,7 @@ function AppContent() {
           city: c.name,
           citySlug: c.slug,
           stateSlug: state.stateSlug,
-          url: `/${serviceSlug}/${state.stateSlug}/${c.slug}/`
+          url: `/${c.slug}/${serviceSlug}/`
         })) : [];
 
       const breadcrumbs = generateBreadcrumbs(service, location);
@@ -469,18 +532,30 @@ function AppContent() {
         currentLocation: location
       };
 
-      return (
-        <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
-          <Suspense fallback={<LoadingFallback />}>
-            <ServiceLocationTemplate 
-              service={service}
-              location={location}
-              relatedServices={relatedServices}
-              nearbyLocations={nearbyLocations}
-            />
-          </Suspense>
-        </PageWrapper>
-      );
+      if (SpecificPageComponent) {
+        // Use specific page component with unique content
+        return (
+          <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+            <Suspense fallback={<LoadingFallback />}>
+              <SpecificPageComponent />
+            </Suspense>
+          </PageWrapper>
+        );
+      } else {
+        // Fallback to generic template for cities without specific components
+        return (
+          <PageWrapper breadcrumbs={breadcrumbs} sidebarProps={sidebarProps}>
+            <Suspense fallback={<LoadingFallback />}>
+              <ServiceLocationTemplate
+                service={service}
+                location={location}
+                relatedServices={relatedServices}
+                nearbyLocations={nearbyLocations}
+              />
+            </Suspense>
+          </PageWrapper>
+        );
+      }
     }
   }
 

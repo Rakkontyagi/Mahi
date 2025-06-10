@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function MalegaonSocialMedia-MarketingPage() {
+export default function MalegaonSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function GulbargaSocialMedia-MarketingPage() {
+export default function GulbargaSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

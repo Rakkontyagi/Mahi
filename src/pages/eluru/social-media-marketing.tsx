@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function EluruSocialMedia-MarketingPage() {
+export default function EluruSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function ErodeSocialMedia-MarketingPage() {
+export default function ErodeSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

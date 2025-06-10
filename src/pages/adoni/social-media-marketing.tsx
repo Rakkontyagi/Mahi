@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function AdoniSocialMedia-MarketingPage() {
+export default function AdoniSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

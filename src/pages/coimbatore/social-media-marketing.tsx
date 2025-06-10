@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function CoimbatoreSocialMedia-MarketingPage() {
+export default function CoimbatoreSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

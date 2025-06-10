@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function MysoreSocialMedia-MarketingPage() {
+export default function MysoreSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

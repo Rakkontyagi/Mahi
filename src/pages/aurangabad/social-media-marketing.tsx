@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function AurangabadSocialMedia-MarketingPage() {
+export default function AurangabadSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

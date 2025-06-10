@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function KurnoolSocialMedia-MarketingPage() {
+export default function KurnoolSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

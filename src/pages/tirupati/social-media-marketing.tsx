@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function TirupatiSocialMedia-MarketingPage() {
+export default function TirupatiSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function NagpurSocialMedia-MarketingPage() {
+export default function NagpurSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

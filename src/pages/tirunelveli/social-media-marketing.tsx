@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function TirunelveliSocialMedia-MarketingPage() {
+export default function TirunelveliSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

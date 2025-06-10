@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function DavangereSocialMedia-MarketingPage() {
+export default function DavangereSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

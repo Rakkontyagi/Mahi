@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function ChittoorSocialMedia-MarketingPage() {
+export default function ChittoorSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

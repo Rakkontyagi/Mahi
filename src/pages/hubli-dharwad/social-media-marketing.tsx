@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function Hubli-dharwadSocialMedia-MarketingPage() {
+export default function HublidharwadSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function NelloreSocialMedia-MarketingPage() {
+export default function NelloreSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

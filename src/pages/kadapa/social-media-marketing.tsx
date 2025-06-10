@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function KadapaSocialMedia-MarketingPage() {
+export default function KadapaSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

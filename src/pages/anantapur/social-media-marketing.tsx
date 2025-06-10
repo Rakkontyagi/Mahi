@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function AnantapurSocialMedia-MarketingPage() {
+export default function AnantapurSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function DhuleSocialMedia-MarketingPage() {
+export default function DhuleSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

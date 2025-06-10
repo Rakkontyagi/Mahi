@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function VelloreSocialMedia-MarketingPage() {
+export default function VelloreSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

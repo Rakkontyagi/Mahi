@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function KakinadaSocialMedia-MarketingPage() {
+export default function KakinadaSocialMediaMarketingPage() {
   return (
     <>
       <Helmet>

@@ -193,7 +193,7 @@ const uniqueContent = {
   }
 };
 
-export default function New-delhiSeoServicesPage() {
+export default function NewdelhiSeoServicesPage() {
   return (
     <>
       <Helmet>
