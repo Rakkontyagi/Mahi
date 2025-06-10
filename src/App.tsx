@@ -86,6 +86,9 @@ import { InternalLinkingContent } from './components/Content/InternalLinkingCont
 function AppContent() {
   const pathname = window.location.pathname.replace(/\/$/, '') || '/';
 
+  console.log('🚀 APP CONTENT LOADED - React routing is active!');
+  console.log('🔍 Current pathname:', pathname);
+
   const LoadingFallback = () => (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
