@@ -1,6 +1,6 @@
 [build]
-  command = "echo 'Using static HTML - no build needed'"
-  publish = "."
+  command = "echo 'Using static HTML from dist folder'"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18.17.0"
