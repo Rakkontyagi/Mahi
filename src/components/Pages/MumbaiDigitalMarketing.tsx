@@ -4,7 +4,7 @@ import { MapPin, TrendingUp, Award, Users, Target, Zap, Phone, Mail, Clock, Chec
 import { GlassmorphismCard } from '../Advanced/GlassmorphismCard';
 import { ScrollReveal } from '../Advanced/ParallaxSection';
 import { SEOHead } from '../SEO/SEOHead';
-import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData.js';
+import { getServiceSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export const MumbaiDigitalMarketing: React.FC = () => {
   const benefits = [

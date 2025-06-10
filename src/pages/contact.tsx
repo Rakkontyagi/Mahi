@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { SEOHead } from '../components/SEO/SEOHead';
 import { TrustSignals } from '../components/TrustSignals';
 import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
-import { getContactSchema, getBreadcrumbSchema } from '../utils/seoStructuredData.js';
+import { getContactSchema, getBreadcrumbSchema } from '../utils/seoStructuredData';
 
 export default function ContactPage() {
   const contactInfo = [
