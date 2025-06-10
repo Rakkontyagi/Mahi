@@ -210,6 +210,13 @@ function AppContent() {
   // Dynamic route matching
   const pathParts = pathname.split('/').filter(Boolean);
 
+  // Debug logging
+  console.log('🔍 ROUTING DEBUG:', {
+    pathname,
+    pathParts,
+    pathPartsLength: pathParts.length
+  });
+
   // Core Service Pages (New)
   const coreServicePages: Record<string, React.ComponentType> = {
     'digital-marketing-services': DigitalMarketingServices,
@@ -231,6 +238,7 @@ function AppContent() {
 
   // Route: /[service]/ (Service Hub Pages)
   if (pathParts.length === 1) {
+    console.log('🎯 Checking 1-part route (Service Hub):', pathParts[0]);
     const [serviceSlug] = pathParts;
     const service = findService(serviceSlug);
 
@@ -455,8 +463,10 @@ function AppContent() {
 
   // Route: /[city]/[service]/ - NEW PATTERN
   if (pathParts.length === 2) {
+    console.log('🎯 Checking 2-part route (City/Service):', pathParts);
     const [citySlug, serviceSlug] = pathParts;
     const service = findService(serviceSlug);
+    console.log('🔍 Service found:', service ? service.name : 'NOT FOUND');
 
     // Find city across all states
     let location = null;
@@ -476,6 +486,7 @@ function AppContent() {
         break;
       }
     }
+    console.log('🔍 Location found:', location ? location.city : 'NOT FOUND');
 
     if (service && location) {
       // Mapping of specific page components
