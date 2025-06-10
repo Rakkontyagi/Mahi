@@ -699,10 +699,11 @@ function AppContent() {
 function App() {
   return (
     <HelmetProvider>
-      <LoadingProvider>
+      {/* TEMPORARILY DISABLED LoadingProvider to test React routing */}
+      {/* <LoadingProvider> */}
         <ReloadPrompt />
         <AppContent />
-      </LoadingProvider>
+      {/* </LoadingProvider> */}
     </HelmetProvider>
   );
 }
