@@ -39,7 +39,11 @@ function getAllRoutes() {
     
     serviceFiles.forEach(serviceFile => {
       const serviceSlug = serviceFile.replace('.tsx', '');
-      routes.push(`/${citySlug}/${serviceSlug}/`);
+
+      // CRITICAL FIX: Skip generating static HTML for city-service combinations
+      // This forces React app to handle these routes with client-side routing
+      console.log(`⚠️  SKIPPING static generation for /${citySlug}/${serviceSlug}/ - will use React routing`);
+      // routes.push(`/${citySlug}/${serviceSlug}/`); // COMMENTED OUT TO FORCE REACT ROUTING
     });
   });
   
