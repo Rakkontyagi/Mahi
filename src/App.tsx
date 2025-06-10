@@ -10,6 +10,7 @@ import { BreadcrumbNavigation } from './components/Layout/BreadcrumbNavigation';
 import { ServiceLocationTemplate } from './components/Templates/ServiceLocationTemplate';
 import { IndustryLocationTemplate } from './components/Templates/IndustryLocationTemplate';
 import { ServiceCostPageTemplate as ServiceCostPageTemplateType } from './components/Templates/ServiceCostPageTemplate'; // For type only
+import { GodDigitalMarketing2025 } from './components/GodDigitalMarketing2025';
 // ServiceROIPageTemplate is not used for type-only import
 // CompetitorAlternativePageTemplate is not used for type-only import
 // CaseStudyPageTemplate is not used for type-only import
@@ -679,17 +680,11 @@ function AppContent() {
     );
   }
 
-  // Default homepage
+  // Default homepage - Use 2025 Design
   return (
-    <PageWrapper>
-      <main>
-        <AdvancedHero />
-        <TrustSignals />
-        <Suspense fallback={<LoadingFallback />}>
-          <IndiaKeywordOptimization />
-        </Suspense>
-      </main>
-    </PageWrapper>
+    <div className="min-h-screen bg-black text-white">
+      <GodDigitalMarketing2025 />
+    </div>
   );
 }
 
