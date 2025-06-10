@@ -1,3 +1,296 @@
+# Netlify configuration for God Digital Marketing
+
 [build]
   command = "npm run build"
-  publish = "dist" 
+  publish = "dist"
+
+# EMERGENCY SEO RECOVERY - CANNIBALIZATION REDIRECTS
+# Phase 2: Critical Ranking Recovery - Day 31-45
+
+# Mumbai Digital Marketing Cannibalization Fix
+[[redirects]]
+  from = "/digital-marketing-mumbai/*"
+  to = "/mumbai/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/mumbai-digital-marketing/*"
+  to = "/mumbai/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/mumbai-digital-marketing-agency/*"
+  to = "/mumbai/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/best-digital-marketing-mumbai/*"
+  to = "/mumbai/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/digital-marketing-services-mumbai/*"
+  to = "/mumbai/digital-marketing/"
+  status = 301
+
+# Delhi SEO Services Cannibalization Fix
+[[redirects]]
+  from = "/seo-services-delhi/*"
+  to = "/delhi/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/delhi-seo-company/*"
+  to = "/delhi/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/delhi-seo-services/*"
+  to = "/delhi/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/best-seo-delhi/*"
+  to = "/delhi/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/seo-company-delhi/*"
+  to = "/delhi/seo-services/"
+  status = 301
+
+# Bangalore PPC Advertising Cannibalization Fix
+[[redirects]]
+  from = "/ppc-advertising-bangalore/*"
+  to = "/bangalore/ppc-advertising/"
+  status = 301
+
+[[redirects]]
+  from = "/bangalore-ppc-management/*"
+  to = "/bangalore/ppc-advertising/"
+  status = 301
+
+[[redirects]]
+  from = "/ppc-services-bangalore/*"
+  to = "/bangalore/ppc-advertising/"
+  status = 301
+
+[[redirects]]
+  from = "/google-ads-bangalore/*"
+  to = "/bangalore/ppc-advertising/"
+  status = 301
+
+# Chennai Digital Marketing Cannibalization Fix
+[[redirects]]
+  from = "/digital-marketing-chennai/*"
+  to = "/chennai/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/chennai-digital-marketing-agency/*"
+  to = "/chennai/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/best-digital-marketing-chennai/*"
+  to = "/chennai/digital-marketing/"
+  status = 301
+
+# Hyderabad SEO Services Cannibalization Fix
+[[redirects]]
+  from = "/seo-services-hyderabad/*"
+  to = "/hyderabad/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/hyderabad-seo-company/*"
+  to = "/hyderabad/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/best-seo-hyderabad/*"
+  to = "/hyderabad/seo-services/"
+  status = 301
+
+# Pune Digital Marketing Cannibalization Fix
+[[redirects]]
+  from = "/digital-marketing-pune/*"
+  to = "/pune/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/pune-digital-marketing/*"
+  to = "/pune/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/pune-digital-marketing-agency/*"
+  to = "/pune/digital-marketing/"
+  status = 301
+
+# Kolkata SEO Services Cannibalization Fix
+[[redirects]]
+  from = "/seo-services-kolkata/*"
+  to = "/kolkata/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/kolkata-seo-company/*"
+  to = "/kolkata/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/best-seo-kolkata/*"
+  to = "/kolkata/seo-services/"
+  status = 301
+
+# Ahmedabad Digital Marketing Cannibalization Fix
+[[redirects]]
+  from = "/digital-marketing-ahmedabad/*"
+  to = "/ahmedabad/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/ahmedabad-digital-marketing/*"
+  to = "/ahmedabad/digital-marketing/"
+  status = 301
+
+# Jaipur SEO Services Cannibalization Fix
+[[redirects]]
+  from = "/seo-services-jaipur/*"
+  to = "/jaipur/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/jaipur-seo-company/*"
+  to = "/jaipur/seo-services/"
+  status = 301
+
+# Lucknow Digital Marketing Cannibalization Fix
+[[redirects]]
+  from = "/digital-marketing-lucknow/*"
+  to = "/lucknow/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/lucknow-digital-marketing/*"
+  to = "/lucknow/digital-marketing/"
+  status = 301
+
+# Kanpur SEO Services Cannibalization Fix
+[[redirects]]
+  from = "/seo-services-kanpur/*"
+  to = "/kanpur/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/kanpur-seo-company/*"
+  to = "/kanpur/seo-services/"
+  status = 301
+
+# Visakhapatnam Digital Marketing Cannibalization Fix
+[[redirects]]
+  from = "/digital-marketing-visakhapatnam/*"
+  to = "/visakhapatnam/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/visakhapatnam-digital-marketing/*"
+  to = "/visakhapatnam/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/vizag-digital-marketing/*"
+  to = "/visakhapatnam/digital-marketing/"
+  status = 301
+
+# Vijayawada SEO Services Cannibalization Fix
+[[redirects]]
+  from = "/seo-services-vijayawada/*"
+  to = "/vijayawada/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/vijayawada-seo-company/*"
+  to = "/vijayawada/seo-services/"
+  status = 301
+
+# Generic Service Cannibalization Fixes
+[[redirects]]
+  from = "/digital-marketing-services/*"
+  to = "/services/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/seo-services/*"
+  to = "/services/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/ppc-services/*"
+  to = "/services/ppc-advertising/"
+  status = 301
+
+[[redirects]]
+  from = "/social-media-marketing-services/*"
+  to = "/services/social-media-marketing/"
+  status = 301
+
+# Old URL Structure Redirects
+[[redirects]]
+  from = "/locations/:city/:service/*"
+  to = "/:city/:service/"
+  status = 301
+
+[[redirects]]
+  from = "/services/:service/:city/*"
+  to = "/:city/:service/"
+  status = 301
+
+# Industry-specific Cannibalization Fixes
+[[redirects]]
+  from = "/healthcare-digital-marketing/*"
+  to = "/industries/healthcare/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/ecommerce-digital-marketing/*"
+  to = "/industries/ecommerce/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/real-estate-digital-marketing/*"
+  to = "/industries/real-estate/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/education-digital-marketing/*"
+  to = "/industries/education/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/manufacturing-digital-marketing/*"
+  to = "/industries/manufacturing/digital-marketing/"
+  status = 301
+
+# Catch-all redirects for remaining cannibalization issues
+[[redirects]]
+  from = "/*-digital-marketing-:city/*"
+  to = "/:city/digital-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/*-seo-services-:city/*"
+  to = "/:city/seo-services/"
+  status = 301
+
+[[redirects]]
+  from = "/*-ppc-advertising-:city/*"
+  to = "/:city/ppc-advertising/"
+  status = 301
+
+# Fallback for any remaining duplicates
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404 
