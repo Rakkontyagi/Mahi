@@ -274,6 +274,14 @@ function generateStaticFiles() {
 function generateNetlifyRedirects() {
   const redirectsPath = path.join('dist', '_redirects');
   const redirectsContent = `# Netlify redirects for SPA with client-side routing
+# HIGH PRIORITY: Force specific city-service routes to React app (must be first!)
+/mumbai/digital-marketing/    /index.html   200!
+/bangalore/digital-marketing/ /index.html   200!
+/chennai/digital-marketing/   /index.html   200!
+/delhi/digital-marketing/     /index.html   200!
+/pune/digital-marketing/      /index.html   200!
+/hyderabad/digital-marketing/ /index.html   200!
+
 # FORCE all city-service routes to use client-side routing (! flag forces redirect even if static file exists)
 /*/digital-marketing/    /index.html   200!
 /*/seo-services/         /index.html   200!
