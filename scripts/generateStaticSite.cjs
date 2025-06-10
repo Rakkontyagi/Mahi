@@ -273,17 +273,25 @@ function generateStaticFiles() {
 // Generate _redirects file for Netlify
 function generateNetlifyRedirects() {
   const redirectsPath = path.join('dist', '_redirects');
-  const redirectsContent = `# Netlify redirects for SPA with static pages
-# Redirect all non-existing files to index.html for client-side routing
-/*    /index.html   200
+  const redirectsContent = `# Netlify redirects for SPA with client-side routing
+# Force all city-service routes to use client-side routing for dynamic content
+/*/digital-marketing/    /index.html   200
+/*/seo-services/         /index.html   200
+/*/ppc-advertising/      /index.html   200
+/*/social-media-marketing/ /index.html   200
+/*/ai-automation/        /index.html   200
+/*/business-automation/  /index.html   200
 
-# Specific redirects for better SEO
+# Specific redirects for better SEO (without trailing slash)
 /mumbai/digital-marketing    /mumbai/digital-marketing/    301
 /bangalore/seo-services      /bangalore/seo-services/      301
 /chennai/ppc-advertising     /chennai/ppc-advertising/     301
 /delhi/social-media-marketing /delhi/social-media-marketing/ 301
 /pune/ai-automation          /pune/ai-automation/          301
 /hyderabad/business-automation /hyderabad/business-automation/ 301
+
+# Fallback for all other routes
+/*    /index.html   200
 `;
 
   fs.writeFileSync(redirectsPath, redirectsContent);
