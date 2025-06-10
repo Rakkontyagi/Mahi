@@ -92,13 +92,13 @@ function AppContent() {
   console.log('🚀 APP CONTENT LOADED - React routing is active!');
   console.log('🔍 Current pathname:', pathname);
 
-  // AGGRESSIVE DEBUG: Add visible debug info to page
-  const debugInfo = `DEBUG: pathname=${pathname}, length=${pathname.length}`;
+  // AGGRESSIVE DEBUG: Add visible debug info to page - FORCE DEPLOYMENT v2
+  const debugInfo = `DEBUG v2: pathname=${pathname}, length=${pathname.length}, timestamp=${Date.now()}`;
   const debugElement = document.getElementById('debug-info');
   if (!debugElement) {
     const div = document.createElement('div');
     div.id = 'debug-info';
-    div.style.cssText = 'position:fixed;top:0;left:0;background:red;color:white;padding:10px;z-index:9999;';
+    div.style.cssText = 'position:fixed;top:0;left:0;background:red;color:white;padding:10px;z-index:9999;font-size:14px;';
     div.textContent = debugInfo;
     document.body.appendChild(div);
   }
