@@ -1,5 +1,5 @@
 [build]
-  command = "echo 'Using static HTML from dist folder'"
+  command = "npm run build"
   publish = "dist"
 
 [build.environment]
