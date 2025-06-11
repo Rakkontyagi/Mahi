@@ -1,0 +1,6212 @@
+{
+  "timestamp": "2025-06-11T10:27:55.432Z",
+  "totalPagesRemoved": 828,
+  "duplicateGroupsProcessed": 406,
+  "backupLocation": "backup-removed-pages",
+  "removedPages": [
+    {
+      "path": "src/pages/nagpur/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nagpur/digital-marketing.tsx",
+      "city": "nagpur",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nashik/ai-automation.tsx",
+      "city": "nashik",
+      "service": "ai-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nashik/business-automation.tsx",
+      "city": "nashik",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nashik/digital-marketing.tsx",
+      "city": "nashik",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nashik/social-media-marketing.tsx",
+      "city": "nashik",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/thane/ai-automation.tsx",
+      "city": "thane",
+      "service": "ai-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/thane/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/thane/digital-marketing.tsx",
+      "city": "thane",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/thane/social-media-marketing.tsx",
+      "city": "thane",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/ai-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "ai-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/digital-marketing.tsx",
+      "city": "visakhapatnam",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/social-media-marketing.tsx",
+      "city": "visakhapatnam",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nagpur/social-media-marketing.tsx",
+      "city": "nagpur",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/content-marketing.tsx",
+      "city": "visakhapatnam",
+      "service": "content-marketing",
+      "priority": 100,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/email-marketing.tsx",
+      "city": "visakhapatnam",
+      "service": "email-marketing",
+      "priority": 100,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/lead-generation.tsx",
+      "city": "visakhapatnam",
+      "service": "lead-generation",
+      "priority": 100,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/marketing-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "marketing-automation",
+      "priority": 100,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/ai-automation.tsx",
+      "city": "adoni",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/business-automation.tsx",
+      "city": "adoni",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/digital-marketing.tsx",
+      "city": "adoni",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/social-media-marketing.tsx",
+      "city": "adoni",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/ahmednagar/ai-automation.tsx",
+      "city": "ahmednagar",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/ahmednagar/business-automation.tsx",
+      "city": "ahmednagar",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/ahmednagar/digital-marketing.tsx",
+      "city": "ahmednagar",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/ahmednagar/social-media-marketing.tsx",
+      "city": "ahmednagar",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/akola/ai-automation.tsx",
+      "city": "akola",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/akola/business-automation.tsx",
+      "city": "akola",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/akola/digital-marketing.tsx",
+      "city": "akola",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/akola/social-media-marketing.tsx",
+      "city": "akola",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/ai-automation.tsx",
+      "city": "anantapur",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/business-automation.tsx",
+      "city": "anantapur",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/digital-marketing.tsx",
+      "city": "anantapur",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/social-media-marketing.tsx",
+      "city": "anantapur",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/aurangabad/ai-automation.tsx",
+      "city": "aurangabad",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/aurangabad/business-automation.tsx",
+      "city": "aurangabad",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/aurangabad/digital-marketing.tsx",
+      "city": "aurangabad",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/aurangabad/social-media-marketing.tsx",
+      "city": "aurangabad",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/belgaum/ai-automation.tsx",
+      "city": "belgaum",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/belgaum/business-automation.tsx",
+      "city": "belgaum",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/belgaum/digital-marketing.tsx",
+      "city": "belgaum",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/belgaum/social-media-marketing.tsx",
+      "city": "belgaum",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bellary/ai-automation.tsx",
+      "city": "bellary",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bellary/business-automation.tsx",
+      "city": "bellary",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bellary/digital-marketing.tsx",
+      "city": "bellary",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bellary/social-media-marketing.tsx",
+      "city": "bellary",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chandrapur/ai-automation.tsx",
+      "city": "chandrapur",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chandrapur/business-automation.tsx",
+      "city": "chandrapur",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chandrapur/digital-marketing.tsx",
+      "city": "chandrapur",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chandrapur/social-media-marketing.tsx",
+      "city": "chandrapur",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/ai-automation.tsx",
+      "city": "chittoor",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/business-automation.tsx",
+      "city": "chittoor",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/digital-marketing.tsx",
+      "city": "chittoor",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/social-media-marketing.tsx",
+      "city": "chittoor",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/coimbatore/ai-automation.tsx",
+      "city": "coimbatore",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/coimbatore/business-automation.tsx",
+      "city": "coimbatore",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/coimbatore/digital-marketing.tsx",
+      "city": "coimbatore",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/coimbatore/social-media-marketing.tsx",
+      "city": "coimbatore",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/davangere/ai-automation.tsx",
+      "city": "davangere",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/davangere/business-automation.tsx",
+      "city": "davangere",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/davangere/digital-marketing.tsx",
+      "city": "davangere",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/davangere/social-media-marketing.tsx",
+      "city": "davangere",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/dhule/ai-automation.tsx",
+      "city": "dhule",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/dhule/business-automation.tsx",
+      "city": "dhule",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/dhule/digital-marketing.tsx",
+      "city": "dhule",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/dhule/social-media-marketing.tsx",
+      "city": "dhule",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/ai-automation.tsx",
+      "city": "eluru",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/business-automation.tsx",
+      "city": "eluru",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/digital-marketing.tsx",
+      "city": "eluru",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/social-media-marketing.tsx",
+      "city": "eluru",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/erode/ai-automation.tsx",
+      "city": "erode",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/erode/business-automation.tsx",
+      "city": "erode",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/erode/digital-marketing.tsx",
+      "city": "erode",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/erode/social-media-marketing.tsx",
+      "city": "erode",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/gulbarga/ai-automation.tsx",
+      "city": "gulbarga",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/gulbarga/business-automation.tsx",
+      "city": "gulbarga",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/gulbarga/digital-marketing.tsx",
+      "city": "gulbarga",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/gulbarga/social-media-marketing.tsx",
+      "city": "gulbarga",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/ai-automation.tsx",
+      "city": "guntur",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/business-automation.tsx",
+      "city": "guntur",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/digital-marketing.tsx",
+      "city": "guntur",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/social-media-marketing.tsx",
+      "city": "guntur",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/hubli-dharwad/ai-automation.tsx",
+      "city": "hubli-dharwad",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/hubli-dharwad/business-automation.tsx",
+      "city": "hubli-dharwad",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/hubli-dharwad/digital-marketing.tsx",
+      "city": "hubli-dharwad",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/hubli-dharwad/social-media-marketing.tsx",
+      "city": "hubli-dharwad",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/jalgaon/ai-automation.tsx",
+      "city": "jalgaon",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/jalgaon/business-automation.tsx",
+      "city": "jalgaon",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/jalgaon/digital-marketing.tsx",
+      "city": "jalgaon",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/jalgaon/social-media-marketing.tsx",
+      "city": "jalgaon",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/ai-automation.tsx",
+      "city": "kadapa",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/business-automation.tsx",
+      "city": "kadapa",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/digital-marketing.tsx",
+      "city": "kadapa",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/social-media-marketing.tsx",
+      "city": "kadapa",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/ai-automation.tsx",
+      "city": "kakinada",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/business-automation.tsx",
+      "city": "kakinada",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/digital-marketing.tsx",
+      "city": "kakinada",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/social-media-marketing.tsx",
+      "city": "kakinada",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kolhapur/ai-automation.tsx",
+      "city": "kolhapur",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kolhapur/business-automation.tsx",
+      "city": "kolhapur",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kolhapur/digital-marketing.tsx",
+      "city": "kolhapur",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kolhapur/social-media-marketing.tsx",
+      "city": "kolhapur",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/ai-automation.tsx",
+      "city": "kurnool",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/business-automation.tsx",
+      "city": "kurnool",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/digital-marketing.tsx",
+      "city": "kurnool",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/social-media-marketing.tsx",
+      "city": "kurnool",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/latur/ai-automation.tsx",
+      "city": "latur",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/latur/business-automation.tsx",
+      "city": "latur",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/latur/digital-marketing.tsx",
+      "city": "latur",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/latur/social-media-marketing.tsx",
+      "city": "latur",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/ai-automation.tsx",
+      "city": "machilipatnam",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/business-automation.tsx",
+      "city": "machilipatnam",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/digital-marketing.tsx",
+      "city": "machilipatnam",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/social-media-marketing.tsx",
+      "city": "machilipatnam",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/madurai/ai-automation.tsx",
+      "city": "madurai",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/madurai/business-automation.tsx",
+      "city": "madurai",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/madurai/digital-marketing.tsx",
+      "city": "madurai",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/madurai/social-media-marketing.tsx",
+      "city": "madurai",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/malegaon/ai-automation.tsx",
+      "city": "malegaon",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/malegaon/business-automation.tsx",
+      "city": "malegaon",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/malegaon/digital-marketing.tsx",
+      "city": "malegaon",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/malegaon/social-media-marketing.tsx",
+      "city": "malegaon",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mangalore/ai-automation.tsx",
+      "city": "mangalore",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mangalore/business-automation.tsx",
+      "city": "mangalore",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mangalore/digital-marketing.tsx",
+      "city": "mangalore",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mangalore/social-media-marketing.tsx",
+      "city": "mangalore",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mysore/ai-automation.tsx",
+      "city": "mysore",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mysore/business-automation.tsx",
+      "city": "mysore",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mysore/digital-marketing.tsx",
+      "city": "mysore",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mysore/social-media-marketing.tsx",
+      "city": "mysore",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/ai-automation.tsx",
+      "city": "nellore",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/business-automation.tsx",
+      "city": "nellore",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/digital-marketing.tsx",
+      "city": "nellore",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/social-media-marketing.tsx",
+      "city": "nellore",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/ai-automation.tsx",
+      "city": "rajahmundry",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/business-automation.tsx",
+      "city": "rajahmundry",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/digital-marketing.tsx",
+      "city": "rajahmundry",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/social-media-marketing.tsx",
+      "city": "rajahmundry",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/salem/ai-automation.tsx",
+      "city": "salem",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/salem/business-automation.tsx",
+      "city": "salem",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/salem/digital-marketing.tsx",
+      "city": "salem",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/salem/social-media-marketing.tsx",
+      "city": "salem",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/sangli/ai-automation.tsx",
+      "city": "sangli",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/sangli/business-automation.tsx",
+      "city": "sangli",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/sangli/digital-marketing.tsx",
+      "city": "sangli",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/sangli/social-media-marketing.tsx",
+      "city": "sangli",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/solapur/ai-automation.tsx",
+      "city": "solapur",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/solapur/business-automation.tsx",
+      "city": "solapur",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/solapur/digital-marketing.tsx",
+      "city": "solapur",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/solapur/social-media-marketing.tsx",
+      "city": "solapur",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/ai-automation.tsx",
+      "city": "srikakulam",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/business-automation.tsx",
+      "city": "srikakulam",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/digital-marketing.tsx",
+      "city": "srikakulam",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/social-media-marketing.tsx",
+      "city": "srikakulam",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirunelveli/ai-automation.tsx",
+      "city": "tirunelveli",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirunelveli/business-automation.tsx",
+      "city": "tirunelveli",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirunelveli/digital-marketing.tsx",
+      "city": "tirunelveli",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirunelveli/social-media-marketing.tsx",
+      "city": "tirunelveli",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/ai-automation.tsx",
+      "city": "tirupati",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/business-automation.tsx",
+      "city": "tirupati",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/digital-marketing.tsx",
+      "city": "tirupati",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/social-media-marketing.tsx",
+      "city": "tirupati",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/trichy/ai-automation.tsx",
+      "city": "trichy",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/trichy/business-automation.tsx",
+      "city": "trichy",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/trichy/digital-marketing.tsx",
+      "city": "trichy",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/trichy/social-media-marketing.tsx",
+      "city": "trichy",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vellore/ai-automation.tsx",
+      "city": "vellore",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vellore/business-automation.tsx",
+      "city": "vellore",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vellore/digital-marketing.tsx",
+      "city": "vellore",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vellore/social-media-marketing.tsx",
+      "city": "vellore",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/ai-automation.tsx",
+      "city": "vijayawada",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/business-automation.tsx",
+      "city": "vijayawada",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/digital-marketing.tsx",
+      "city": "vijayawada",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/social-media-marketing.tsx",
+      "city": "vijayawada",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/ai-automation.tsx",
+      "city": "vizianagaram",
+      "service": "ai-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/business-automation.tsx",
+      "city": "vizianagaram",
+      "service": "business-automation",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/digital-marketing.tsx",
+      "city": "vizianagaram",
+      "service": "digital-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/social-media-marketing.tsx",
+      "city": "vizianagaram",
+      "service": "social-media-marketing",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/content-marketing.tsx",
+      "city": "adoni",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/email-marketing.tsx",
+      "city": "adoni",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/lead-generation.tsx",
+      "city": "adoni",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/marketing-automation.tsx",
+      "city": "adoni",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/content-marketing.tsx",
+      "city": "anantapur",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/email-marketing.tsx",
+      "city": "anantapur",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/lead-generation.tsx",
+      "city": "anantapur",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/marketing-automation.tsx",
+      "city": "anantapur",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/content-marketing.tsx",
+      "city": "chittoor",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/email-marketing.tsx",
+      "city": "chittoor",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/lead-generation.tsx",
+      "city": "chittoor",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/marketing-automation.tsx",
+      "city": "chittoor",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/content-marketing.tsx",
+      "city": "eluru",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/email-marketing.tsx",
+      "city": "eluru",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/lead-generation.tsx",
+      "city": "eluru",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/marketing-automation.tsx",
+      "city": "eluru",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/content-marketing.tsx",
+      "city": "guntur",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/email-marketing.tsx",
+      "city": "guntur",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/lead-generation.tsx",
+      "city": "guntur",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/marketing-automation.tsx",
+      "city": "guntur",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/content-marketing.tsx",
+      "city": "kadapa",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/email-marketing.tsx",
+      "city": "kadapa",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/lead-generation.tsx",
+      "city": "kadapa",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/marketing-automation.tsx",
+      "city": "kadapa",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/content-marketing.tsx",
+      "city": "kakinada",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/email-marketing.tsx",
+      "city": "kakinada",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/lead-generation.tsx",
+      "city": "kakinada",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/marketing-automation.tsx",
+      "city": "kakinada",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/content-marketing.tsx",
+      "city": "kurnool",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/email-marketing.tsx",
+      "city": "kurnool",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/lead-generation.tsx",
+      "city": "kurnool",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/marketing-automation.tsx",
+      "city": "kurnool",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/content-marketing.tsx",
+      "city": "machilipatnam",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/email-marketing.tsx",
+      "city": "machilipatnam",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/lead-generation.tsx",
+      "city": "machilipatnam",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/marketing-automation.tsx",
+      "city": "machilipatnam",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/content-marketing.tsx",
+      "city": "nellore",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/email-marketing.tsx",
+      "city": "nellore",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/lead-generation.tsx",
+      "city": "nellore",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/marketing-automation.tsx",
+      "city": "nellore",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/content-marketing.tsx",
+      "city": "rajahmundry",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/email-marketing.tsx",
+      "city": "rajahmundry",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/lead-generation.tsx",
+      "city": "rajahmundry",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/marketing-automation.tsx",
+      "city": "rajahmundry",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/content-marketing.tsx",
+      "city": "srikakulam",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/email-marketing.tsx",
+      "city": "srikakulam",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/lead-generation.tsx",
+      "city": "srikakulam",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/marketing-automation.tsx",
+      "city": "srikakulam",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/content-marketing.tsx",
+      "city": "tirupati",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/email-marketing.tsx",
+      "city": "tirupati",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/lead-generation.tsx",
+      "city": "tirupati",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/marketing-automation.tsx",
+      "city": "tirupati",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/content-marketing.tsx",
+      "city": "vijayawada",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/email-marketing.tsx",
+      "city": "vijayawada",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/lead-generation.tsx",
+      "city": "vijayawada",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/marketing-automation.tsx",
+      "city": "vijayawada",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/content-marketing.tsx",
+      "city": "vizianagaram",
+      "service": "content-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/email-marketing.tsx",
+      "city": "vizianagaram",
+      "service": "email-marketing",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/lead-generation.tsx",
+      "city": "vizianagaram",
+      "service": "lead-generation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/marketing-automation.tsx",
+      "city": "vizianagaram",
+      "service": "marketing-automation",
+      "priority": -20,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nashik/ppc-advertising.tsx",
+      "city": "nashik",
+      "service": "ppc-advertising",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/thane/ppc-advertising.tsx",
+      "city": "thane",
+      "service": "ppc-advertising",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/ppc-advertising.tsx",
+      "city": "visakhapatnam",
+      "service": "ppc-advertising",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/ppc-advertising.tsx",
+      "city": "adoni",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/ahmednagar/ppc-advertising.tsx",
+      "city": "ahmednagar",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/akola/ppc-advertising.tsx",
+      "city": "akola",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/ppc-advertising.tsx",
+      "city": "anantapur",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/aurangabad/ppc-advertising.tsx",
+      "city": "aurangabad",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/belgaum/ppc-advertising.tsx",
+      "city": "belgaum",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bellary/ppc-advertising.tsx",
+      "city": "bellary",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chandrapur/ppc-advertising.tsx",
+      "city": "chandrapur",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/ppc-advertising.tsx",
+      "city": "chittoor",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/coimbatore/ppc-advertising.tsx",
+      "city": "coimbatore",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/davangere/ppc-advertising.tsx",
+      "city": "davangere",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/dhule/ppc-advertising.tsx",
+      "city": "dhule",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/ppc-advertising.tsx",
+      "city": "eluru",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/erode/ppc-advertising.tsx",
+      "city": "erode",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/gulbarga/ppc-advertising.tsx",
+      "city": "gulbarga",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/ppc-advertising.tsx",
+      "city": "guntur",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/hubli-dharwad/ppc-advertising.tsx",
+      "city": "hubli-dharwad",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/jalgaon/ppc-advertising.tsx",
+      "city": "jalgaon",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/ppc-advertising.tsx",
+      "city": "kadapa",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/ppc-advertising.tsx",
+      "city": "kakinada",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kolhapur/ppc-advertising.tsx",
+      "city": "kolhapur",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/ppc-advertising.tsx",
+      "city": "kurnool",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/latur/ppc-advertising.tsx",
+      "city": "latur",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/ppc-advertising.tsx",
+      "city": "machilipatnam",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/madurai/ppc-advertising.tsx",
+      "city": "madurai",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/malegaon/ppc-advertising.tsx",
+      "city": "malegaon",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mangalore/ppc-advertising.tsx",
+      "city": "mangalore",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mysore/ppc-advertising.tsx",
+      "city": "mysore",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/ppc-advertising.tsx",
+      "city": "nellore",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/new-delhi/ppc-advertising.tsx",
+      "city": "new-delhi",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/ppc-advertising.tsx",
+      "city": "rajahmundry",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/salem/ppc-advertising.tsx",
+      "city": "salem",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/sangli/ppc-advertising.tsx",
+      "city": "sangli",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/solapur/ppc-advertising.tsx",
+      "city": "solapur",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/ppc-advertising.tsx",
+      "city": "srikakulam",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirunelveli/ppc-advertising.tsx",
+      "city": "tirunelveli",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/ppc-advertising.tsx",
+      "city": "tirupati",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/trichy/ppc-advertising.tsx",
+      "city": "trichy",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vellore/ppc-advertising.tsx",
+      "city": "vellore",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/ppc-advertising.tsx",
+      "city": "vijayawada",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/ppc-advertising.tsx",
+      "city": "vizianagaram",
+      "service": "ppc-advertising",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nashik/seo-services.tsx",
+      "city": "nashik",
+      "service": "seo-services",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/thane/seo-services.tsx",
+      "city": "thane",
+      "service": "seo-services",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/visakhapatnam/seo-services.tsx",
+      "city": "visakhapatnam",
+      "service": "seo-services",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/adoni/seo-services.tsx",
+      "city": "adoni",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/ahmednagar/seo-services.tsx",
+      "city": "ahmednagar",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/akola/seo-services.tsx",
+      "city": "akola",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/anantapur/seo-services.tsx",
+      "city": "anantapur",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/aurangabad/seo-services.tsx",
+      "city": "aurangabad",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/belgaum/seo-services.tsx",
+      "city": "belgaum",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bellary/seo-services.tsx",
+      "city": "bellary",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chandrapur/seo-services.tsx",
+      "city": "chandrapur",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chittoor/seo-services.tsx",
+      "city": "chittoor",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/coimbatore/seo-services.tsx",
+      "city": "coimbatore",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/davangere/seo-services.tsx",
+      "city": "davangere",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/dhule/seo-services.tsx",
+      "city": "dhule",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/eluru/seo-services.tsx",
+      "city": "eluru",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/erode/seo-services.tsx",
+      "city": "erode",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/gulbarga/seo-services.tsx",
+      "city": "gulbarga",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/guntur/seo-services.tsx",
+      "city": "guntur",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/hubli-dharwad/seo-services.tsx",
+      "city": "hubli-dharwad",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/jalgaon/seo-services.tsx",
+      "city": "jalgaon",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kadapa/seo-services.tsx",
+      "city": "kadapa",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kakinada/seo-services.tsx",
+      "city": "kakinada",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kolhapur/seo-services.tsx",
+      "city": "kolhapur",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/kurnool/seo-services.tsx",
+      "city": "kurnool",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/latur/seo-services.tsx",
+      "city": "latur",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/machilipatnam/seo-services.tsx",
+      "city": "machilipatnam",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/madurai/seo-services.tsx",
+      "city": "madurai",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/malegaon/seo-services.tsx",
+      "city": "malegaon",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mangalore/seo-services.tsx",
+      "city": "mangalore",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mysore/seo-services.tsx",
+      "city": "mysore",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/nellore/seo-services.tsx",
+      "city": "nellore",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/new-delhi/seo-services.tsx",
+      "city": "new-delhi",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/rajahmundry/seo-services.tsx",
+      "city": "rajahmundry",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/salem/seo-services.tsx",
+      "city": "salem",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/sangli/seo-services.tsx",
+      "city": "sangli",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/solapur/seo-services.tsx",
+      "city": "solapur",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/srikakulam/seo-services.tsx",
+      "city": "srikakulam",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirunelveli/seo-services.tsx",
+      "city": "tirunelveli",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/tirupati/seo-services.tsx",
+      "city": "tirupati",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/trichy/seo-services.tsx",
+      "city": "trichy",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vellore/seo-services.tsx",
+      "city": "vellore",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vijayawada/seo-services.tsx",
+      "city": "vijayawada",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/vizianagaram/seo-services.tsx",
+      "city": "vizianagaram",
+      "service": "seo-services",
+      "priority": 30,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/agriculture/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/automotive/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/construction/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/consulting/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/ecommerce/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/education/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/fashion/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/financial-services/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/financial-services/seo-services.tsx",
+      "city": "ahmedabad",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/financial-services/ppc-advertising.tsx",
+      "city": "ahmedabad",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/fitness-wellness/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/food-beverage/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/healthcare/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/hospitality/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/legal-services/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/legal-services/seo-services.tsx",
+      "city": "ahmedabad",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/legal-services/ppc-advertising.tsx",
+      "city": "ahmedabad",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/manufacturing/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/non-profit/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/real-estate/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/retail/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/technology/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/ahmedabad/industries/transportation/business-automation.tsx",
+      "city": "ahmedabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bangalore/digital-marketing.tsx",
+      "city": "bangalore",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bangalore/social-media-marketing.tsx",
+      "city": "bangalore",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chennai/ai-automation.tsx",
+      "city": "chennai",
+      "service": "ai-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chennai/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chennai/digital-marketing.tsx",
+      "city": "chennai",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chennai/social-media-marketing.tsx",
+      "city": "chennai",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mumbai/ai-automation.tsx",
+      "city": "mumbai",
+      "service": "ai-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mumbai/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mumbai/digital-marketing.tsx",
+      "city": "mumbai",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mumbai/social-media-marketing.tsx",
+      "city": "mumbai",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/pune/ai-automation.tsx",
+      "city": "pune",
+      "service": "ai-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/pune/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/pune/digital-marketing.tsx",
+      "city": "pune",
+      "service": "digital-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/pune/social-media-marketing.tsx",
+      "city": "pune",
+      "service": "social-media-marketing",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bangalore/industries/agriculture/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/automotive/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/construction/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/consulting/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/ecommerce/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/education/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/fashion/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/financial-services/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/financial-services/seo-services.tsx",
+      "city": "bangalore",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/financial-services/ppc-advertising.tsx",
+      "city": "bangalore",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/fitness-wellness/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/food-beverage/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/healthcare/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/hospitality/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/legal-services/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/legal-services/seo-services.tsx",
+      "city": "bangalore",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/legal-services/ppc-advertising.tsx",
+      "city": "bangalore",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/manufacturing/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/non-profit/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/real-estate/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/retail/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/technology/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bangalore/industries/transportation/business-automation.tsx",
+      "city": "bangalore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/ppc-advertising.tsx",
+      "city": "chennai",
+      "service": "ppc-advertising",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mumbai/ppc-advertising.tsx",
+      "city": "mumbai",
+      "service": "ppc-advertising",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/pune/ppc-advertising.tsx",
+      "city": "pune",
+      "service": "ppc-advertising",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/chennai/seo-services.tsx",
+      "city": "chennai",
+      "service": "seo-services",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/mumbai/seo-services.tsx",
+      "city": "mumbai",
+      "service": "seo-services",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/pune/seo-services.tsx",
+      "city": "pune",
+      "service": "seo-services",
+      "priority": 150,
+      "isIndustryPage": false
+    },
+    {
+      "path": "src/pages/bhopal/industries/agriculture/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/automotive/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/construction/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/consulting/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/ecommerce/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/education/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/fashion/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/financial-services/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/financial-services/seo-services.tsx",
+      "city": "bhopal",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/financial-services/ppc-advertising.tsx",
+      "city": "bhopal",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/fitness-wellness/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/food-beverage/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/healthcare/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/hospitality/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/legal-services/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/legal-services/seo-services.tsx",
+      "city": "bhopal",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/legal-services/ppc-advertising.tsx",
+      "city": "bhopal",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/manufacturing/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/non-profit/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/real-estate/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/retail/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/technology/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/bhopal/industries/transportation/business-automation.tsx",
+      "city": "bhopal",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/agriculture/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/automotive/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/construction/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/consulting/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/ecommerce/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/education/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/fashion/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/financial-services/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/financial-services/seo-services.tsx",
+      "city": "chennai",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/financial-services/ppc-advertising.tsx",
+      "city": "chennai",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/fitness-wellness/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/food-beverage/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/healthcare/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/hospitality/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/legal-services/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/legal-services/seo-services.tsx",
+      "city": "chennai",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/legal-services/ppc-advertising.tsx",
+      "city": "chennai",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/manufacturing/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/non-profit/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/real-estate/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/retail/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/technology/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/chennai/industries/transportation/business-automation.tsx",
+      "city": "chennai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/agriculture/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/automotive/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/construction/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/consulting/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/ecommerce/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/education/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/fashion/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/financial-services/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/financial-services/seo-services.tsx",
+      "city": "delhi",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/financial-services/ppc-advertising.tsx",
+      "city": "delhi",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/fitness-wellness/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/food-beverage/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/healthcare/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/hospitality/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/legal-services/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/legal-services/seo-services.tsx",
+      "city": "delhi",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/legal-services/ppc-advertising.tsx",
+      "city": "delhi",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/manufacturing/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/non-profit/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/real-estate/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/retail/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/technology/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/delhi/industries/transportation/business-automation.tsx",
+      "city": "delhi",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/agriculture/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/automotive/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/construction/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/consulting/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/ecommerce/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/education/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/fashion/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/financial-services/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/financial-services/seo-services.tsx",
+      "city": "hyderabad",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/financial-services/ppc-advertising.tsx",
+      "city": "hyderabad",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/fitness-wellness/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/food-beverage/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/healthcare/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/hospitality/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/legal-services/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/legal-services/seo-services.tsx",
+      "city": "hyderabad",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/legal-services/ppc-advertising.tsx",
+      "city": "hyderabad",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/manufacturing/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/non-profit/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/real-estate/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/retail/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/technology/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/hyderabad/industries/transportation/business-automation.tsx",
+      "city": "hyderabad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/agriculture/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/automotive/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/construction/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/consulting/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/ecommerce/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/education/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/fashion/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/financial-services/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/financial-services/seo-services.tsx",
+      "city": "indore",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/financial-services/ppc-advertising.tsx",
+      "city": "indore",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/fitness-wellness/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/food-beverage/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/healthcare/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/hospitality/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/legal-services/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/legal-services/seo-services.tsx",
+      "city": "indore",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/legal-services/ppc-advertising.tsx",
+      "city": "indore",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/manufacturing/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/non-profit/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/real-estate/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/retail/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/technology/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/indore/industries/transportation/business-automation.tsx",
+      "city": "indore",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/agriculture/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/automotive/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/construction/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/consulting/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/ecommerce/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/education/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/fashion/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/financial-services/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/financial-services/seo-services.tsx",
+      "city": "jaipur",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/financial-services/ppc-advertising.tsx",
+      "city": "jaipur",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/fitness-wellness/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/food-beverage/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/healthcare/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/hospitality/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/legal-services/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/legal-services/seo-services.tsx",
+      "city": "jaipur",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/legal-services/ppc-advertising.tsx",
+      "city": "jaipur",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/manufacturing/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/non-profit/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/real-estate/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/retail/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/technology/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/jaipur/industries/transportation/business-automation.tsx",
+      "city": "jaipur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/agriculture/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/automotive/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/construction/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/consulting/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/ecommerce/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/education/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/fashion/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/financial-services/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/financial-services/seo-services.tsx",
+      "city": "kanpur",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/financial-services/ppc-advertising.tsx",
+      "city": "kanpur",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/fitness-wellness/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/food-beverage/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/healthcare/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/hospitality/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/legal-services/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/legal-services/seo-services.tsx",
+      "city": "kanpur",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/legal-services/ppc-advertising.tsx",
+      "city": "kanpur",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/manufacturing/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/non-profit/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/real-estate/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/retail/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/technology/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kanpur/industries/transportation/business-automation.tsx",
+      "city": "kanpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/agriculture/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/automotive/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/construction/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/consulting/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/ecommerce/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/education/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/fashion/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/financial-services/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/financial-services/seo-services.tsx",
+      "city": "kolkata",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/financial-services/ppc-advertising.tsx",
+      "city": "kolkata",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/fitness-wellness/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/food-beverage/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/healthcare/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/hospitality/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/legal-services/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/legal-services/seo-services.tsx",
+      "city": "kolkata",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/legal-services/ppc-advertising.tsx",
+      "city": "kolkata",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/manufacturing/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/non-profit/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/real-estate/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/retail/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/technology/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/kolkata/industries/transportation/business-automation.tsx",
+      "city": "kolkata",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/agriculture/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/automotive/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/construction/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/consulting/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/ecommerce/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/education/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/fashion/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/financial-services/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/financial-services/seo-services.tsx",
+      "city": "lucknow",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/financial-services/ppc-advertising.tsx",
+      "city": "lucknow",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/fitness-wellness/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/food-beverage/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/healthcare/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/hospitality/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/legal-services/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/legal-services/seo-services.tsx",
+      "city": "lucknow",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/legal-services/ppc-advertising.tsx",
+      "city": "lucknow",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/manufacturing/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/non-profit/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/real-estate/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/retail/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/technology/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/lucknow/industries/transportation/business-automation.tsx",
+      "city": "lucknow",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/agriculture/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/automotive/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/construction/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/consulting/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/ecommerce/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/education/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/fashion/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/financial-services/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/financial-services/seo-services.tsx",
+      "city": "mumbai",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/financial-services/ppc-advertising.tsx",
+      "city": "mumbai",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/fitness-wellness/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/food-beverage/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/healthcare/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/hospitality/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/legal-services/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/legal-services/seo-services.tsx",
+      "city": "mumbai",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/legal-services/ppc-advertising.tsx",
+      "city": "mumbai",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/manufacturing/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/non-profit/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/real-estate/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/retail/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/technology/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/mumbai/industries/transportation/business-automation.tsx",
+      "city": "mumbai",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/agriculture/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/automotive/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/construction/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/consulting/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/ecommerce/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/education/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/fashion/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/financial-services/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/financial-services/seo-services.tsx",
+      "city": "nagpur",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/financial-services/ppc-advertising.tsx",
+      "city": "nagpur",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/fitness-wellness/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/food-beverage/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/healthcare/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/hospitality/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/legal-services/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/legal-services/seo-services.tsx",
+      "city": "nagpur",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/legal-services/ppc-advertising.tsx",
+      "city": "nagpur",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/manufacturing/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/non-profit/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/real-estate/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/retail/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/technology/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/nagpur/industries/transportation/business-automation.tsx",
+      "city": "nagpur",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/agriculture/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/automotive/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/construction/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/consulting/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/ecommerce/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/education/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/fashion/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/financial-services/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/financial-services/seo-services.tsx",
+      "city": "patna",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/financial-services/ppc-advertising.tsx",
+      "city": "patna",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/fitness-wellness/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/food-beverage/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/healthcare/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/hospitality/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/legal-services/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/legal-services/seo-services.tsx",
+      "city": "patna",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/legal-services/ppc-advertising.tsx",
+      "city": "patna",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/manufacturing/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/non-profit/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/real-estate/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/retail/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/technology/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/patna/industries/transportation/business-automation.tsx",
+      "city": "patna",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/agriculture/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/automotive/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/construction/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/consulting/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/ecommerce/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/education/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/fashion/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/financial-services/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/financial-services/seo-services.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/financial-services/ppc-advertising.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/fitness-wellness/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/food-beverage/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/healthcare/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/hospitality/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/legal-services/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/legal-services/seo-services.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/legal-services/ppc-advertising.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/manufacturing/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/non-profit/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/real-estate/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/retail/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/technology/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pimpri-chinchwad/industries/transportation/business-automation.tsx",
+      "city": "pimpri-chinchwad",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/agriculture/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/automotive/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/construction/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/consulting/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/ecommerce/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/education/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/fashion/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/financial-services/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/financial-services/seo-services.tsx",
+      "city": "pune",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/financial-services/ppc-advertising.tsx",
+      "city": "pune",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/fitness-wellness/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/food-beverage/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/healthcare/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/hospitality/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/legal-services/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/legal-services/seo-services.tsx",
+      "city": "pune",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/legal-services/ppc-advertising.tsx",
+      "city": "pune",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/manufacturing/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/non-profit/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/real-estate/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/retail/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/technology/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/pune/industries/transportation/business-automation.tsx",
+      "city": "pune",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/agriculture/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/automotive/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/construction/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/consulting/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/ecommerce/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/education/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/fashion/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/financial-services/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/financial-services/seo-services.tsx",
+      "city": "surat",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/financial-services/ppc-advertising.tsx",
+      "city": "surat",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/fitness-wellness/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/food-beverage/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/healthcare/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/hospitality/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/legal-services/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/legal-services/seo-services.tsx",
+      "city": "surat",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/legal-services/ppc-advertising.tsx",
+      "city": "surat",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/manufacturing/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/non-profit/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/real-estate/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/retail/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/technology/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/surat/industries/transportation/business-automation.tsx",
+      "city": "surat",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/agriculture/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/automotive/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/construction/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/consulting/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/ecommerce/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/education/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/fashion/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/financial-services/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/financial-services/seo-services.tsx",
+      "city": "thane",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/financial-services/ppc-advertising.tsx",
+      "city": "thane",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/fitness-wellness/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/food-beverage/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/healthcare/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/hospitality/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/legal-services/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/legal-services/seo-services.tsx",
+      "city": "thane",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/legal-services/ppc-advertising.tsx",
+      "city": "thane",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/manufacturing/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/non-profit/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/real-estate/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/retail/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/technology/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/thane/industries/transportation/business-automation.tsx",
+      "city": "thane",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/agriculture/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/automotive/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/construction/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/consulting/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/ecommerce/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/education/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/fashion/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/financial-services/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/financial-services/seo-services.tsx",
+      "city": "vadodara",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/financial-services/ppc-advertising.tsx",
+      "city": "vadodara",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/fitness-wellness/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/food-beverage/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/healthcare/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/hospitality/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/legal-services/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/legal-services/seo-services.tsx",
+      "city": "vadodara",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/legal-services/ppc-advertising.tsx",
+      "city": "vadodara",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/manufacturing/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/non-profit/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/real-estate/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/retail/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/technology/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/vadodara/industries/transportation/business-automation.tsx",
+      "city": "vadodara",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/agriculture/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/automotive/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/beauty-cosmetics/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/construction/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/consulting/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/ecommerce/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/education/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/fashion/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/financial-services/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/financial-services/seo-services.tsx",
+      "city": "visakhapatnam",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/financial-services/ppc-advertising.tsx",
+      "city": "visakhapatnam",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/fitness-wellness/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/food-beverage/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/healthcare/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/hospitality/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/legal-services/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/legal-services/seo-services.tsx",
+      "city": "visakhapatnam",
+      "service": "seo-services",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/legal-services/ppc-advertising.tsx",
+      "city": "visakhapatnam",
+      "service": "ppc-advertising",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/manufacturing/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/non-profit/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/real-estate/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/retail/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/technology/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    },
+    {
+      "path": "src/pages/visakhapatnam/industries/transportation/business-automation.tsx",
+      "city": "visakhapatnam",
+      "service": "business-automation",
+      "priority": 120,
+      "isIndustryPage": true
+    }
+  ],
+  "keptPages": [
+    "src/pages/nagpur/ai-automation.tsx",
+    "src/pages/nagpur/ppc-advertising.tsx",
+    "src/pages/nagpur/seo-services.tsx",
+    "src/pages/ahmedabad/industries/agriculture/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/automotive/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/construction/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/consulting/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/ecommerce/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/education/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/fashion/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/financial-services/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/food-beverage/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/healthcare/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/hospitality/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/legal-services/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/manufacturing/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/non-profit/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/real-estate/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/retail/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/technology/ai-automation.tsx",
+    "src/pages/ahmedabad/industries/transportation/ai-automation.tsx",
+    "src/pages/bangalore/ai-automation.tsx",
+    "src/pages/bangalore/industries/agriculture/ai-automation.tsx",
+    "src/pages/bangalore/industries/automotive/ai-automation.tsx",
+    "src/pages/bangalore/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/bangalore/industries/construction/ai-automation.tsx",
+    "src/pages/bangalore/industries/consulting/ai-automation.tsx",
+    "src/pages/bangalore/industries/ecommerce/ai-automation.tsx",
+    "src/pages/bangalore/industries/education/ai-automation.tsx",
+    "src/pages/bangalore/industries/fashion/ai-automation.tsx",
+    "src/pages/bangalore/industries/financial-services/ai-automation.tsx",
+    "src/pages/bangalore/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/bangalore/industries/food-beverage/ai-automation.tsx",
+    "src/pages/bangalore/industries/healthcare/ai-automation.tsx",
+    "src/pages/bangalore/industries/hospitality/ai-automation.tsx",
+    "src/pages/bangalore/industries/legal-services/ai-automation.tsx",
+    "src/pages/bangalore/industries/manufacturing/ai-automation.tsx",
+    "src/pages/bangalore/industries/non-profit/ai-automation.tsx",
+    "src/pages/bangalore/industries/real-estate/ai-automation.tsx",
+    "src/pages/bangalore/industries/retail/ai-automation.tsx",
+    "src/pages/bangalore/industries/technology/ai-automation.tsx",
+    "src/pages/bangalore/industries/transportation/ai-automation.tsx",
+    "src/pages/bangalore/ppc-advertising.tsx",
+    "src/pages/bangalore/seo-services.tsx",
+    "src/pages/bhopal/industries/agriculture/ai-automation.tsx",
+    "src/pages/bhopal/industries/automotive/ai-automation.tsx",
+    "src/pages/bhopal/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/bhopal/industries/construction/ai-automation.tsx",
+    "src/pages/bhopal/industries/consulting/ai-automation.tsx",
+    "src/pages/bhopal/industries/ecommerce/ai-automation.tsx",
+    "src/pages/bhopal/industries/education/ai-automation.tsx",
+    "src/pages/bhopal/industries/fashion/ai-automation.tsx",
+    "src/pages/bhopal/industries/financial-services/ai-automation.tsx",
+    "src/pages/bhopal/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/bhopal/industries/food-beverage/ai-automation.tsx",
+    "src/pages/bhopal/industries/healthcare/ai-automation.tsx",
+    "src/pages/bhopal/industries/hospitality/ai-automation.tsx",
+    "src/pages/bhopal/industries/legal-services/ai-automation.tsx",
+    "src/pages/bhopal/industries/manufacturing/ai-automation.tsx",
+    "src/pages/bhopal/industries/non-profit/ai-automation.tsx",
+    "src/pages/bhopal/industries/real-estate/ai-automation.tsx",
+    "src/pages/bhopal/industries/retail/ai-automation.tsx",
+    "src/pages/bhopal/industries/technology/ai-automation.tsx",
+    "src/pages/bhopal/industries/transportation/ai-automation.tsx",
+    "src/pages/chennai/industries/agriculture/ai-automation.tsx",
+    "src/pages/chennai/industries/automotive/ai-automation.tsx",
+    "src/pages/chennai/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/chennai/industries/construction/ai-automation.tsx",
+    "src/pages/chennai/industries/consulting/ai-automation.tsx",
+    "src/pages/chennai/industries/ecommerce/ai-automation.tsx",
+    "src/pages/chennai/industries/education/ai-automation.tsx",
+    "src/pages/chennai/industries/fashion/ai-automation.tsx",
+    "src/pages/chennai/industries/financial-services/ai-automation.tsx",
+    "src/pages/chennai/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/chennai/industries/food-beverage/ai-automation.tsx",
+    "src/pages/chennai/industries/healthcare/ai-automation.tsx",
+    "src/pages/chennai/industries/hospitality/ai-automation.tsx",
+    "src/pages/chennai/industries/legal-services/ai-automation.tsx",
+    "src/pages/chennai/industries/manufacturing/ai-automation.tsx",
+    "src/pages/chennai/industries/non-profit/ai-automation.tsx",
+    "src/pages/chennai/industries/real-estate/ai-automation.tsx",
+    "src/pages/chennai/industries/retail/ai-automation.tsx",
+    "src/pages/chennai/industries/technology/ai-automation.tsx",
+    "src/pages/chennai/industries/transportation/ai-automation.tsx",
+    "src/pages/delhi/industries/agriculture/ai-automation.tsx",
+    "src/pages/delhi/industries/automotive/ai-automation.tsx",
+    "src/pages/delhi/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/delhi/industries/construction/ai-automation.tsx",
+    "src/pages/delhi/industries/consulting/ai-automation.tsx",
+    "src/pages/delhi/industries/ecommerce/ai-automation.tsx",
+    "src/pages/delhi/industries/education/ai-automation.tsx",
+    "src/pages/delhi/industries/fashion/ai-automation.tsx",
+    "src/pages/delhi/industries/financial-services/ai-automation.tsx",
+    "src/pages/delhi/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/delhi/industries/food-beverage/ai-automation.tsx",
+    "src/pages/delhi/industries/healthcare/ai-automation.tsx",
+    "src/pages/delhi/industries/hospitality/ai-automation.tsx",
+    "src/pages/delhi/industries/legal-services/ai-automation.tsx",
+    "src/pages/delhi/industries/manufacturing/ai-automation.tsx",
+    "src/pages/delhi/industries/non-profit/ai-automation.tsx",
+    "src/pages/delhi/industries/real-estate/ai-automation.tsx",
+    "src/pages/delhi/industries/retail/ai-automation.tsx",
+    "src/pages/delhi/industries/technology/ai-automation.tsx",
+    "src/pages/delhi/industries/transportation/ai-automation.tsx",
+    "src/pages/hyderabad/industries/agriculture/ai-automation.tsx",
+    "src/pages/hyderabad/industries/automotive/ai-automation.tsx",
+    "src/pages/hyderabad/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/hyderabad/industries/construction/ai-automation.tsx",
+    "src/pages/hyderabad/industries/consulting/ai-automation.tsx",
+    "src/pages/hyderabad/industries/ecommerce/ai-automation.tsx",
+    "src/pages/hyderabad/industries/education/ai-automation.tsx",
+    "src/pages/hyderabad/industries/fashion/ai-automation.tsx",
+    "src/pages/hyderabad/industries/financial-services/ai-automation.tsx",
+    "src/pages/hyderabad/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/hyderabad/industries/food-beverage/ai-automation.tsx",
+    "src/pages/hyderabad/industries/healthcare/ai-automation.tsx",
+    "src/pages/hyderabad/industries/hospitality/ai-automation.tsx",
+    "src/pages/hyderabad/industries/legal-services/ai-automation.tsx",
+    "src/pages/hyderabad/industries/manufacturing/ai-automation.tsx",
+    "src/pages/hyderabad/industries/non-profit/ai-automation.tsx",
+    "src/pages/hyderabad/industries/real-estate/ai-automation.tsx",
+    "src/pages/hyderabad/industries/retail/ai-automation.tsx",
+    "src/pages/hyderabad/industries/technology/ai-automation.tsx",
+    "src/pages/hyderabad/industries/transportation/ai-automation.tsx",
+    "src/pages/indore/industries/agriculture/ai-automation.tsx",
+    "src/pages/indore/industries/automotive/ai-automation.tsx",
+    "src/pages/indore/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/indore/industries/construction/ai-automation.tsx",
+    "src/pages/indore/industries/consulting/ai-automation.tsx",
+    "src/pages/indore/industries/ecommerce/ai-automation.tsx",
+    "src/pages/indore/industries/education/ai-automation.tsx",
+    "src/pages/indore/industries/fashion/ai-automation.tsx",
+    "src/pages/indore/industries/financial-services/ai-automation.tsx",
+    "src/pages/indore/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/indore/industries/food-beverage/ai-automation.tsx",
+    "src/pages/indore/industries/healthcare/ai-automation.tsx",
+    "src/pages/indore/industries/hospitality/ai-automation.tsx",
+    "src/pages/indore/industries/legal-services/ai-automation.tsx",
+    "src/pages/indore/industries/manufacturing/ai-automation.tsx",
+    "src/pages/indore/industries/non-profit/ai-automation.tsx",
+    "src/pages/indore/industries/real-estate/ai-automation.tsx",
+    "src/pages/indore/industries/retail/ai-automation.tsx",
+    "src/pages/indore/industries/technology/ai-automation.tsx",
+    "src/pages/indore/industries/transportation/ai-automation.tsx",
+    "src/pages/jaipur/industries/agriculture/ai-automation.tsx",
+    "src/pages/jaipur/industries/automotive/ai-automation.tsx",
+    "src/pages/jaipur/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/jaipur/industries/construction/ai-automation.tsx",
+    "src/pages/jaipur/industries/consulting/ai-automation.tsx",
+    "src/pages/jaipur/industries/ecommerce/ai-automation.tsx",
+    "src/pages/jaipur/industries/education/ai-automation.tsx",
+    "src/pages/jaipur/industries/fashion/ai-automation.tsx",
+    "src/pages/jaipur/industries/financial-services/ai-automation.tsx",
+    "src/pages/jaipur/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/jaipur/industries/food-beverage/ai-automation.tsx",
+    "src/pages/jaipur/industries/healthcare/ai-automation.tsx",
+    "src/pages/jaipur/industries/hospitality/ai-automation.tsx",
+    "src/pages/jaipur/industries/legal-services/ai-automation.tsx",
+    "src/pages/jaipur/industries/manufacturing/ai-automation.tsx",
+    "src/pages/jaipur/industries/non-profit/ai-automation.tsx",
+    "src/pages/jaipur/industries/real-estate/ai-automation.tsx",
+    "src/pages/jaipur/industries/retail/ai-automation.tsx",
+    "src/pages/jaipur/industries/technology/ai-automation.tsx",
+    "src/pages/jaipur/industries/transportation/ai-automation.tsx",
+    "src/pages/kanpur/industries/agriculture/ai-automation.tsx",
+    "src/pages/kanpur/industries/automotive/ai-automation.tsx",
+    "src/pages/kanpur/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/kanpur/industries/construction/ai-automation.tsx",
+    "src/pages/kanpur/industries/consulting/ai-automation.tsx",
+    "src/pages/kanpur/industries/ecommerce/ai-automation.tsx",
+    "src/pages/kanpur/industries/education/ai-automation.tsx",
+    "src/pages/kanpur/industries/fashion/ai-automation.tsx",
+    "src/pages/kanpur/industries/financial-services/ai-automation.tsx",
+    "src/pages/kanpur/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/kanpur/industries/food-beverage/ai-automation.tsx",
+    "src/pages/kanpur/industries/healthcare/ai-automation.tsx",
+    "src/pages/kanpur/industries/hospitality/ai-automation.tsx",
+    "src/pages/kanpur/industries/legal-services/ai-automation.tsx",
+    "src/pages/kanpur/industries/manufacturing/ai-automation.tsx",
+    "src/pages/kanpur/industries/non-profit/ai-automation.tsx",
+    "src/pages/kanpur/industries/real-estate/ai-automation.tsx",
+    "src/pages/kanpur/industries/retail/ai-automation.tsx",
+    "src/pages/kanpur/industries/technology/ai-automation.tsx",
+    "src/pages/kanpur/industries/transportation/ai-automation.tsx",
+    "src/pages/kolkata/industries/agriculture/ai-automation.tsx",
+    "src/pages/kolkata/industries/automotive/ai-automation.tsx",
+    "src/pages/kolkata/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/kolkata/industries/construction/ai-automation.tsx",
+    "src/pages/kolkata/industries/consulting/ai-automation.tsx",
+    "src/pages/kolkata/industries/ecommerce/ai-automation.tsx",
+    "src/pages/kolkata/industries/education/ai-automation.tsx",
+    "src/pages/kolkata/industries/fashion/ai-automation.tsx",
+    "src/pages/kolkata/industries/financial-services/ai-automation.tsx",
+    "src/pages/kolkata/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/kolkata/industries/food-beverage/ai-automation.tsx",
+    "src/pages/kolkata/industries/healthcare/ai-automation.tsx",
+    "src/pages/kolkata/industries/hospitality/ai-automation.tsx",
+    "src/pages/kolkata/industries/legal-services/ai-automation.tsx",
+    "src/pages/kolkata/industries/manufacturing/ai-automation.tsx",
+    "src/pages/kolkata/industries/non-profit/ai-automation.tsx",
+    "src/pages/kolkata/industries/real-estate/ai-automation.tsx",
+    "src/pages/kolkata/industries/retail/ai-automation.tsx",
+    "src/pages/kolkata/industries/technology/ai-automation.tsx",
+    "src/pages/kolkata/industries/transportation/ai-automation.tsx",
+    "src/pages/lucknow/industries/agriculture/ai-automation.tsx",
+    "src/pages/lucknow/industries/automotive/ai-automation.tsx",
+    "src/pages/lucknow/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/lucknow/industries/construction/ai-automation.tsx",
+    "src/pages/lucknow/industries/consulting/ai-automation.tsx",
+    "src/pages/lucknow/industries/ecommerce/ai-automation.tsx",
+    "src/pages/lucknow/industries/education/ai-automation.tsx",
+    "src/pages/lucknow/industries/fashion/ai-automation.tsx",
+    "src/pages/lucknow/industries/financial-services/ai-automation.tsx",
+    "src/pages/lucknow/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/lucknow/industries/food-beverage/ai-automation.tsx",
+    "src/pages/lucknow/industries/healthcare/ai-automation.tsx",
+    "src/pages/lucknow/industries/hospitality/ai-automation.tsx",
+    "src/pages/lucknow/industries/legal-services/ai-automation.tsx",
+    "src/pages/lucknow/industries/manufacturing/ai-automation.tsx",
+    "src/pages/lucknow/industries/non-profit/ai-automation.tsx",
+    "src/pages/lucknow/industries/real-estate/ai-automation.tsx",
+    "src/pages/lucknow/industries/retail/ai-automation.tsx",
+    "src/pages/lucknow/industries/technology/ai-automation.tsx",
+    "src/pages/lucknow/industries/transportation/ai-automation.tsx",
+    "src/pages/mumbai/industries/agriculture/ai-automation.tsx",
+    "src/pages/mumbai/industries/automotive/ai-automation.tsx",
+    "src/pages/mumbai/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/mumbai/industries/construction/ai-automation.tsx",
+    "src/pages/mumbai/industries/consulting/ai-automation.tsx",
+    "src/pages/mumbai/industries/ecommerce/ai-automation.tsx",
+    "src/pages/mumbai/industries/education/ai-automation.tsx",
+    "src/pages/mumbai/industries/fashion/ai-automation.tsx",
+    "src/pages/mumbai/industries/financial-services/ai-automation.tsx",
+    "src/pages/mumbai/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/mumbai/industries/food-beverage/ai-automation.tsx",
+    "src/pages/mumbai/industries/healthcare/ai-automation.tsx",
+    "src/pages/mumbai/industries/hospitality/ai-automation.tsx",
+    "src/pages/mumbai/industries/legal-services/ai-automation.tsx",
+    "src/pages/mumbai/industries/manufacturing/ai-automation.tsx",
+    "src/pages/mumbai/industries/non-profit/ai-automation.tsx",
+    "src/pages/mumbai/industries/real-estate/ai-automation.tsx",
+    "src/pages/mumbai/industries/retail/ai-automation.tsx",
+    "src/pages/mumbai/industries/technology/ai-automation.tsx",
+    "src/pages/mumbai/industries/transportation/ai-automation.tsx",
+    "src/pages/nagpur/industries/agriculture/ai-automation.tsx",
+    "src/pages/nagpur/industries/automotive/ai-automation.tsx",
+    "src/pages/nagpur/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/nagpur/industries/construction/ai-automation.tsx",
+    "src/pages/nagpur/industries/consulting/ai-automation.tsx",
+    "src/pages/nagpur/industries/ecommerce/ai-automation.tsx",
+    "src/pages/nagpur/industries/education/ai-automation.tsx",
+    "src/pages/nagpur/industries/fashion/ai-automation.tsx",
+    "src/pages/nagpur/industries/financial-services/ai-automation.tsx",
+    "src/pages/nagpur/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/nagpur/industries/food-beverage/ai-automation.tsx",
+    "src/pages/nagpur/industries/healthcare/ai-automation.tsx",
+    "src/pages/nagpur/industries/hospitality/ai-automation.tsx",
+    "src/pages/nagpur/industries/legal-services/ai-automation.tsx",
+    "src/pages/nagpur/industries/manufacturing/ai-automation.tsx",
+    "src/pages/nagpur/industries/non-profit/ai-automation.tsx",
+    "src/pages/nagpur/industries/real-estate/ai-automation.tsx",
+    "src/pages/nagpur/industries/retail/ai-automation.tsx",
+    "src/pages/nagpur/industries/technology/ai-automation.tsx",
+    "src/pages/nagpur/industries/transportation/ai-automation.tsx",
+    "src/pages/patna/industries/agriculture/ai-automation.tsx",
+    "src/pages/patna/industries/automotive/ai-automation.tsx",
+    "src/pages/patna/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/patna/industries/construction/ai-automation.tsx",
+    "src/pages/patna/industries/consulting/ai-automation.tsx",
+    "src/pages/patna/industries/ecommerce/ai-automation.tsx",
+    "src/pages/patna/industries/education/ai-automation.tsx",
+    "src/pages/patna/industries/fashion/ai-automation.tsx",
+    "src/pages/patna/industries/financial-services/ai-automation.tsx",
+    "src/pages/patna/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/patna/industries/food-beverage/ai-automation.tsx",
+    "src/pages/patna/industries/healthcare/ai-automation.tsx",
+    "src/pages/patna/industries/hospitality/ai-automation.tsx",
+    "src/pages/patna/industries/legal-services/ai-automation.tsx",
+    "src/pages/patna/industries/manufacturing/ai-automation.tsx",
+    "src/pages/patna/industries/non-profit/ai-automation.tsx",
+    "src/pages/patna/industries/real-estate/ai-automation.tsx",
+    "src/pages/patna/industries/retail/ai-automation.tsx",
+    "src/pages/patna/industries/technology/ai-automation.tsx",
+    "src/pages/patna/industries/transportation/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/agriculture/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/automotive/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/construction/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/consulting/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/ecommerce/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/education/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/fashion/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/financial-services/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/food-beverage/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/healthcare/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/hospitality/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/legal-services/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/manufacturing/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/non-profit/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/real-estate/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/retail/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/technology/ai-automation.tsx",
+    "src/pages/pimpri-chinchwad/industries/transportation/ai-automation.tsx",
+    "src/pages/pune/industries/agriculture/ai-automation.tsx",
+    "src/pages/pune/industries/automotive/ai-automation.tsx",
+    "src/pages/pune/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/pune/industries/construction/ai-automation.tsx",
+    "src/pages/pune/industries/consulting/ai-automation.tsx",
+    "src/pages/pune/industries/ecommerce/ai-automation.tsx",
+    "src/pages/pune/industries/education/ai-automation.tsx",
+    "src/pages/pune/industries/fashion/ai-automation.tsx",
+    "src/pages/pune/industries/financial-services/ai-automation.tsx",
+    "src/pages/pune/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/pune/industries/food-beverage/ai-automation.tsx",
+    "src/pages/pune/industries/healthcare/ai-automation.tsx",
+    "src/pages/pune/industries/hospitality/ai-automation.tsx",
+    "src/pages/pune/industries/legal-services/ai-automation.tsx",
+    "src/pages/pune/industries/manufacturing/ai-automation.tsx",
+    "src/pages/pune/industries/non-profit/ai-automation.tsx",
+    "src/pages/pune/industries/real-estate/ai-automation.tsx",
+    "src/pages/pune/industries/retail/ai-automation.tsx",
+    "src/pages/pune/industries/technology/ai-automation.tsx",
+    "src/pages/pune/industries/transportation/ai-automation.tsx",
+    "src/pages/surat/industries/agriculture/ai-automation.tsx",
+    "src/pages/surat/industries/automotive/ai-automation.tsx",
+    "src/pages/surat/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/surat/industries/construction/ai-automation.tsx",
+    "src/pages/surat/industries/consulting/ai-automation.tsx",
+    "src/pages/surat/industries/ecommerce/ai-automation.tsx",
+    "src/pages/surat/industries/education/ai-automation.tsx",
+    "src/pages/surat/industries/fashion/ai-automation.tsx",
+    "src/pages/surat/industries/financial-services/ai-automation.tsx",
+    "src/pages/surat/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/surat/industries/food-beverage/ai-automation.tsx",
+    "src/pages/surat/industries/healthcare/ai-automation.tsx",
+    "src/pages/surat/industries/hospitality/ai-automation.tsx",
+    "src/pages/surat/industries/legal-services/ai-automation.tsx",
+    "src/pages/surat/industries/manufacturing/ai-automation.tsx",
+    "src/pages/surat/industries/non-profit/ai-automation.tsx",
+    "src/pages/surat/industries/real-estate/ai-automation.tsx",
+    "src/pages/surat/industries/retail/ai-automation.tsx",
+    "src/pages/surat/industries/technology/ai-automation.tsx",
+    "src/pages/surat/industries/transportation/ai-automation.tsx",
+    "src/pages/thane/industries/agriculture/ai-automation.tsx",
+    "src/pages/thane/industries/automotive/ai-automation.tsx",
+    "src/pages/thane/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/thane/industries/construction/ai-automation.tsx",
+    "src/pages/thane/industries/consulting/ai-automation.tsx",
+    "src/pages/thane/industries/ecommerce/ai-automation.tsx",
+    "src/pages/thane/industries/education/ai-automation.tsx",
+    "src/pages/thane/industries/fashion/ai-automation.tsx",
+    "src/pages/thane/industries/financial-services/ai-automation.tsx",
+    "src/pages/thane/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/thane/industries/food-beverage/ai-automation.tsx",
+    "src/pages/thane/industries/healthcare/ai-automation.tsx",
+    "src/pages/thane/industries/hospitality/ai-automation.tsx",
+    "src/pages/thane/industries/legal-services/ai-automation.tsx",
+    "src/pages/thane/industries/manufacturing/ai-automation.tsx",
+    "src/pages/thane/industries/non-profit/ai-automation.tsx",
+    "src/pages/thane/industries/real-estate/ai-automation.tsx",
+    "src/pages/thane/industries/retail/ai-automation.tsx",
+    "src/pages/thane/industries/technology/ai-automation.tsx",
+    "src/pages/thane/industries/transportation/ai-automation.tsx",
+    "src/pages/vadodara/industries/agriculture/ai-automation.tsx",
+    "src/pages/vadodara/industries/automotive/ai-automation.tsx",
+    "src/pages/vadodara/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/vadodara/industries/construction/ai-automation.tsx",
+    "src/pages/vadodara/industries/consulting/ai-automation.tsx",
+    "src/pages/vadodara/industries/ecommerce/ai-automation.tsx",
+    "src/pages/vadodara/industries/education/ai-automation.tsx",
+    "src/pages/vadodara/industries/fashion/ai-automation.tsx",
+    "src/pages/vadodara/industries/financial-services/ai-automation.tsx",
+    "src/pages/vadodara/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/vadodara/industries/food-beverage/ai-automation.tsx",
+    "src/pages/vadodara/industries/healthcare/ai-automation.tsx",
+    "src/pages/vadodara/industries/hospitality/ai-automation.tsx",
+    "src/pages/vadodara/industries/legal-services/ai-automation.tsx",
+    "src/pages/vadodara/industries/manufacturing/ai-automation.tsx",
+    "src/pages/vadodara/industries/non-profit/ai-automation.tsx",
+    "src/pages/vadodara/industries/real-estate/ai-automation.tsx",
+    "src/pages/vadodara/industries/retail/ai-automation.tsx",
+    "src/pages/vadodara/industries/technology/ai-automation.tsx",
+    "src/pages/vadodara/industries/transportation/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/agriculture/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/automotive/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/beauty-cosmetics/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/construction/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/consulting/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/ecommerce/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/education/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/fashion/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/financial-services/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/fitness-wellness/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/food-beverage/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/healthcare/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/hospitality/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/legal-services/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/manufacturing/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/non-profit/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/real-estate/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/retail/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/technology/ai-automation.tsx",
+    "src/pages/visakhapatnam/industries/transportation/ai-automation.tsx"
+  ]
+}

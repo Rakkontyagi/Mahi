@@ -233,7 +233,7 @@ function AppContent() {
   });
 
   // Enhanced debugging for Mumbai route
-  if (pathname === '/mumbai/digital-marketing/') {
+  if (pathname === '#removed-duplicate') {
     console.log('🎯 MUMBAI ROUTE DETECTED!', { pathname, pathParts });
     console.log('🔍 Service found:', findService('digital-marketing'));
     console.log('🔍 Location search for mumbai...');
@@ -243,8 +243,7 @@ function AppContent() {
   const coreServicePages: Record<string, React.ComponentType> = {
     'digital-marketing-services': DigitalMarketingServices,
     'seo-services': SEOServices,
-    'ppc-advertising': PPCAdvertising,
-  };
+    'ppc-advertising': PPCAdvertising};
 
   // Check for core service pages first
   if (pathParts.length === 1 && coreServicePages[pathParts[0]]) {
@@ -275,8 +274,7 @@ function AppContent() {
         'digital-marketing': DigitalMarketingHub,
         'ai-automation': AIAutomationHub,
         'lead-generation': LeadGenerationHub,
-        'business-automation': BusinessAutomationHub,
-      };
+        'business-automation': BusinessAutomationHub};
 
       const ServiceHubComponent = serviceHubPages[serviceSlug];
 
@@ -532,8 +530,7 @@ function AppContent() {
         'chennai-ppc-advertising': ChennaiPPCAdvertising,
         'chennai-social-media-marketing': ChennaiSocialMediaMarketing,
         'chennai-ai-automation': ChennaiAIAutomation,
-        'chennai-business-automation': ChennaiBusinessAutomation,
-      };
+        'chennai-business-automation': ChennaiBusinessAutomation};
 
       const componentKey = `${citySlug}-${serviceSlug}`;
       const SpecificPageComponent = specificPageComponents[componentKey];
@@ -665,8 +662,7 @@ function AppContent() {
     '/digital-marketing-pune': PuneDigitalMarketing,
     '/healthcare-digital-marketing': HealthcareDigitalMarketing,
     '/ecommerce-digital-marketing': EcommerceDigitalMarketing,
-    '/real-estate-digital-marketing': RealEstateDigitalMarketing,
-  };
+    '/real-estate-digital-marketing': RealEstateDigitalMarketing};
 
   const PageComponent = staticRoutes[pathname];
 

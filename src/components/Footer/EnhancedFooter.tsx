@@ -315,12 +315,12 @@ export function EnhancedFooter() {
             <div>
               <h4 className="font-semibold mb-4 text-purple-400">Popular Service Locations</h4>
               <div className="grid grid-cols-1 gap-1 text-sm">
-                <a href="/mumbai/digital-marketing/" className="text-gray-400 hover:text-white">Digital Marketing in Mumbai</a>
-                <a href="/delhi/seo-services/" className="text-gray-400 hover:text-white">SEO Services in Delhi</a>
+                <a href="#removed-duplicate" className="text-gray-400 hover:text-white">Digital Marketing in Mumbai</a>
+                <a href="#removed-duplicate" className="text-gray-400 hover:text-white">SEO Services in Delhi</a>
                 <a href="/bangalore/ai-automation/" className="text-gray-400 hover:text-white">AI Automation in Bangalore</a>
-                <a href="/chennai/ppc-advertising/" className="text-gray-400 hover:text-white">PPC Advertising in Chennai</a>
+                <a href="#removed-duplicate" className="text-gray-400 hover:text-white">PPC Advertising in Chennai</a>
                 <a href="/hyderabad/social-media-marketing/" className="text-gray-400 hover:text-white">Social Media Marketing in Hyderabad</a>
-                <a href="/pune/business-automation/" className="text-gray-400 hover:text-white">Business Automation in Pune</a>
+                <a href="#removed-duplicate" className="text-gray-400 hover:text-white">Business Automation in Pune</a>
               </div>
             </div>
 
